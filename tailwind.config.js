@@ -3,6 +3,7 @@ export default {
     extend: {
       fontFamily: {
         mono: ['OCR-X Trial'],
+        headline: ['ABC Diatype Unlicensed Trial'],
       },
       fontSize: {
         xl: ['1.6rem', '1.8rem', {
