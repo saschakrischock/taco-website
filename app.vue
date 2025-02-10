@@ -15,6 +15,7 @@ import Accordion01 from './components/Section/Accordion01.vue';
    <SectionImageText02/>
    <SectionAccordionCode/>
    <SectionTable/>
+   <SectionFooter/>
    <NavFixedFooter/>
   </div>
 </template>
