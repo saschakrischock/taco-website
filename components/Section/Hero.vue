@@ -4,12 +4,12 @@
         <div class="p-7 pt-24 max-w-[90rem] flex flex-col justify-between h-[calc(100svh-5rem)]">
             <h1 class="text-black headline text-2xl font-bold  ">
                 <span>Trusting </span>
-                <span class="text-[#fd4825]">centralized platforms </span>
-                <span class="text-black  ">with secrets managementis giving Bezos your house keys.</span>
+                <span class="text-[#fd4825]">centralized platforms </span><br>
+                <span class="text-black  ">with secrets management<br>is giving Bezos your house keys.</span>
             </h1>
             <h2 class="subtitle headline  mt-6 text-black font-medium   text-xl">
-                TACo is the only general-purpose access control plugin that works without trusting
-                an intermediary so users aren’t obliged to trust AWS your dev team or TACo.
+                TACo is the only general-purpose access control plugin that works without<br> trusting
+                an intermediary so users aren’t obliged to trust AWS your dev team or<br>TACo.
             </h2>
         </div>
         </div>
