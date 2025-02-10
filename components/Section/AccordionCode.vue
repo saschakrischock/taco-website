@@ -4,7 +4,7 @@
         <div class="p-7 pt-6 max-w-[90rem]">
             <h1 class="text-white text-2xl font-bold">
                 <span class="text-black">Access</span>
-                <span class=" text-[#96FF5E]"> conditions</span>
+                <span class=" text-[#FD4825]"> conditions</span>
                 <br>
                 <span class="text-black  ">that fit your use case.</span>
             </h1>

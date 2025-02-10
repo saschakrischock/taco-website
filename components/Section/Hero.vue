@@ -1,10 +1,10 @@
 <template>
     <section class="hero h-screen is-primary is-fullheight">
         <div class="hero-body">
-        <div class="p-7 pt-24 max-w-[90rem]">
+        <div class="p-7 pt-24 max-w-[90rem] flex flex-col justify-between h-[calc(100svh-5rem)]">
             <h1 class="text-black text-2xl font-bold font-['ABC Diatype Unlicensed Trial'] ">
                 <span>Trusting </span>
-                <span class="text-[#96ff5d]  ">centralized platforms </span>
+                <span class="text-[#fd4825]  ">centralized platforms </span>
                 <span class="text-black  ">with secrets managementis giving Bezos your house keys.</span>
             </h1>
             <h2 class="subtitle mt-6 text-black font-medium  font-['ABC Diatype Medium Unlicensed Trial'] text-xl">

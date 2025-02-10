@@ -32,7 +32,7 @@
                  class="border-t border-white py-4">
               <span :class="[
                       'font-mono text-[15px]',
-                      index === 0 && feature[solution] === 'YES' ? 'text-[#96ff5d]' : 'text-gray-400'
+                      index === 0 && feature[solution] === 'YES' ? 'text-[#fd4825]' : 'text-gray-400'
                     ]">
                 {{ feature[solution] }}
               </span>
