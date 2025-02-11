@@ -4,7 +4,7 @@
         <div class="p-7 pt-24 max-w-[90rem] flex flex-col justify-between h-[calc(100svh-5rem)]">
             <h1 class="text-black headline text-2xl font-bold  ">
                 <span>Trusting </span>
-                <span class="text-[#fd4825]">centralized platforms </span><br>
+                <span class="text-[#96FF5E]">centralized platforms </span><br>
                 <span class="text-black  ">with secrets management<br>is giving Bezos your house keys.</span>
             </h1>
             <h2 class="subtitle headline  mt-6 text-black font-medium   text-xl">

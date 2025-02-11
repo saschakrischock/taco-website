@@ -43,7 +43,7 @@
                  transform: openItems[index] ? `translateY(-${descriptionHeights[index] || 0}px)` : 'translateY(0)'
                }">
             <div class="px-4 pb-4 bg-black">
-              <div class="text-white text-sm w-[12rem]">
+              <div class="text-white text-sm w-[12rem] mono-text">
                 {{ item.title }}
               </div>
             </div>
@@ -51,7 +51,7 @@
 
           <!-- Description -->
           <div ref="descriptionRefs"
-               class="absolute inset-x-0 bottom-0 px-4 pb-4 text-white text-sm transition-all duration-500"
+               class="absolute mono-text inset-x-0 bottom-0 px-4 pb-4 text-white text-sm transition-all duration-500"
                :style="{
                  opacity: openItems[index] ? 1 : 0,
                  transform: openItems[index] ? 'translateY(0)' : 'translateY(100%)'
@@ -67,6 +67,9 @@
 <script setup>
 import { ref, onMounted, nextTick } from 'vue'
 const Globe = resolveComponent('SvgIconGlobe')
+
+ import { useMatrixText } from '~/composables/matrix';
+ useMatrixText();
 
 const isMobile = ref(false)
 const openItems = ref({})
