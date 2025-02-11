@@ -9,14 +9,16 @@
           zIndex: 0
         }"
       ></div>
-      <div class="hero-body absolute">
-        <div class="p-7 max-w-[90rem]">
+      <div class="absolute h-72 inset-0 w-full  bg-gradient-to-b from-black to-transparent z-10"></div>
+      <div class="absolute h-72 bottom-0  w-full bg-gradient-to-t from-black to-transparent z-10"></div>
+      <div class="hero-body absolute z-20">
+        <div class="p-7 max-w-[90rem] h-[calc(100svh-3rem)] flex justify-between flex-col">
             <h1 class="text-white text-2xl font-bold ">
               End-to-end encryption<br>for (almost) everything.
             </h1>
-            <h2 class="subtitle text-white text-medium text-xl mt-7">
-              TACo is the only general-purpose access control plugin that works without trusting<br>an intermediary so users aren’t obliged to trust AWS your dev team or TACo.
-                </h2>
+            <h2 class="subtitle text-white max-w-[60rem] headline font-bold text-xl mt-7">
+              Imagine if Signal-like protections were embedded in every application. So healthcare providers, social platforms, connected vehicles and every other shadowy would-be data collector would see nothing but ciphertexts.
+            </h2>
         </div>
     </div>
     </section>

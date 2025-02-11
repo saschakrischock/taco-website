@@ -2,7 +2,7 @@
 <template>
   <div class="bg-black flex flex-col justify-between min-h-screen">
     <div class="p-7 pt-6 max-w-[90rem]">
-            <h1 class="text-white text-2xl">
+            <h1 class="text-white headline font-bold text-2xl">
                 <span>Web3 needs TACo</span><br>
                 <span class="text-[#909090]">to fulfill a long-awaited promise.</span>
             </h1>
