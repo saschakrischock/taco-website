@@ -7,12 +7,14 @@
       </h1>
     </div>
     <div class="p-7 font-mono">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+      <div class="grid grid-cols-1 items-end md:grid-cols-2 lg:grid-cols-3 gap-7">
         <div v-for="(item, index) in items" 
              :key="index"
              ref="cardRefs"
-             class="w-full border-t border-b border-white relative cursor-pointer transition-all duration-300 overflow-hidden"
-             :style="{ height: `${containerHeight}px` }"
+             class="w-full border-t border-b border-white relative cursor-pointer overflow-hidden transition-all duration-500"
+             :style="{ 
+               height: `${openItems[index] ? fullHeights[index] : baseHeight}px`
+             }"
              @click="toggleItem(index)"
              @mouseenter="!isMobile && handleHover(index, true)"
              @mouseleave="!isMobile && handleHover(index, false)">
@@ -26,12 +28,8 @@
 
           <!-- Plus/Cross button - combined transforms -->
           <button
-            class="absolute right-4 bottom-4 text-white transition-all duration-500 z-10"
-            :style="{
-              transform: openItems[index] 
-                ? `translateY(-${containerHeight - 42}px) rotate(45deg)` 
-                : 'translateY(0) rotate(0deg)'
-            }">
+            class="absolute right-4 top-4 text-white transition-all duration-500 z-10"
+            :class="{ 'rotate-45': openItems[index] }">
             <div class="w-[7px] h-[7px] relative">
               <div class="w-[1.68px] h-[7px] left-[7px] top-[2.66px] absolute origin-top-left rotate-90 bg-white"></div>
               <div class="w-[1.68px] h-[7px] left-[4.34px] top-[7px] absolute origin-top-left -rotate-180 bg-white"></div>
@@ -65,6 +63,7 @@
     </div>
   </div>
 </template>
+
 <script setup>
 import { ref, onMounted, nextTick } from 'vue'
 const Globe = resolveComponent('SvgIconGlobe')
@@ -72,7 +71,8 @@ const Globe = resolveComponent('SvgIconGlobe')
 const isMobile = ref(false)
 const openItems = ref({})
 const descriptionHeights = ref({})
-const containerHeight = ref(0)
+const baseHeight = ref(0)
+const fullHeights = ref({})
 
 // Refs for measurements
 const cardRefs = ref([])
@@ -80,24 +80,32 @@ const iconRefs = ref([])
 const titleRefs = ref([])
 const descriptionRefs = ref([])
 
-const calculateContainerHeight = async () => {
+const calculateHeights = async () => {
   await nextTick()
   
-  // Get maximum heights
-  const maxTitleHeight = Math.max(...titleRefs.value.map(el => el?.offsetHeight || 0))
-  const maxDescriptionHeight = Math.max(...descriptionRefs.value.map(el => el?.offsetHeight || 0))
-  const iconHeight = iconRefs.value[0]?.offsetHeight || 0
-  
-  // Store individual description heights for animations
-  descriptionRefs.value.forEach((ref, index) => {
-    if (ref) {
-      descriptionHeights.value[index] = ref.offsetHeight
-    }
+  // First calculate the base height using the maximum of icon + title heights
+  let maxIconHeight = 0
+  let maxTitleHeight = 0
+
+  iconRefs.value.forEach(ref => {
+    const height = ref?.offsetHeight || 0
+    maxIconHeight = Math.max(maxIconHeight, height)
   })
 
-  // Calculate total height needed
-  const totalHeight = iconHeight + maxTitleHeight + maxDescriptionHeight + 32
-  containerHeight.value = totalHeight
+  titleRefs.value.forEach(ref => {
+    const height = ref?.offsetHeight || 0
+    maxTitleHeight = Math.max(maxTitleHeight, height)
+  })
+
+  // Set uniform base height for all items
+  baseHeight.value = maxIconHeight + maxTitleHeight + 32
+
+  // Calculate individual expanded heights
+  items.value.forEach((_, index) => {
+    const descHeight = descriptionRefs.value[index]?.offsetHeight || 0
+    descriptionHeights.value[index] = descHeight
+    fullHeights.value[index] = baseHeight.value + descHeight
+  })
 }
 
 const handleHover = (index, isEntering) => {
@@ -111,12 +119,16 @@ onMounted(() => {
   
   const handleResize = () => {
     checkMobile()
-    calculateContainerHeight()
+    calculateHeights()
   }
   
   checkMobile()
-  calculateContainerHeight()
+  calculateHeights()
   window.addEventListener('resize', handleResize)
+
+  return () => {
+    window.removeEventListener('resize', handleResize)
+  }
 })
 
 const items = ref([
