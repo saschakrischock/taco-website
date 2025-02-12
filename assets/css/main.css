@@ -5,3 +5,8 @@
 .font-mono {
     font-feature-settings: "ss02" 1, "onum" 1;
 }
+
+body, html {
+    width: 100vw;
+    overflow-x: hidden;
+}
