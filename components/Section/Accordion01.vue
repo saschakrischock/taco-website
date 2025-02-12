@@ -21,7 +21,7 @@
           
           <!-- Icon -->
           <div class="p-4" ref="iconRefs">
-            <div class="flex justify-between items-start">
+            <div class="flex justify-between  items-start">
               <component :is="item.icon" />
             </div>
           </div>

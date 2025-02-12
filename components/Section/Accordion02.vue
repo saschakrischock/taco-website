@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white flex flex-col justify-between min-h-screen">
     <div class="p-7 pt-6 max-w-[90rem]">
-      <h1 class="text-2xl font-bold">
+      <h1 class="lg:text-2xl text-mobile-2xl font-headline ">
         <span class="text-[#96FF5E]">The Web needs TACo</span>
         <span class="text-black"> to escape</span>
         <br>
@@ -45,7 +45,7 @@
                  transform: openItems[index] ? `translateY(-${descriptionHeights[index] || 0}px)` : 'translateY(0)'
                }">
             <div class="px-4 pb-4 bg-white">
-              <div class="text-black text-sm w-[12rem] mono-text">
+              <div class="text-black text-sm mono-text">
                 {{ item.title }}
               </div>
             </div>
@@ -53,7 +53,7 @@
 
           <!-- Description -->
           <div ref="descriptionRefs"
-               class="absolute mono-text inset-x-0 bottom-0 px-4 pb-4 text-black text-sm transition-all duration-500"
+               class="absolute mono-text text-mono inset-x-0 bottom-0 px-4 pb-4 text-black text-sm transition-all duration-500"
                :style="{
                  opacity: openItems[index] ? 1 : 0,
                  transform: openItems[index] ? 'translateY(0)' : 'translateY(100%)'
@@ -68,9 +68,9 @@
 
 <script setup>
 import { ref, onMounted, nextTick } from 'vue'
-const Globe = resolveComponent('SvgIconGlobe')
-const Database = resolveComponent('SvgIconDatabase')
-const Ai = resolveComponent('SvgIconAi')
+const Secure = resolveComponent('SvgIconSecure')
+const Eye = resolveComponent('SvgIconEye')
+const Fist = resolveComponent('SvgIconFist')
 
 const isMobile = ref(false)
 const openItems = ref({})
@@ -137,19 +137,19 @@ onMounted(() => {
 
 const items = ref([
   {
-    title: 'Decentralized Social Networks & Communities',
+    title: 'Hyper-sensitive, high stakes data',
     content: 'Sufficiently decentralized is a cop-out. TACo can handle many-to-many data sharing at scale, regardless of the size of file or frequency of access request. And without a centralized authority that may harvest, exploit, monetize, or censor interpersonal communication.',
-    icon: Globe
+    icon: Secure
   },
   {
-    title: 'Decentralized GenAI',
+    title: 'Internet of Things',
     content: 'Communication with or between LLM models should be 100% private and censorship-resistant, not mined by intermediaries or blocked by a central authority. TACo can be harnessed for e2ee inference, acess-controlled agentic RAG, and distributed computation.',
-    icon: Ai
+    icon: Eye
   },
   {
-    title: 'Decentralized Storage & Databases',
+    title: 'Activism, journalism and human rights',
     content: 'TACo is the perfect complement to persistent storage and GraphQL/SQL databases – at long last enabling users to grant future access to uploaded data – without having to download & re-encrypt locally using a known data consumer‘s public key.',
-    icon: Database
+    icon: Fist
   }
 ])
 
