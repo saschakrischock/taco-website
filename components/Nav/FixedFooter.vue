@@ -17,8 +17,3 @@
 </template>
 
 
-<style>
-. {
-    font-family: 'OCR-X Trial';
-}
-</style>

@@ -67,6 +67,8 @@
 <script setup>
 import { ref, onMounted, nextTick } from 'vue'
 const Globe = resolveComponent('SvgIconGlobe')
+const Database = resolveComponent('SvgIconDatabase')
+const Ai = resolveComponent('SvgIconAi')
 
  import { useMatrixText } from '~/composables/matrix';
  useMatrixText();
@@ -142,13 +144,13 @@ const items = ref([
   },
   {
     title: 'Decentralized GenAI',
-    content: 'Content for GenAI...',
-    icon: Globe
+    content: 'Communication with or between LLM models should be 100% private and censorship-resistant, not mined by intermediaries or blocked by a central authority. TACo can be harnessed for e2ee inference, acess-controlled agentic RAG, and distributed computation.',
+    icon: Ai
   },
   {
     title: 'Decentralized Storage & Databases',
-    content: 'Content for storage...',
-    icon: Globe
+    content: 'TACo is the perfect complement to persistent storage and GraphQL/SQL databases – at long last enabling users to grant future access to uploaded data – without having to download & re-encrypt locally using a known data consumer’s public key.',
+    icon: Database
   }
 ])
 

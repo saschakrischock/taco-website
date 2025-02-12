@@ -1,36 +1,64 @@
-# components/AccordionGrid.vue
 <template>
   <div class="bg-white flex flex-col justify-between min-h-screen">
     <div class="p-7 pt-6 max-w-[90rem]">
-            <h1 class="text-white text-2xl font-bold">
-                <span class="text-[#96FF5E]">The Web needs TACo</span>
-                <span class="text-black"> to escape</span>
-                <br>
-                <span class="text-black  ">the clutches of Big Tech.</span>
-            </h1>
-
-        </div>
+      <h1 class="text-2xl font-bold">
+        <span class="text-[#96FF5E]">The Web needs TACo</span>
+        <span class="text-black"> to escape</span>
+        <br>
+        <span class="text-black">the clutches of Big Tech.</span>
+      </h1>
+    </div>
     <div class="p-7 font-mono">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 ">
-        <div v-for="(item, index) in items" :key="index" 
-             class="w-full border-t h-[20rem] border-b border-black">
-          <div class="p-4 h-full relative justify-between flex flex-col space-y-4">
+      <div class="grid grid-cols-1 items-end md:grid-cols-2 lg:grid-cols-3 gap-7">
+        <div v-for="(item, index) in items" 
+             :key="index"
+             ref="cardRefs"
+             class="w-full border-t border-b border-black relative cursor-pointer overflow-hidden transition-all duration-500"
+             :style="{ 
+               height: `${openItems[index] ? fullHeights[index] : baseHeight}px`
+             }"
+             @click="toggleItem(index)"
+             @mouseenter="!isMobile && handleHover(index, true)"
+             @mouseleave="!isMobile && handleHover(index, false)">
+          
+          <!-- Icon -->
+          <div class="p-4" ref="iconRefs">
             <div class="flex justify-between items-start">
-              <div v-html="item.svg"></div>
+              <component :is="item.icon" />
             </div>
-            
-            <div class="flex justify-between items-center">
-              <div class="text-black text-sm ">{{ item.title }}</div>
-            </div>
+          </div>
 
-            <button @click="toggleItem(index)" class="text-black absolute right-0 bottom-3">
-                <span v-if="openItems[index]" class="text-xl">−</span>
-                <span v-else class="text-xl">+</span>
-              </button>
-
-            <div v-if="openItems[index]" class="text-black text-sm mt-4">
-              {{ item.content }}
+          <!-- Plus/Cross button -->
+          <button
+            class="absolute right-4 top-4 text-black transition-all duration-500 z-10"
+            :class="{ 'rotate-45': openItems[index] }">
+            <div class="w-[7px] h-[7px] relative">
+              <div class="w-[1.68px] h-[7px] left-[7px] top-[2.66px] absolute origin-top-left rotate-90 bg-black"></div>
+              <div class="w-[1.68px] h-[7px] left-[4.34px] top-[7px] absolute origin-top-left -rotate-180 bg-black"></div>
             </div>
+          </button>
+
+          <!-- Title -->
+          <div ref="titleRefs"
+               class="absolute inset-x-0 bottom-0 transition-transform duration-500"
+               :style="{
+                 transform: openItems[index] ? `translateY(-${descriptionHeights[index] || 0}px)` : 'translateY(0)'
+               }">
+            <div class="px-4 pb-4 bg-white">
+              <div class="text-black text-sm w-[12rem] mono-text">
+                {{ item.title }}
+              </div>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div ref="descriptionRefs"
+               class="absolute mono-text inset-x-0 bottom-0 px-4 pb-4 text-black text-sm transition-all duration-500"
+               :style="{
+                 opacity: openItems[index] ? 1 : 0,
+                 transform: openItems[index] ? 'translateY(0)' : 'translateY(100%)'
+               }">
+            {{ item.content }}
           </div>
         </div>
       </div>
@@ -39,27 +67,93 @@
 </template>
 
 <script setup>
+import { ref, onMounted, nextTick } from 'vue'
+const Globe = resolveComponent('SvgIconGlobe')
+const Database = resolveComponent('SvgIconDatabase')
+const Ai = resolveComponent('SvgIconAi')
+
+const isMobile = ref(false)
+const openItems = ref({})
+const descriptionHeights = ref({})
+const baseHeight = ref(0)
+const fullHeights = ref({})
+
+// Refs for measurements
+const cardRefs = ref([])
+const iconRefs = ref([])
+const titleRefs = ref([])
+const descriptionRefs = ref([])
+
+const calculateHeights = async () => {
+  await nextTick()
+  
+  // First calculate the base height using the maximum of icon + title heights
+  let maxIconHeight = 0
+  let maxTitleHeight = 0
+
+  iconRefs.value.forEach(ref => {
+    const height = ref?.offsetHeight || 0
+    maxIconHeight = Math.max(maxIconHeight, height)
+  })
+
+  titleRefs.value.forEach(ref => {
+    const height = ref?.offsetHeight || 0
+    maxTitleHeight = Math.max(maxTitleHeight, height)
+  })
+
+  // Set uniform base height for all items
+  baseHeight.value = maxIconHeight + maxTitleHeight + 32
+
+  // Calculate individual expanded heights
+  items.value.forEach((_, index) => {
+    const descHeight = descriptionRefs.value[index]?.offsetHeight || 0
+    descriptionHeights.value[index] = descHeight
+    fullHeights.value[index] = baseHeight.value + descHeight
+  })
+}
+
+const handleHover = (index, isEntering) => {
+  openItems.value[index] = isEntering
+}
+
+onMounted(() => {
+  const checkMobile = () => {
+    isMobile.value = window.innerWidth < 768
+  }
+  
+  const handleResize = () => {
+    checkMobile()
+    calculateHeights()
+  }
+  
+  checkMobile()
+  calculateHeights()
+  window.addEventListener('resize', handleResize)
+
+  return () => {
+    window.removeEventListener('resize', handleResize)
+  }
+})
+
 const items = ref([
   {
-    title: 'Hyper-sensitive, high stakes data',
-    content: 'Content for Hyper-sensitive, high stakes data...',
-    svg: '<svg width="33" height="41" viewBox="0 0 33 41" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1_267)"><path d="M28.3819 8.04203V5.81421L16.5002 0.698486L4.61852 5.97923V8.04203L16.5002 2.84379L28.3819 8.04203ZM30.3622 6.72184V19.9237C30.3622 29.5776 24.6689 35.1884 17.4903 38.2413V40.3041C25.494 37.1687 32.3425 30.9803 32.3425 19.9237V7.62947L30.3622 6.72184ZM15.5101 38.2413C8.33155 35.1884 2.63824 29.5776 2.63824 19.9237V6.80435L0.657959 7.62947V19.9237C0.657959 30.9803 7.50643 37.1687 15.5101 40.3041V38.2413ZM22.6061 15.6331L15.5926 22.5641L11.5495 18.6035L10.2293 19.9237L15.5926 25.3695L23.9263 17.1183L22.6061 15.6331Z" fill="black"/></g><defs><clipPath id="clip0_1_267"><rect width="31.6845" height="39.6056" fill="white" transform="translate(0.657959 0.698486)"/></clipPath></defs></svg>'
+    title: 'Decentralized Social Networks & Communities',
+    content: 'Sufficiently decentralized is a cop-out. TACo can handle many-to-many data sharing at scale, regardless of the size of file or frequency of access request. And without a centralized authority that may harvest, exploit, monetize, or censor interpersonal communication.',
+    icon: Globe
   },
   {
-    title: 'Internet of Things',
-    content: 'Internet of Things...',
-    svg: '<svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.5001 10.5797C12.6411 10.5797 7.52771 12.8893 3.31917 17.5111H0.680054C5.54769 11.5711 11.6525 8.59973 18.5001 8.59973C25.3478 8.59973 31.4526 11.5711 36.3202 17.5111H33.6811C29.4726 12.892 24.3591 10.5797 18.5001 10.5797ZM26.8335 8.35392L29.5563 4.47493L27.9059 3.3188L24.9345 7.60837L26.8308 8.35122L26.8335 8.35392ZM17.5088 6.61972H19.4888V0.679688H17.5088V6.61972ZM17.5088 6.61972H19.4888V0.679688H17.5088V6.61972ZM10.1668 8.35392L12.0631 7.61108L9.09173 3.3215L7.44126 4.47763L10.1641 8.35662L10.1668 8.35392ZM18.5001 24.4425C21.8011 24.4425 24.4402 21.8034 24.4402 18.5025C24.4402 15.2016 21.8011 12.5625 18.5001 12.5625C15.1992 12.5625 12.5601 15.2016 12.5601 18.5025C12.5601 21.8034 15.1992 24.4425 18.5001 24.4425ZM18.5001 22.4598C16.2716 22.4598 14.5401 20.7283 14.5401 18.4998C14.5401 16.2713 16.2716 14.5398 18.5001 14.5398C20.7287 14.5398 22.4602 16.2713 22.4602 18.4998C22.4602 20.7283 20.7287 22.4598 18.5001 22.4598ZM27.9059 33.6808L29.5563 32.5246L26.8335 28.6456L24.9372 29.3885L27.9086 33.6781L27.9059 33.6808ZM17.5088 36.3226H19.4888V30.3825H17.5088V36.3226ZM17.5088 36.3226H19.4888V30.3825H17.5088V36.3226ZM9.09443 33.6808L12.0658 29.3912L10.1695 28.6483L7.44666 32.5273L9.09712 33.6835L9.09443 33.6808ZM18.5001 28.4025C11.6525 28.4025 5.54769 25.4312 0.680054 19.4911H3.31917C7.52771 24.1103 12.6411 26.4225 18.5001 26.4225C24.3591 26.4225 29.4726 24.113 33.6811 19.4911H36.3202C31.4526 25.4312 25.3478 28.4025 18.5001 28.4025Z" fill="black"/></svg>',
+    title: 'Decentralized GenAI',
+    content: 'Communication with or between LLM models should be 100% private and censorship-resistant, not mined by intermediaries or blocked by a central authority. TACo can be harnessed for e2ee inference, acess-controlled agentic RAG, and distributed computation.',
+    icon: Ai
   },
   {
-    title: 'Inference protection',
-    content: 'Inference protection...',
-    svg: '<svg width="33" height="41" viewBox="0 0 33 41" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1_286)"><path d="M25.9052 8.86872C25.9052 7.54871 26.8127 6.6412 28.1327 6.6412C29.4527 6.6412 30.3603 7.54871 30.3603 8.86872V12.3337C30.3603 13.6537 29.4527 14.5612 28.1327 14.5612C26.8127 14.5612 25.9052 13.6537 25.9052 12.3337V8.86872ZM23.9252 8.86872V12.3337C23.9252 14.7262 25.7402 16.5413 28.1327 16.5413C30.5253 16.5413 32.3403 14.7262 32.3403 12.3337V8.86872C32.3403 6.4762 30.5253 4.66119 28.1327 4.66119C25.7402 4.66119 23.9252 6.4762 23.9252 8.86872ZM19.4702 6.88871C19.4702 5.5687 20.3777 4.66119 21.6977 4.66119C23.0177 4.66119 23.9252 5.5687 23.9252 6.88871V12.3337C23.9252 13.6537 23.0177 14.5612 21.6977 14.5612C20.3777 14.5612 19.4702 13.6537 19.4702 12.3337V6.88871ZM17.4902 6.88871V12.3337C17.4902 14.7262 19.3052 16.5413 21.6977 16.5413C24.0902 16.5413 25.9052 14.7262 25.9052 12.3337V6.88871C25.9052 4.49619 24.0902 2.68118 21.6977 2.68118C19.3052 2.68118 17.4902 4.49619 17.4902 6.88871ZM16.9127 29.1638C16.9127 26.9363 16.2527 24.7913 15.0977 22.9763H12.5402C14.1077 24.5438 14.9327 26.7713 14.9327 29.1638H16.9127ZM7.50763 20.9963H13.2827C11.7977 19.7588 9.81764 19.0163 7.50763 19.0163V20.9963ZM13.0352 10.3537V4.90869C13.0352 3.58869 13.9427 2.68118 15.2627 2.68118C16.5827 2.68118 17.4902 3.58869 17.4902 4.90869V10.6012H19.4702V4.90869C19.4702 2.51618 17.6552 0.701172 15.2627 0.701172C12.8702 0.701172 11.0552 2.51618 11.0552 4.90869V10.3537H13.0352ZM26.4002 38.3214V40.3014H28.3802V33.3713L31.0203 28.7513C32.0103 27.0188 32.3403 25.6163 32.3403 23.6363V17.9438H30.3603V23.6363C30.3603 25.3688 30.1128 26.3588 29.2877 27.7613L26.4002 32.8763V38.3214ZM11.0552 10.6012H13.0352V6.88871C13.0352 4.49619 11.2202 2.68118 8.82764 2.68118C6.43513 2.68118 4.62012 4.49619 4.62012 6.88871V10.6012H6.60013V6.88871C6.60013 5.5687 7.50763 4.66119 8.82764 4.66119C10.1476 4.66119 11.0552 5.5687 11.0552 6.88871V10.6012ZM6.60013 40.3014H8.58014V32.6288L4.04261 27.3488C2.97011 26.1113 2.64011 25.1213 2.64011 23.5538V17.6138C2.64011 15.7988 3.87761 14.5612 5.69262 14.5612H16.9127C18.2327 14.5612 19.1402 15.4688 19.1402 16.7888C19.1402 18.1088 18.2327 19.0163 16.9127 19.0163H7.09513V20.9963H16.9127C19.3052 20.9963 21.1202 19.1813 21.1202 16.7888C21.1202 14.3962 19.3052 12.5812 16.9127 12.5812H5.69262C2.80511 12.5812 0.660095 14.7262 0.660095 17.6138V23.5538C0.660095 25.6163 1.2376 27.1013 2.55761 28.6688L6.60013 33.3713V40.3014Z" fill="black"/></g><defs><clipPath id="clip0_1_286"><rect width="31.6802" height="39.6002" fill="white" transform="translate(0.660095 0.701172)"/></clipPath></defs></svg>'
+    title: 'Decentralized Storage & Databases',
+    content: 'TACo is the perfect complement to persistent storage and GraphQL/SQL databases – at long last enabling users to grant future access to uploaded data – without having to download & re-encrypt locally using a known data consumer‘s public key.',
+    icon: Database
   }
 ])
 
-const openItems = ref({})
-
 const toggleItem = (index) => {
-  openItems.value[index] = !openItems.value[index]
+  handleHover(index, !openItems.value[index])
 }
 </script>

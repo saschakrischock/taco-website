@@ -1,59 +1,31 @@
+<script lang="ts" setup>
+import { Blottie } from 'blottie'
+</script>
+
+
 <template>
     <div>
         <div>
-        <svg class="w-full" width="1440" height="886" viewBox="0 0 1440 886" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M457.267 261.101C432.085 321.005 410.397 389.461 393.024 464.502" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M562.255 85.0586C530.691 120.511 501.523 166.243 475.482 220.506" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M840.696 49.1457C802.823 18.0292 762.244 1.16602 720 1.16602C677.757 1.16602 637.104 18.0693 599.213 49.226" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M964.518 220.528C938.459 166.204 909.254 120.433 877.654 84.96" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M1046.88 464.08C1029.53 389.2 1007.88 320.904 982.733 261.12" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M1094.16 877.469C1092.53 743.888 1078.89 617.595 1055.73 504.652" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M384.173 505.094C361.094 617.936 347.47 744.069 345.843 877.468" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M581.547 346.82C551.081 394.78 521.565 447.517 493.623 504.29" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M701.511 188.028C670.075 222.156 638.822 261.785 608.319 306.231" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M840.677 74.5596C807.193 92.4064 772.868 118.002 738.47 150.504" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M1105.4 165.019C1079.93 111.057 1045.2 73.1148 1001.46 55.6494C963.421 40.4525 921.543 41.918 877.654 57.9179" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M1156.92 426.016C1154.41 340.837 1142.62 265.937 1121.79 205.591" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M1101.58 877.468C1138.45 729.775 1156.85 589.168 1157.41 466.931" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M473.873 545.664C441.504 615.586 411.586 691.028 385.161 770.747C373.293 806.541 362.467 842.154 352.683 877.467" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M369.965 885.256C444.778 826.858 528.351 767.857 618.177 710.943C646.138 693.217 673.953 676.173 701.512 659.832" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M1310.88 413.931C1373.26 409.294 1416.19 421.54 1432.67 452.857C1473.18 529.885 1342.61 701.307 1119.3 884.413" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M1175.79 440.974C1211.43 430.535 1244.31 422.906 1273.92 418.289" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M1069.74 477.249C1093.48 468.095 1116.43 459.884 1138.48 452.617" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M974.996 516.836C994.655 508.023 1013.93 499.732 1032.78 491.983" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M872.277 565.922C894.551 554.64 916.496 543.94 938.038 533.802" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M738.488 638.272C771.241 619.461 803.591 601.675 835.337 584.992" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M264.172 440.974C228.549 430.535 195.669 422.926 166.098 418.289" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M370.056 477.172C346.264 467.998 323.259 459.767 301.149 452.479" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M464.655 516.676C445.052 507.883 425.813 499.632 407.014 491.883" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M567.796 565.961C545.376 554.619 523.303 543.838 501.633 533.66" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M701.512 638.273C668.778 619.482 636.464 601.716 604.754 585.033" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M1069.98 885.216C995.167 826.817 911.632 767.857 821.823 710.943C793.862 693.217 766.047 676.173 738.488 659.832" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M129.14 413.932C66.7446 409.295 23.8062 421.521 7.32943 452.858C-33.1767 529.866 97.3756 701.288 320.644 884.374" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M338.419 877.468C301.643 730.136 283.228 589.83 282.588 467.813" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M966.201 545.809C998.532 615.69 1028.43 691.073 1054.86 770.751C1066.73 806.545 1077.55 842.159 1087.34 877.471" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M858.452 346.82C889.102 395.061 918.763 448.1 946.853 505.234" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M738.488 188.028C769.924 222.156 801.177 261.785 831.68 306.231" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M599.213 74.501C632.734 92.3478 667.077 117.964 701.512 150.486" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M334.725 164.778C360.199 110.957 394.89 73.0947 438.542 55.6494C476.543 40.4725 518.402 41.918 562.255 57.8978" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M283.046 426.659C285.515 341.099 297.346 265.897 318.267 205.351" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M329.55 877.467C233.67 714.136 171.292 558.673 150.701 436.074" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M871.162 595.675C897.569 626.751 923.774 659.233 949.596 693.039C996.466 754.369 1039.28 816.261 1077.59 877.47" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M738.488 452.759C770.71 484.357 803.097 518.344 835.337 554.5" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M613.001 340.92C642.096 364.207 671.685 389.763 701.512 417.467" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M484.863 251.283C514.287 268.688 544.808 289.125 576.043 312.372" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M343.942 189.37C376.036 197.581 410.928 211.513 447.886 230.725" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M145.306 395.503C137.406 312.914 151.633 248.814 191.042 212.518C219.808 186.019 259.528 176.603 307.166 182.345" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M701.512 452.759C669.107 484.538 636.538 518.726 604.115 555.102" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M826.779 341.1C797.757 364.327 768.242 389.842 738.488 417.466" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M955.485 251.082C925.878 268.568 895.192 289.125 863.738 312.532" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M1095.77 189.45C1063.86 197.641 1029.16 211.493 992.462 230.544" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M1294.69 395.504C1302.59 312.914 1288.37 248.814 1248.96 212.518C1220.17 185.999 1180.4 176.584 1132.72 182.365" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M1110.45 877.467C1206.33 714.136 1268.71 558.673 1289.3 436.074" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-<path d="M568.838 595.675C542.431 626.751 516.225 659.233 490.404 693.039C443.534 754.369 400.723 816.261 362.412 877.47" stroke="#E2E2E2" stroke-width="1.5" stroke-miterlimit="10"/>
-</svg>
-<div class="flex justify-center mb-8 text-center text-black text-[15px] font-normal font-['OCR-X Trial'] leading-[18px]"><br/><br/>Design & AD: Aletheia, Leith Benkhedda<br>Photography: Thadde Comar<br/>Web development: Sascha Krischock</div>
+
+            <Blottie 
+            class=" w-[100vw] absolute h-[calc(100svh-7rem)] object-cover"
+            :lottie="{
+                player: 'svg',
+                renderer: 'svg',
+                path: '/lottie/data_footer.json',
+            }"
+        />
+
+<div class="flex justify-center items-end mb-8 h-[calc(100svh-7rem)] text-center text-black text-[15px] font-normal  ">
+    <div class="flex flex-col gap-0 leading-[1.3]">
+    <span class="font-mono mono-text block">Design & AD: Aletheia, Leith Benkhedda</span>
+    <span class="font-mono mono-text block">Photography: Thadde Comar</span>
+    <span class="font-mono mono-text block">Web development: Sascha Krischock</span>
     </div>
+</div>
+</div>
+
+
     <div class="w-full bg-black flex flex-row justify-between p-6 relative">
 <div class=" left-[20px] top-[19.63px]  text-white text-[15px] font-normal font-['OCR-X Trial'] leading-[18px]">©2025 | A Thesis Build – All Rights Reserved</div>
 <svg width="99" height="27" viewBox="0 0 99 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -83,10 +55,10 @@
 </defs>
 </svg>
 
-<div class="h-[11px] left-[1182px] top-[23.13px]  justify-end items-center gap-5 inline-flex">
-<div class="text-center text-white text-[15px] font-normal font-['OCR-X Trial'] leading-[18px]">Build </div>
-<div class="text-center text-white text-[15px] font-normal font-['OCR-X Trial'] leading-[18px]">Editorials</div>
-<div class="text-center text-white text-[15px] font-normal font-['OCR-X Trial'] leading-[18px]">Contact</div>
+<div class="h-[11px] left-[1182px] top-[23.13px]   justify-end items-center gap-5 inline-flex">
+<div class="text-center text-white text-[15px] font-normal font-mono mono-text  ">Build </div>
+<div class="text-center text-white text-[15px] font-normal  ">Editorials</div>
+<div class="text-center text-white text-[15px] font-normal  ">Contact</div>
 </div>
 <div class="w-[98.10px] h-[25.43px] left-[666px] top-[15.91px] absolute overflow-hidden">
 <div class="w-[98.10px] h-[25.43px] left-0 top-0 ">
