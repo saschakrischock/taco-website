@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white flex flex-col justify-between min-h-screen">
     <div class="p-7 pt-6 max-w-[90rem]">
-      <h1 class="lg:text-2xl text-mobile-2xl font-headline ">
+      <h1 class="text-2xl font-bold">
         <span class="text-[#96FF5E]">The Web needs TACo</span>
         <span class="text-black"> to escape</span>
         <br>
@@ -45,7 +45,7 @@
                  transform: openItems[index] ? `translateY(-${descriptionHeights[index] || 0}px)` : 'translateY(0)'
                }">
             <div class="px-4 pb-4 bg-white">
-              <div class="text-black text-sm mono-text">
+              <div class="text-black text-sm w-[12rem] mono-text">
                 {{ item.title }}
               </div>
             </div>
