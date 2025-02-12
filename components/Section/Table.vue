@@ -3,12 +3,12 @@
     <section class="hero h-screen flex justify-between pb-7 flex-col bg-black is-primary is-fullheight">
       <div class="hero-body">
         <div class="p-7 max-w-[90rem]">
-          <h1 class="text-white text-2xl font-bold font-['ABC Diatype Unlicensed Trial']">
+          <h1 class="text-white font-headline text-2xl font-bold font-['ABC Diatype Unlicensed Trial']">
             <span class="text-[#909090]">The</span>
             <span class="text-white"> zero compromiss </span>
             <span class="text-[#909090]">solution.</span>
           </h1>
-          <h2 class="subtitle mt-6 text-black font-medium font-['ABC Diatype Medium Unlicensed Trial'] text-xl">
+          <h2 class="subtitle mt-6 font-headline text-black font-medium font-['ABC Diatype Medium Unlicensed Trial'] text-xl">
             TACo is the only general-purpose access control plugin that works without trusting
             an intermediary so users aren't obliged to trust AWS your dev team or TACo.
           </h2>
@@ -16,22 +16,22 @@
       </div>
   
       <div class="relative px-7 bg-black">
-        <div class="grid grid-cols-6 gap-4">
+        <div class="grid grid-cols-6 gap-y-2 gap-x-4">
           <!-- Headers -->
           <div v-for="header in headers" :key="header" 
-               class="text-white header text-[15px] font-medium font-['ABC Diatype Medium'] leading-[18px]">
+               class="text-white header text-[20px] font-medium  font-['ABC Diatype Medium'] leading-[18px]">
             {{ header }}
           </div>
   
           <!-- Content -->
           <template v-for="(feature, i) in features" :key="i">
-            <div class="text-white text-[15px] font-medium font-['ABC Diatype Medium'] leading-[18px] py-4 border-t border-white">
+            <div class="text-white text-[20px] pr-2  font-medium font-['ABC Diatype Medium'] leading-[20px] py-4 border-t border-white">
               {{ feature.name }}
             </div>
             <div v-for="(solution, index) in solutions" :key="solution" 
-                 class="border-t border-white py-4">
+                 class="border-t border-white flex items-center justify-center py-4">
               <span :class="[
-                      'font-mono text-[15px]',
+                      'font-mono text-[15px] text-center block',
                       index === 0 && feature[solution] === 'YES' ? 'text-[#96FF5E]' : 'text-gray-400'
                     ]">
                 {{ feature[solution] }}

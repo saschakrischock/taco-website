@@ -1,8 +1,8 @@
 <template>
-  <section ref="container" class="hero is-primary h-screen is-fullheight relative overflow-hidden">
+  <section ref="container" class="hero is-primary bg-black h-screen is-fullheight relative overflow-hidden">
     <div 
       ref="parallaxBg"
-      class="absolute inset-0 w-full h-[150%] -top-[50%] bg-center bg-cover bg-no-repeat"
+      class="absolute inset-0 w-full h-[100%] -top-[0%] bg-center bg-cover bg-no-repeat"
       :style="{
         backgroundImage: 'url(/images/2.jpg)',
         transform: `translate3d(0, ${parallaxOffset}px, 0)`,

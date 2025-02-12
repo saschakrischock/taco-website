@@ -6,7 +6,15 @@
     font-feature-settings: "ss02" 1, "onum" 1;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body, html {
     width: 100vw;
     overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }

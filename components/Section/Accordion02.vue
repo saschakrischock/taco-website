@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white flex flex-col justify-between min-h-screen">
+  <section class="bg-white flex flex-col relative justify-between min-h-screen">
     <div class="p-7 pt-6 max-w-[90rem]">
       <h1 class="text-2xl font-bold">
         <span class="text-[#96FF5E]">The Web needs TACo</span>
@@ -9,7 +9,7 @@
       </h1>
     </div>
     <div class="p-7 font-mono">
-      <div class="grid grid-cols-1 items-end md:grid-cols-2 lg:grid-cols-3 gap-7">
+      <div class="grid grid-cols-1 w-full px-7 absolute bottom-7 left-0 items-end md:grid-cols-2 lg:grid-cols-3 gap-7">
         <div v-for="(item, index) in items" 
              :key="index"
              ref="cardRefs"
@@ -22,7 +22,7 @@
              @mouseleave="!isMobile && handleHover(index, false)">
           
           <!-- Icon -->
-          <div class="p-4" ref="iconRefs">
+          <div class="px-2 pt-4" ref="iconRefs">
             <div class="flex justify-between items-start">
               <component :is="item.icon" />
             </div>
@@ -30,7 +30,7 @@
 
           <!-- Plus/Cross button -->
           <button
-            class="absolute right-4 top-4 text-black transition-all duration-500 z-10"
+            class="absolute right-2 top-4 text-black transition-all duration-500 z-10"
             :class="{ 'rotate-45': openItems[index] }">
             <div class="w-[7px] h-[7px] relative">
               <div class="w-[1.68px] h-[7px] left-[7px] top-[2.66px] absolute origin-top-left rotate-90 bg-black"></div>
@@ -44,7 +44,7 @@
                :style="{
                  transform: openItems[index] ? `translateY(-${descriptionHeights[index] || 0}px)` : 'translateY(0)'
                }">
-            <div class="px-4 pb-4 bg-white">
+            <div class="px-2 pb-4 bg-white">
               <div class="text-black text-sm w-[12rem] mono-text">
                 {{ item.title }}
               </div>
@@ -53,7 +53,7 @@
 
           <!-- Description -->
           <div ref="descriptionRefs"
-               class="absolute mono-text text-mono inset-x-0 bottom-0 px-4 pb-4 text-black text-sm transition-all duration-500"
+               class="absolute  text-mono inset-x-0 bottom-0 px-2 pb-2 text-black text-sm transition-all duration-500"
                :style="{
                  opacity: openItems[index] ? 1 : 0,
                  transform: openItems[index] ? 'translateY(0)' : 'translateY(100%)'
@@ -63,7 +63,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>

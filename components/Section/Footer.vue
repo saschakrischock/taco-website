@@ -4,7 +4,7 @@ import { Blottie } from 'blottie'
 
 
 <template>
-    <div>
+    <div id="contact" >
         <div>
 
             <Blottie 

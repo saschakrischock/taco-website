@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-4xl mx-auto p-6">
+    <section id="editorials" class="bg-white m  p-7">
       <div v-if="posts" class="divide-y divide-gray-200">
         <article v-for="post in posts" 
                  :key="post.id"
@@ -27,7 +27,7 @@
         </article>
       </div>
       <div v-else>No posts found</div>
-    </div>
+    </section>
   </template>
   
   <script setup lang="ts">

@@ -1,16 +1,23 @@
 <template>
 <div>
-    <div class=" h-auto z-30 left-1/2 w-fit -translate-x-1/2 fixed bottom-8  p-3 bg-[#F4F4F4] rounded-[10px] flex-col justify-between items-center inline-flex">
-<div class=" gap-4 font-mono  justify-between items-center inline-flex">
-<div class=" text-[#909090] whitespace-nowrap text-lg font-normal mono-text ">TACo is used (but NOT TRUSTED) by</div>
-<div class="  text-black w-fit text-lg font-normal mono-text ">Waku</div>
-<div class="  text-black w-fit text-lg font-normal mono-text ">OrbisDB</div>
-<div class="  text-black w-fit whitespace-nowrap text-lg font-normal mono-text ">Zuzalu City</div>
-<div class="  text-black w-fit text-lg font-normal mono-text ">ArDrive</div>
-<div class="  text-black w-fit text-lg font-normal mono-text ">BqETH</div>
-<div class="  text-black w-fit text-lg font-normal mono-text ">Irys</div>
-<div class="  text-black text-lg font-normal mono-text ">GONKBONK</div>
-<div class="  text-black text-lg font-normal mono-text ">Holonym</div>
+    <div class=" h-10 z-30 w-[calc(100vw-3rem)] left-1/2 overflow-y-hidden  -translate-x-1/2 absolute bottom-8  p-3 bg-[#F4F4F4] rounded-[10px]  justify-between items-center ">
+<div class=" gap-4 font-mono  justify-between items-center ">
+<div class="text-[#909090] pr-12 absolute bg-[#F4F4F4] z-10 whitespace-nowrap text-lg font-normal mono-text" style="background: linear-gradient(to right, #F4F4F4 90%, transparent);">TACo is used (but NOT TRUSTED) by</div>
+
+<Vue3Marquee :clone="true">
+ 
+<div class="flex gap-4 overflow-hidden">
+<div class="  text-black  text-lg font-normal  ">Waku</div>
+<div class="  text-black  text-lg font-normal  ">OrbisDB</div>
+<div class="  text-black  whitespace-nowrap text-lg font-normal  ">Zuzalu City</div>
+<div class="  text-black  text-lg font-normal  ">ArDrive</div>
+<div class="  text-black  text-lg font-normal ">BqETH</div>
+<div class="  text-black  text-lg font-normal  ">Irys</div>
+<div class="  text-black text-lg font-normal  ">GONKBONK</div>
+<div class="  text-black text-lg font-normal ">Holonym</div>
+</div>
+</Vue3Marquee>
+
 </div>
 </div>
 </div>

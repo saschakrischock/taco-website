@@ -1,20 +1,19 @@
 ---
-title: Modern Urban Architecture second - A Visual Journey
-description: Exploring the stunning architectural marvels of contemporary cities
+title: When you die, self custody becomesmeaningless
+description: Lorem Ipsum
 date: 2024-02-11
-image: /images/urban/skyline-banner.jpg
+bannerimage: /images/urban/skyline-banner.jpg
 tags:
-  - architecture
-  - urban
-  - design
+  - TACo 
+  - BqETH
 ---
 
-# Modern Urban Architecture abc - A Visual Journey
+#  When you die, self custody becomesmeaningless
 
-The evolution of urban architecture tells the story of our civilization's progress. Today's cities are canvases where architects push the boundaries of design and engineering.
+Lorem Ipsum
 
 ![Geometric Glass Building](/images/posts/1.jpg)
-*The Crystal Tower stands as a testament to modern geometric design*
+*Caption*
 
 The interplay between light and glass creates ever-changing patterns throughout the day. Modern architects have mastered the art of using natural light to enhance their designs. This approach not only creates stunning visual effects but also contributes to energy efficiency.
 

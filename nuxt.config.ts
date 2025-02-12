@@ -8,5 +8,6 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/content',
     'nuxt-swiper',
+    'nuxt-marquee'
   ],
 })

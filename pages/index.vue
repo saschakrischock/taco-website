@@ -18,7 +18,7 @@ const handleComplete = () => {
 
 <template>
   <div>
-    <div
+   <!--+ <div
       v-if="isVisible"
       class="bg-white fixed w-full h-full z-[1000] transition-opacity duration-500"
       :style="{ opacity: overlayOpacity }"
@@ -37,7 +37,7 @@ const handleComplete = () => {
         }"
         @complete="handleComplete"
       />
-    </div>
+    </div>-->
 
     <SectionHero/>
     <SectionImageText01/>

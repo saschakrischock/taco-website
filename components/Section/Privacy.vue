@@ -27,10 +27,10 @@ const swiper = useSwiper(containerRef, {
 </script>
 
 <template>
-  <section class="bg-black flex-row flex ">
+  <section class="bg-black flex-row flex relative ">
     <div class="hero-body h-[calc(100svh)]  flex flex-col justify-between">
       <div class="p-7 max-w-[90rem]">
-        <h1 class="text-white text-2xl font-bold font-['ABC Diatype Unlicensed Trial']">
+        <h1 class="text-white text-2xl font-headline font-bold font-['ABC Diatype Unlicensed Trial']">
           <span class="text-[#909090]">The privacy Layer</span><br>
           <span class="text-[#909090]">with </span>
           <span class="text-white">nothing to hide</span>
@@ -38,7 +38,7 @@ const swiper = useSwiper(containerRef, {
       </div>
       <div class="flex flex-col gap-4 px-7 pb-7">
       <div class="swiper-pagination font-mono "></div>
-      <div class="lg:text-xl text-mobile-xl text-white max-w-[27rem]">
+      <div class="lg:text-xl text-mobile-x font-headline text-white max-w-[27rem]">
         Independent nodes are sampled from the Threshold Network to collectively generate a distributed public key.
       </div>
     </div>
@@ -47,7 +47,7 @@ const swiper = useSwiper(containerRef, {
 
 
     <ClientOnly>
-      <swiper-container ref="containerRef" :init="false" class="">
+      <swiper-container ref="containerRef" :init="false" class=" absolute right-0 bottom-0">
         <swiper-slide v-for="(slide, index) in slides" :key="index" class="flex items-center justify-center">
           <img :src="slide" :alt="`Diagram ${index + 1}`" class="max-w-full h-auto" />
         </swiper-slide>
