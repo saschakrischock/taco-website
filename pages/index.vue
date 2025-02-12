@@ -2,21 +2,24 @@
 import { ref, onMounted } from 'vue'
 import { Blottie } from 'blottie'
 
-const isAnimationComplete = ref(false)
+const isVisible = ref(true)
 const overlayOpacity = ref(1)
 
 const handleComplete = () => {
-  isAnimationComplete.value = true
   // Start fade out animation
+  overlayOpacity.value = 0
+  
+  // Remove element after fade animation completes
   setTimeout(() => {
-    overlayOpacity.value = 0
-  }, 100) // Small delay to ensure animation completed
+    isVisible.value = false
+  }, 500) // Match this with the CSS transition duration
 }
 </script>
 
 <template>
   <div>
     <div
+      v-if="isVisible"
       class="bg-white fixed w-full h-full z-[1000] transition-opacity duration-500"
       :style="{ opacity: overlayOpacity }"
     >
