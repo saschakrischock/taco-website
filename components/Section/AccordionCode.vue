@@ -54,16 +54,7 @@
       </div>
     </div>
 
-      <div class="flex gap-2 mt-4">
-        <button 
-          v-for="n in 3" 
-          :key="n"
-          @click="playAnimation(n)"
-          class="px-3 py-1 bg-gray-700 text-gray-300 rounded hover:bg-gray-600"
-        >
-          Animation {{ n }}
-        </button>
-      </div>
+    
     </section>
   </template>
   
