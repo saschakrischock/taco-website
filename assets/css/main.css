@@ -3,5 +3,5 @@
 }
 
 .font-mono {
-    font-feature-settings: 'SS02';
+    font-feature-settings: "ss02" 1, "onum" 1;
 }
