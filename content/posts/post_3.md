@@ -2,11 +2,11 @@
 title: Modern Urban Architecture third - A Visual Journey
 description: Exploring the stunning architectural marvels of contemporary cities
 date: 2024-02-12
+time: 6:30PM
 image: /images/urban/skyline-banner.jpg
 tags:
-  - architecture
-  - urban
-  - design
+  - TACo 
+  - BqETH
 ---
 
 # Modern Urban Architecture 3 - A Visual Journey

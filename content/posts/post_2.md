@@ -2,6 +2,7 @@
 title: When you die, self custody becomesmeaningless
 description: Lorem Ipsum
 date: 2024-02-11
+time: 5:00PM
 bannerimage: /images/urban/skyline-banner.jpg
 tags:
   - TACo 

@@ -2,10 +2,10 @@
   <section class="bg-white relative flex flex-col justify-between min-h-screen">
     <div class="p-7 pt-6 max-w-[90rem]">
       <h1 class="lg:text-2xl text-mobile-2xl font-headline ">
-        <span class="text-[#96FF5E]">The Web needs TACo</span>
-        <span class="text-black"> to escape</span>
+        Access
+        <span class="text-[#96FF5E]"> conditions</span>
         <br>
-        <span class="text-black">the clutches of Big Tech.</span>
+        <span class="text-black">that fit your use case.</span>
       </h1>
     </div>
     <div class="p-7 font-mono">
@@ -22,7 +22,7 @@
              @mouseleave="!isMobile && handleHover(index, false)">
           
           <!-- Icon -->
-          <div class="p-4" ref="iconRefs">
+          <div class="px-2 pt-2" ref="iconRefs">
             <div class="flex justify-between items-start">
               <component :is="item.icon" />
             </div>
@@ -63,7 +63,7 @@
                  transform: openItems[index] ? `translateY(-${descriptionHeights[index]}px)` : 'translateY(0)'
                }">
             <div class="px-2 pb-4 bg-white">
-              <div class="text-black text-sm mono-text">
+              <div class="text-black text-sm mono-text text-mono">
                 {{ item.title }}
               </div>
             </div>
@@ -74,7 +74,9 @@
                class="absolute text-mono inset-x-0 bottom-0 px-2 pb-2 text-black text-sm transition-all duration-500"
                :style="{
                  opacity: openItems[index] ? 1 : 0,
-                 transform: openItems[index] ? 'translateY(0)' : 'translateY(100%)'
+                 transform: openItems[index] ? 'translateY(0)' : 'translateY(100%)',
+                 transition: 'transform 500ms cubic-bezier(0.4, 0, 0.2, 1), opacity 600ms ease-in'
+
                }">
             {{ item.content }}
           </div>
@@ -86,6 +88,8 @@
 
 <script setup>
 import { ref, onMounted, nextTick } from 'vue'
+const Lock = resolveComponent('SvgIconLock')
+const Box = resolveComponent('SvgIconBox')
 const Secure = resolveComponent('SvgIconSecure')
 
 const isMobile = ref(false)
@@ -161,9 +165,9 @@ onMounted(() => {
 
 const items = ref([
   {
-    title: 'Hyper-sensitive, high stakes data',
-    content: 'Sufficiently decentralized is a cop-out. TACo can handle many-to-many data sharing at scale, regardless of the size of file or frequency of access request. And without a centralized authority that may harvest, exploit, monetize, or censor interpersonal communication.',
-    icon: Secure,
+    title: 'NFT-gating',
+    content: 'Predicate decryption rights on ownership of a special-purpose NFTs. Works for digital media, event streams and beyond.',
+    icon: Box,
     codeExample: `import { conditions } from '@nucypher/taco';
 const age_requirement_condition = new conditions.base. time.TimeCondition ({
     chain: 1,
@@ -174,9 +178,9 @@ const age_requirement_condition = new conditions.base. time.TimeCondition ({
 });`
   },
   {
-    title: 'Internet of Things',
+    title: 'Secret recovery',
     content: 'Communication with or between LLM models should be 100% private and censorship-resistant, not mined by intermediaries or blocked by a central authority. TACo can be harnessed for e2ee inference, acess-controlled agentic RAG, and distributed computation.',
-    icon: Secure,
+    icon: Lock,
     codeExample: `import { Recovery } from '@nucypher/taco';
 const recovery = new Recovery({
     threshold: 2,
@@ -185,7 +189,7 @@ const recovery = new Recovery({
 });`
   },
   {
-    title: 'Activism, journalism and human rights',
+    title: 'Inference protection',
     content: 'TACo is the perfect complement to persistent storage and GraphQL/SQL databases – at long last enabling users to grant future access to uploaded data – without having to download & re-encrypt locally using a known consumer public key.',
     icon: Secure,
     codeExample: `import { Delegation } from '@nucypher/taco';

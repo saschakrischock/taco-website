@@ -1,4 +1,4 @@
-# HeroSection.vue
+
 <template>
   <section 
     ref="sectionRef"

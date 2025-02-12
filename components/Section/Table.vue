@@ -16,20 +16,20 @@
       </div>
   
       <div class="relative px-7 bg-black">
-        <div class="grid grid-cols-6 gap-y-2 gap-x-4">
+        <div class="grid grid-cols-6 gap-y-4 gap-x-4">
           <!-- Headers -->
           <div v-for="header in headers" :key="header" 
-               class="text-white header text-[20px] font-medium  font-['ABC Diatype Medium'] leading-[18px]">
+               class="text-white top text-center header text-[20px] font-medium mb-0 font-['ABC Diatype Medium'] leading-[18px]">
             {{ header }}
           </div>
   
           <!-- Content -->
           <template v-for="(feature, i) in features" :key="i">
-            <div class="text-white text-[20px] pr-2  font-medium font-['ABC Diatype Medium'] leading-[20px] py-4 border-t border-white">
+            <div  class="text-white text-[20px] pr-2  font-medium font-['ABC Diatype Medium'] leading-[20px] pt-3 pb-2 border-t border-white">
               {{ feature.name }}
             </div>
             <div v-for="(solution, index) in solutions" :key="solution" 
-                 class="border-t border-white flex items-center justify-center py-4">
+                 class="border-t border-white flex items-center justify-center pt-7 pb-2">
               <span :class="[
                       'font-mono text-[15px] text-center block',
                       index === 0 && feature[solution] === 'YES' ? 'text-[#96FF5E]' : 'text-gray-400'
@@ -106,7 +106,7 @@
     },
     {
       name: 'Multi-chain',
-      TACo: 'X',
+      TACo: '',
       LIT: 'YES',
       EVMContract: 'X',
       PKI: 'X',
@@ -127,8 +127,26 @@
     margin-left: -9px;
     position: absolute;
     height: calc(100% - 2.1rem);
-    margin-top: 2.1rem;
+    margin-top: 2.6rem;
     background-color: white;
     margin-bottom: 1rem;
   }
+
+
+  .top:first-child {
+    text-align: left;
+  }
+
+  .top:first-child:after {
+    content: '';
+    position: absolute;
+    left: 30px;
+    width: calc(100vw - 60px);
+    height: 1px;
+    top: 34px;
+    z-index: 100;
+    background-color: #fff;
+
+  }
+
   </style>

@@ -56,7 +56,8 @@
                class="absolute  text-mono inset-x-0 bottom-0 px-2 pb-2 text-black text-sm transition-all duration-500"
                :style="{
                  opacity: openItems[index] ? 1 : 0,
-                 transform: openItems[index] ? 'translateY(0)' : 'translateY(100%)'
+                 transform: openItems[index] ? 'translateY(0)' : 'translateY(100%)',
+                                  transition: 'transform 500ms cubic-bezier(0.4, 0, 0.2, 1), opacity 600ms ease-in'
                }">
             {{ item.content }}
           </div>

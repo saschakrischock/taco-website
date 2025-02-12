@@ -1,7 +1,7 @@
 <template>
   <section class="bg-black flex relative flex-col justify-between min-h-screen">
     <div class="p-7 pt-6 max-w-[90rem]">
-      <h1 class="text-white headline font-bold text-2xl">
+      <h1 class="text-white font-headline font-bold text-2xl">
         <span>Web3 needs TACo</span><br>
         <span class="text-[#909090]">to fulfill a long-awaited promise.</span>
       </h1>
@@ -54,7 +54,8 @@
                class="absolute  inset-x-0 bottom-0 px-2 pb-2 text-white text-sm transition-all duration-500"
                :style="{
                  opacity: openItems[index] ? 1 : 0,
-                 transform: openItems[index] ? 'translateY(0)' : 'translateY(100%)'
+                 transform: openItems[index] ? 'translateY(0)' : 'translateY(100%)',
+                                  transition: 'transform 500ms cubic-bezier(0.4, 0, 0.2, 1), opacity 600ms ease-in'
                }">
             {{ item.content }}
           </div>

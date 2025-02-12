@@ -14,6 +14,10 @@ export default {
           lineHeight: '1.8rem',
           letterSpacing: '-0.03rem'
         }],
+        'list-xl': ['1.25rem', {
+          lineHeight: '1.4rem',
+          letterSpacing: '-0.02rem'
+        }],
         'mobile-xl': ['1.25rem', {
           lineHeight: '1.4rem',
           letterSpacing: '-0.02rem'

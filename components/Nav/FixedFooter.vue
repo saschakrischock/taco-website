@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div class=" h-10 z-30 w-[calc(100vw-3rem)] left-1/2 overflow-y-hidden  -translate-x-1/2 absolute bottom-8  p-3 bg-[#F4F4F4] rounded-[10px]  justify-between items-center ">
+    <div class=" h-10 z-30 w-[calc(60rem)] max-w-[80vw] left-1/2 overflow-y-hidden  -translate-x-1/2 absolute bottom-8  p-3 bg-[#F4F4F4] rounded-[10px]  justify-between items-center ">
 <div class=" gap-4 font-mono  justify-between items-center ">
 <div class="text-[#909090] pr-12 absolute bg-[#F4F4F4] z-10 whitespace-nowrap text-lg font-normal mono-text" style="background: linear-gradient(to right, #F4F4F4 90%, transparent);">TACo is used (but NOT TRUSTED) by</div>
 
