@@ -5,7 +5,11 @@
     class="hero bg-white h-screen is-primary is-fullheight relative overflow-hidden"
   >
     <!-- First Lottie Animation with centered text -->
-    <div class="absolute pointer-events-none bg-white z-[100] w-full h-full transition-opacity duration-1000" :style="{ opacity: firstLottieOpacity }">      <Blottie
+    <div 
+      :class="['fixed bg-white z-[100] w-full h-full transition-opacity duration-1000', { 'pointer-events-none': isFirstAnimationFadedOut }]" 
+      :style="{ opacity: firstLottieOpacity }"
+    >
+      <Blottie
         ref="firstLottieRef"
         class="absolute inset-0 w-[60rem] left-1/2 -translate-x-1/2 object-cover transition-opacity duration-300"
         :lottie="{
@@ -47,8 +51,8 @@
 
     <div class="hero-body relative z-10">
       <div
-        :style="{ opacity }"
-        class="lg:p-7 p-4 pt-16 lg:pt-24 max-w-[90rem] flex flex-col justify-between h-[calc(100svh-7rem)] lg:h-[calc(100svh-5rem)] transition-opacity duration-300"
+        :style="{ opacity: heroContentOpacity }"
+        class="lg:p-7 p-4 pt-16 lg:pt-24 max-w-[90rem] flex flex-col justify-between h-[calc(100svh-7rem)] lg:h-[calc(100svh-5rem)] transition-opacity duration-700"
       >
         <h2 class="text-black font-headline text-mobile-2xl lg:lg:text-2xl text-mobile-2xl font-bold">
           <span>Trusting </span>
@@ -69,7 +73,6 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import { Blottie, type BlottieExpose } from 'blottie'
 import type { AnimationItem } from 'lottie-web'
 
-
 const { startMatrixEffect } = useTacoMatrixSync()
 
 const sectionRef = ref<HTMLElement | null>(null)
@@ -79,6 +82,8 @@ const secondLottieRef = ref<BlottieExpose>()
 const opacity = ref(1)
 const firstLottieOpacity = ref(1)
 const secondLottieOpacity = ref(0)
+const heroContentOpacity = ref(0) // New ref for hero content opacity
+const isFirstAnimationFadedOut = ref(false) // New ref for controlling pointer events
 let isFirstAnimationComplete = false
 let isSecondAnimationComplete = false
 let stopMatrixEffect: (() => void) | null = null
@@ -114,7 +119,6 @@ const handleScroll = () => {
 const onFirstLottieReady = (anim?: AnimationItem) => {
   if (anim) {
     anim.play()
-    // Start matrix effect when Lottie starts, passing the Lottie animation instance
     if (tacoTextRef.value) {
       stopMatrixEffect = startMatrixEffect(tacoTextRef.value, anim)
     }
@@ -123,18 +127,29 @@ const onFirstLottieReady = (anim?: AnimationItem) => {
 
 const onFirstLottieComplete = () => {
   isFirstAnimationComplete = true
-  // Stop matrix effect and restore original text
   if (stopMatrixEffect) {
     stopMatrixEffect()
   }
+  
   // Fade out first animation
   firstLottieOpacity.value = 0
-  // Start second animation after a short delay
+  
+  // Set pointer-events-none after the fade-out animation completes
+  setTimeout(() => {
+    isFirstAnimationFadedOut.value = true
+  }, 1000) // Match the duration-1000 transition
+  
+  // Start second animation and fade in hero content after a short delay
   setTimeout(() => {
     secondLottieOpacity.value = 1
     if (secondLottieRef.value?.anim) {
       secondLottieRef.value.anim.play()
     }
+    
+    // Fade in hero content with a slight delay after second animation starts
+    setTimeout(() => {
+      heroContentOpacity.value = 1
+    }, 300)
   }, 500)
 }
 
