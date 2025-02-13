@@ -1,7 +1,7 @@
 <template>
     <section id="editorials" class="bg-white flex flex-col justify-between h-[calc(100svh-7rem)]  p-7">
         <div class="  max-w-[90rem]">
-      <h1 class="lg:text-2xl text-mobile-2xl font-headline ">
+      <h1 class="lg:lg:text-2xl text-mobile-2xl font-headline ">
         Stories
         <span class="text-[#96FF5E]"> curated by TACo</span>
       </h1>

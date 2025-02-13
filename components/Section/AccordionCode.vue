@@ -1,7 +1,7 @@
 <template>
   <section class="bg-white relative flex flex-col justify-between min-h-screen">
-    <div class="p-7 pt-6 max-w-[90rem]">
-      <h1 class="lg:text-2xl text-mobile-2xl font-headline ">
+    <div class="lg:p-7 lg:pt-6 p-4max-w-[90rem]">
+      <h1 class="lg:lg:text-2xl text-mobile-2xl font-headline ">
         Access
         <span class="text-[#96FF5E]"> conditions</span>
         <br>
@@ -9,7 +9,7 @@
       </h1>
     </div>
     <div class="p-7 font-mono">
-      <div class="grid absolute bottom-7 px-7 w-full left-0 grid-cols-1 items-end md:grid-cols-2 lg:grid-cols-3 gap-7">
+      <div class="grid absolute bottom-7 lg:px-7 px-4  w-full left-0 grid-cols-1 items-end md:grid-cols-2 lg:grid-cols-3 gap-7">
         <div v-for="(item, index) in items" 
              :key="index"
              ref="cardRefs"

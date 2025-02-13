@@ -3,19 +3,19 @@
     <section class="hero h-screen flex justify-between pb-7 flex-col bg-black is-primary is-fullheight">
       <div class="hero-body">
         <div class="p-7 max-w-[90rem]">
-          <h1 class="text-white font-headline text-2xl font-bold font-['ABC Diatype Unlicensed Trial']">
+          <h1 class="text-white font-headline lg:text-2xl text-mobile-2xl font-bold font-['ABC Diatype Unlicensed Trial']">
             <span class="text-[#909090]">The</span>
             <span class="text-white"> zero compromiss </span>
             <span class="text-[#909090]">solution.</span>
           </h1>
-          <h2 class="subtitle mt-6 font-headline text-black font-medium font-['ABC Diatype Medium Unlicensed Trial'] text-xl">
+          <h2 class="subtitle mt-6 font-headline text-black font-medium font-['ABC Diatype Medium Unlicensed Trial'] text-mobile-xl lg:text-xl">
             TACo is the only general-purpose access control plugin that works without trusting
             an intermediary so users aren't obliged to trust AWS your dev team or TACo.
           </h2>
         </div>
       </div>
   
-      <div class="relative px-7 bg-black">
+      <div class="relative lg:px-7 px-4  bg-black">
         <div class="grid grid-cols-6 gap-y-4 gap-x-4">
           <!-- Headers -->
           <div v-for="header in headers" :key="header" 

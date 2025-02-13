@@ -1,13 +1,13 @@
 <template>
   <section class="bg-black flex relative flex-col justify-between min-h-screen">
-    <div class="p-7 pt-6 max-w-[90rem]">
-      <h1 class="text-white font-headline font-bold text-2xl">
+    <div class="lg:p-7 lg:pt-6 p-4 max-w-[90rem]">
+      <h1 class="text-white font-headline font-bold lg:text-2xl text-mobile-2xl">
         <span>Web3 needs TACo</span><br>
-        <span class="text-[#909090]">to fulfill a long-awaited promise.</span>
+        <span class="text-[#909090]"> to fulfill a long-awaited promise.</span>
       </h1>
     </div>
-    <div class="p-7 font-mono">
-      <div class="grid grid-cols-1 w-full px-7 absolute bottom-7 left-0 items-end md:grid-cols-2 lg:grid-cols-3 gap-7">
+    <div class="lg:p-7 max-lg:pb-7 font-mono">
+      <div class="grid grid-cols-1 w-full lg:px-7 px-4  lg:absolute lg:bottom-7 lg:left-0 items-end md:grid-cols-2 lg:grid-cols-3 gap-7">
         <div v-for="(item, index) in items" 
              :key="index"
              ref="cardRefs"

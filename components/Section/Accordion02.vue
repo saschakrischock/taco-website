@@ -1,7 +1,7 @@
 <template>
   <section class="bg-white flex flex-col relative justify-between min-h-screen">
-    <div class="p-7 pt-6 max-w-[90rem]">
-      <h1 class="text-2xl font-bold">
+    <div class="lg:p-7 lg:pt-6 p-4max-w-[90rem]">
+      <h1 class="lg:text-2xl text-mobile-2xl font-bold">
         <span class="text-[#96FF5E]">The Web needs TACo</span>
         <span class="text-black"> to escape</span>
         <br>
@@ -9,7 +9,7 @@
       </h1>
     </div>
     <div class="p-7 font-mono">
-      <div class="grid grid-cols-1 w-full px-7 absolute bottom-7 left-0 items-end md:grid-cols-2 lg:grid-cols-3 gap-7">
+      <div class="grid grid-cols-1 w-full lg:px-7 px-4  absolute bottom-7 left-0 items-end md:grid-cols-2 lg:grid-cols-3 gap-7">
         <div v-for="(item, index) in items" 
              :key="index"
              ref="cardRefs"
