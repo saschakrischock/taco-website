@@ -28,7 +28,7 @@ export default {
           fontWeight: 700
         }],
         'mobile-2xl': ['2.2rem', {
-          lineHeight: '2.3rem',
+          lineHeight: '2.1rem',
           letterSpacing: '-0.02rem'
         }]
       }

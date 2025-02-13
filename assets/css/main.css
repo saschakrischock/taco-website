@@ -18,9 +18,16 @@ body, html {
 ::-webkit-scrollbar {
     display: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     br {
         display: none;
     }
+
+    .scale-up {
+        scale: 2;
+    }
 }
+
+
+
 
