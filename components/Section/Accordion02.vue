@@ -9,11 +9,11 @@
       </h1>
     </div>
     <div class="p-7 font-mono">
-      <div class="grid grid-cols-1 w-full lg:px-7 px-4  absolute bottom-7 left-0 items-end md:grid-cols-2 lg:grid-cols-3 gap-7">
+      <div class="grid grid-cols-1 w-full lg:px-7 px-4  absolute bottom-7 left-0 items-end md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
         <div v-for="(item, index) in items" 
              :key="index"
              ref="cardRefs"
-             class="w-full border-t border-b border-black relative cursor-pointer overflow-hidden transition-all duration-500"
+             class="w-full border-t lg:border-b max-lg:last-of-type:border-b border-black relative cursor-pointer overflow-hidden transition-all duration-500"
              :style="{ 
                height: `${openItems[index] ? fullHeights[index] : baseHeight}px`
              }"
