@@ -24,13 +24,13 @@
             Feature
           </div>
           <div class="flex items-center w-[60%] ">
-            <span class="text-white w-full text-center text-15px lg:text-[20px] font-medium font-['ABC Diatype Medium'] leading-[18px]">
+            <span class="text-white w-1/2 text-center text-15px lg:text-[20px] font-medium font-['ABC Diatype Medium'] leading-[18px]">
               TACo
             </span>
-            <div class="relative inline-block">
+            <div class="relative w-1/2 inline-block">
               <select 
                 v-model="selectedCompetitor"
-                class="appearance-none bg-[#333] text-white px-3 py-1 rounded-full text-[15px] lg:text-[20px] font-medium font-['ABC Diatype Medium'] min-w-[100px]"
+                class="appearance-none bg-[#333] w-full text-white px-3 py-1 rounded-full text-[15px] lg:text-[20px] font-medium font-['ABC Diatype Medium'] min-w-[100px]"
               >
                 <option v-for="solution in solutions.slice(1)" :key="solution" :value="solution">
                   {{ solution }}

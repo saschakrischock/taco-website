@@ -27,7 +27,7 @@ const swiper = useSwiper(containerRef, {
 </script>
 
 <template>
-  <section class="bg-black flex-row flex relative ">
+  <section class="bg-black lg:flex-row lg:flex relative ">
     <div class="hero-body h-[calc(100svh)]  flex flex-col justify-between">
       <div class="lg:p-7 p-4 max-w-[90rem]">
         <h1 class="text-white lg:text-2xl text-mobile-2xl font-headline font-bold font-['ABC Diatype Unlicensed Trial']">
@@ -36,23 +36,25 @@ const swiper = useSwiper(containerRef, {
           <span class="text-white">nothing to hide</span>
         </h1>
       </div>
+      <div class="max-lg:flex max-lg:flex-col-reverse">
       <div class="flex flex-col gap-4 lg:px-7 px-4  pb-7">
       <div class="swiper-pagination font-mono "></div>
-      <div class="lg:text-mobile-xl lg:text-xl text-mobile-x font-headline text-white max-w-[27rem]">
+      <div class="text-mobile-xl lg:text-xl  text-mobile-xl font-headline text-white max-w-[27rem]">
         Independent nodes are sampled from the Threshold Network to collectively generate a distributed public key.
       </div>
-    </div>
     </div>
 
 
 
     <ClientOnly>
-      <swiper-container ref="containerRef" :init="false" class=" absolute right-0 bottom-0">
+      <swiper-container ref="containerRef" :init="false" class=" lg:absolute lg:right-0 lg:bottom-0">
         <swiper-slide v-for="(slide, index) in slides" :key="index" class="flex items-center justify-center">
           <img :src="slide" :alt="`Diagram ${index + 1}`" class="max-w-full h-auto" />
         </swiper-slide>
       </swiper-container>
     </ClientOnly>
+</div>
+    </div>
   </section>
 </template>
 
@@ -70,6 +72,16 @@ swiper-container {
   width: 50rem;
   margin-bottom: 2rem;
   margin-right: 2rem;
+}
+
+
+@media (max-width: 1024px) {
+    swiper-container {
+        width: calc(100% - 2rem) !important;
+        margin-right: 1rem !important;
+        margin-left: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
 }
 
 swiper-slide {
@@ -98,6 +110,31 @@ swiper-slide {
   opacity: 1;
   background: transparent;
   border-color: #fff;
+}
+
+@media (max-width: 1024px) {
+    :deep(.swiper-pagination-bullet) {
+        width: 6px;
+        height: 6px;
+        padding: 0;
+        font-size: 0 ;
+        background: #fff;
+        border-radius: 50%;
+        opacity: 0.5;
+    }
+
+    :deep(.swiper-pagination-bullet-active) {
+        background: #96ff5e;
+        opacity: 1;
+    }
+
+    .swiper-pagination {
+        width: fit-content !important;
+        padding: 0.5rem 0.75rem  !important;
+        margin: 0 auto !important;
+        border-radius: 1rem !important;
+        background-color: #252525 !important;
+    }
 }
 
 swiper-container {
