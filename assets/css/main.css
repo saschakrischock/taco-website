@@ -23,6 +23,10 @@ body, html {
         display: none;
     }
 
+    .text-lg {
+        font-size: 15px;
+    }
+
     .scale-up {
         scale: 2;
     }

@@ -9,19 +9,19 @@
       <div v-if="posts" class="divide-y border-t border-b border-black  divide-black">
         <article v-for="post in posts" 
                  :key="post.id"
-                 class="py-3 px-4 duration-300 transition-all hover:bg-[#96FF5E]">
+                 class="py-3 lg:px-4 duration-300 transition-all relative hover:bg-[#96FF5E]">
           <NuxtLink :to="post.path" class="w-full  ">
             <div class="space-y-2">
             
-            <div class="flex justify-between w-full">
+            <div class="flex lg:flex-row flex-col justify-between w-full">
                 <!-- Title -->
-               <div class="flex gap-24">
-              <h2 class="text-list-xl font-bold w-[20rem]">
+               <div class="flex max-lg:flex-col lg:gap-24">
+              <h2 class="text-list-xl font-bold max-lg:mb-2 w-[20rem]">
                 {{ post.title }}
               </h2>
            
               <!-- Tags and Date container -->
-              <div class="flex justify-between text-lg text-[#909090] font-mono">
+              <div class="flex justify-between mono-text  text-lg text-[#909090] font-mono">
                 <div class="flex gap-2">
                   <span v-for="tag in post.meta.tags" :key="tag" class="whitespace-nowrap">
                     #{{ tag }}
@@ -32,9 +32,9 @@
 
      
             
-                <time class="text-right font-mono font-xl">
-                  {{ formatDate(post.meta.date) }}<br>
-                  {{ post.meta.time }}
+                <time class="text-right max-lg:absolute max-lg:right-0  max-lg:bottom-2 max-lg:text-[#909090] font-mono font-lg">
+                  <div class="mono-text">{{ formatDate(post.meta.date) }}</div><br>
+                  <div class="max-lg:!hidden">{{ post.meta.time }}</div>
                 </time>
               </div>
             </div>
