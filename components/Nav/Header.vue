@@ -1,5 +1,68 @@
 <template>
   <div>
+
+    <button v-show="!isMenuOpen"   @click="toggleMenu" class="mobile-trigger lg:hidden z-[100] fixed top-4 cursor-pointer right-4 py-[0.8rem] px-[1rem]  bg-[#f4f4f4] rounded-xl flex-col justify-between items-center inline-flex">
+<div class=" justify-center items-center flex">
+<div class=" relative">
+  <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="7.125" y="3.16" width="1.68" height="7" transform="rotate(90 7.125 3.16)" fill="black"/>
+<rect x="4.46484" y="7.5" width="1.68" height="7" transform="rotate(-180 4.46484 7.5)" fill="black"/>
+</svg>
+
+
+
+</div>
+</div>
+</button>
+
+<Transition
+      enter-active-class="transition duration-300 ease-out"
+      enter-from-class="opacity-0"
+      enter-to-class="opacity-100"
+      leave-active-class="transition duration-200 ease-in"
+      leave-from-class="opacity-100"
+      leave-to-class="opacity-0"
+    >
+      <div 
+        v-show="isMenuOpen"
+        class="mobile-menu lg:hidden flex fixed w-full h-full z-50 flex-col justify-center bg-opacity-80 bg-white"
+      >
+        <div class="flex flex-col h-1/2 justify-center gap-8 items-center">
+          <!-- Close Button -->
+          <button 
+            @click="toggleMenu"
+            class="hover:fill-[#96FF5E] duration-300 bg-[#f4f4f4] p-8 rounded-[30px]"
+          >
+            <svg 
+              class="rotate-45 block" 
+              width="8" 
+              height="8" 
+              viewBox="0 0 8 8" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect x="7.125" y="3.16" width="1.68" height="7" transform="rotate(90 7.125 3.16)" fill="black"/>
+              <rect x="4.46484" y="7.5" width="1.68" height="7" transform="rotate(-180 4.46484 7.5)" fill="black"/>
+            </svg>
+          </button>
+          
+          <!-- Navigation Items -->
+          <a 
+            v-for="item in navItems" 
+            :key="item.href"
+            :href="item.href"
+            :class="[
+              'transition-colors bg-[#f4f4f4] p-8 rounded-[30px] duration-300 text-lg font-normal font-mono mono-text hover:text-[#96FF5E]',
+              isOverDarkSection ? 'text-white' : 'text-black'
+            ]"
+            @click="toggleMenu"
+          >
+            {{ item.text }}
+          </a>
+        </div>
+      </div>
+    </Transition>
+
     <nav 
       :class="[
         'flex z-30 p-4 lg:p-7 w-full fixed top-0 justify-between items-center transition-all duration-300',
@@ -34,6 +97,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
+const isMenuOpen = ref(false)
 const isVisible = ref(true)
 const atTop = ref(true)
 const lastScrollPosition = ref(0)
@@ -45,6 +109,19 @@ const navItems = [
   { href: '#editorials', text: 'Editorials' },
   { href: '#contact', text: 'Contact' }
 ]
+
+
+// Toggle menu function
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+  
+  // Toggle body scroll when menu is open
+  if (isMenuOpen.value) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = 'auto'
+  }
+}
 
 // Function to check the background color of an element
 const isElementDark = (element) => {
