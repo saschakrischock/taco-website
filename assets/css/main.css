@@ -1,3 +1,30 @@
+@font-face {
+    font-family: 'ABC Diatype Unlicensed Trial';
+    src: url('/assets/fonts/ABCDiatype-Regular-Trial.woff2') format('woff2'),
+        url('/assets/fonts/ABCDiatype-Regular-Trial.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ABC Diatype Unlicensed Trial';
+    src: url('/assets/fonts/ABCDiatype-Bold-Trial.woff2') format('woff2'),
+        url('/assets/fonts/ABCDiatype-Bold-Trial.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ABC Diatype Unlicensed Trial';
+    src: url('/assets/fonts/ABCDiatype-Medium-Trial.woff2') format('woff2'),
+        url('/assets/fonts/ABCDiatype-Medium-Trial.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
 .blog p {
     margin-bottom: 1rem;
 }
