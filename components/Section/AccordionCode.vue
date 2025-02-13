@@ -9,7 +9,7 @@
       </h2>
     </div>
     <div class="lg:p-7 font-mono">
-      <div class="grid lg:absolute lg:bottom-7 lg:px-7 px-4  w-full lg:left-0 grid-cols-1 items-end md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
+      <div class="grid fade-element lg:absolute lg:bottom-7 lg:px-7 px-4  w-full lg:left-0 grid-cols-1 items-end md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
         <div v-for="(item, index) in items" 
              :key="index"
              ref="cardRefs"

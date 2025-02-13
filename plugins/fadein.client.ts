@@ -18,7 +18,7 @@ export default defineNuxtPlugin((nuxtApp) => {
           rootMargin: '0px'
         })
 
-        document.querySelectorAll('h2').forEach(heading => {
+        document.querySelectorAll('h2, h3, .fade-element').forEach(heading => {
           observer.observe(heading)
         })
       }

@@ -6,7 +6,7 @@
         <span class="text-[#909090]"> to fulfill a long-awaited promise.</span>
       </h2>
     </div>
-    <div class="lg:p-7 max-lg:pb-7 font-mono">
+    <div class="lg:p-7 max-lg:pb-7 fade-element font-mono">
       <div class="grid grid-cols-1 w-full lg:px-7 px-4  lg:absolute lg:bottom-7 lg:left-0 items-end md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
         <div v-for="(item, index) in items" 
              :key="index"

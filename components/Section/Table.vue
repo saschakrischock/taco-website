@@ -69,7 +69,7 @@
       </div>
 
       <!-- Desktop View -->
-      <div class="hidden lg:grid grid-cols-6 gap-y-4 gap-x-4">
+      <div class="hidden fade-element lg:grid grid-cols-6 gap-y-4 gap-x-4">
         <!-- Headers -->
         <div v-for="header in headers" :key="header" 
              class="text-white top text-center header text-[20px] font-medium mb-0 font-['ABC Diatype Medium'] leading-[18px]">

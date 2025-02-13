@@ -6,7 +6,7 @@
         <span class="text-[#96FF5E]"> curated by TACo</span>
       </h2>
     </div>
-      <div v-if="posts" class="divide-y border-t border-b border-black  divide-black">
+      <div v-if="posts" class="divide-y border-t fade-element border-b border-black  divide-black">
         <article v-for="post in posts" 
                  :key="post.id"
                  class="py-3 lg:px-4 duration-300 transition-all relative hover:bg-[#96FF5E]">
