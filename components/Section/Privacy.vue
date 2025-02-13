@@ -131,7 +131,7 @@ swiper-slide {
     .swiper-pagination {
         width: fit-content !important;
         padding: 0.5rem 0.75rem  !important;
-        margin: 0 auto !important;
+        margin: 0.5rem auto 0 !important;
         border-radius: 1rem !important;
         background-color: #252525 !important;
     }

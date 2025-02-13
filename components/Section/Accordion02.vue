@@ -8,8 +8,8 @@
         <span class="text-black">the clutches of Big Tech.</span>
       </h2>
     </div>
-    <div class="p-7 font-mono">
-      <div class="grid grid-cols-1 w-full lg:px-7 px-4  absolute bottom-7 left-0 items-end md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
+    <div class="lg:p-7 font-mono">
+      <div class="grid grid-cols-1 w-full lg:px-7 px-4  lg:absolute lg:bottom-7 lg:left-0 items-end md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
         <div v-for="(item, index) in items" 
              :key="index"
              ref="cardRefs"

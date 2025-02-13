@@ -1,7 +1,7 @@
 import { onMounted, onUnmounted } from 'vue';
 
 export const useMatrixText = () => {
-  const matrixChars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%&*<>[]{}|=+-';
+  const matrixChars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz#&*<>|=+-';
   const activeAnimations = new Map<HTMLElement, number>();
   let observer: IntersectionObserver | null = null;
 
