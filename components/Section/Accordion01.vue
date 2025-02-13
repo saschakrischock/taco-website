@@ -1,6 +1,6 @@
 <template>
   <section class="bg-black flex relative flex-col justify-between min-h-screen">
-    <div class="lg:p-7 lg:pt-6 p-4 max-w-[90rem]">
+    <div class="lg:p-7  p-4 max-w-[90rem]">
       <h1 class="text-white font-headline font-bold lg:text-2xl text-mobile-2xl">
         <span>Web3 needs TACo</span><br>
         <span class="text-[#909090]"> to fulfill a long-awaited promise.</span>

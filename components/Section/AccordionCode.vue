@@ -1,7 +1,7 @@
 <template>
   <section class="bg-white relative flex flex-col justify-between min-h-screen">
-    <div class="lg:p-7 lg:pt-6 p-4max-w-[90rem]">
-      <h1 class="lg:lg:text-2xl text-mobile-2xl font-headline ">
+    <div class="lg:p-7  p-4 max-w-[90rem]">
+      <h1 class="lg:text-2xl font-bold text-mobile-2xl font-headline ">
         Access
         <span class="text-[#96FF5E]"> conditions</span>
         <br>

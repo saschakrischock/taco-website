@@ -10,7 +10,7 @@
       }"
     ></div>
     <div class="hero-body absolute">
-      <div class="p-7 max-w-[90rem] justify-between h-[calc(100svh-0rem)] flex flex-col">
+      <div class="lg:p-7 p-4 max-w-[90rem] justify-between h-[calc(100svh-0rem)] flex flex-col">
         <h1 class="text-black lg:text-2xl text-mobile-2xl font-bold ">
               End-to-End Encrypted. <br>End-to-End Decentralized. 
             </h1>

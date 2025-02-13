@@ -29,7 +29,7 @@ const swiper = useSwiper(containerRef, {
 <template>
   <section class="bg-black flex-row flex relative ">
     <div class="hero-body h-[calc(100svh)]  flex flex-col justify-between">
-      <div class="p-7 max-w-[90rem]">
+      <div class="lg:p-7 p-4 max-w-[90rem]">
         <h1 class="text-white lg:text-2xl text-mobile-2xl font-headline font-bold font-['ABC Diatype Unlicensed Trial']">
           <span class="text-[#909090]">The privacy Layer</span><br>
           <span class="text-[#909090]">with </span>

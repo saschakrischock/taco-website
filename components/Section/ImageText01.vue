@@ -2,7 +2,7 @@
     <section ref="container" class="hero is-primary bg-black h-screen is-fullheight relative overflow-hidden">
       <div 
         ref="parallaxBg"
-        class="absolute inset-0 w-full h-[100%] -top-[0%] bg-center bg-cover bg-no-repeat"
+        class="absolute inset-0 w-full h-[100%] top-[0%] bg-center bg-cover bg-no-repeat"
         :style="{
           backgroundImage: 'url(/images/1.jpg)',
           transform: `translate3d(0, ${parallaxOffset}px, 0)`,
@@ -12,7 +12,7 @@
       <div class="absolute h-72 inset-0 w-full  bg-gradient-to-b from-black to-transparent z-10"></div>
       <div class="absolute h-72 bottom-0  w-full bg-gradient-to-t from-black to-transparent z-10"></div>
       <div class="hero-body absolute z-20">
-        <div class="lg:p-7 p-4 max-w-[90rem] h-[calc(100svh-3rem)] font-headline  flex justify-between flex-col">
+        <div class="lg:p-7 p-4 max-w-[90rem]  h-[calc(100svh-1rem)]  lg:h-[calc(100svh-3rem)] font-headline  flex justify-between flex-col">
             <h1 class="text-white   lg:text-2xl text-mobile-2xl font-bold font-headline ">
               End-to-end encryption<br> for (almost) everything.
             </h1>

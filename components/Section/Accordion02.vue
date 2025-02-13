@@ -1,6 +1,6 @@
 <template>
   <section class="bg-white flex flex-col relative justify-between min-h-screen">
-    <div class="lg:p-7 lg:pt-6 p-4max-w-[90rem]">
+    <div class="lg:p-7  p-4 max-w-[90rem]">
       <h1 class="lg:text-2xl text-mobile-2xl font-bold">
         <span class="text-[#96FF5E]">The Web needs TACo</span>
         <span class="text-black"> to escape</span>
