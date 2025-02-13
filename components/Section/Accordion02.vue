@@ -1,12 +1,12 @@
 <template>
   <section class="bg-white flex flex-col relative justify-between min-h-screen">
     <div class="lg:p-7  p-4 max-w-[90rem]">
-      <h1 class="lg:text-2xl text-mobile-2xl font-bold">
+      <h2 class="lg:text-2xl text-mobile-2xl font-bold">
         <span class="text-[#96FF5E]">The Web needs TACo</span>
         <span class="text-black"> to escape</span>
         <br>
         <span class="text-black">the clutches of Big Tech.</span>
-      </h1>
+      </h2>
     </div>
     <div class="p-7 font-mono">
       <div class="grid grid-cols-1 w-full lg:px-7 px-4  absolute bottom-7 left-0 items-end md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
@@ -32,10 +32,11 @@
           <button
             class="absolute right-2 top-4 text-black transition-all duration-500 z-10"
             :class="{ 'rotate-45': openItems[index] }">
-            <div class="w-[7px] h-[7px] relative">
-              <div class="w-[1.68px] h-[7px] left-[7px] top-[2.66px] absolute origin-top-left rotate-90 bg-black"></div>
-              <div class="w-[1.68px] h-[7px] left-[4.34px] top-[7px] absolute origin-top-left -rotate-180 bg-black"></div>
-            </div>
+            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="7.10742" y="3.55225" width="1.68" height="7" transform="rotate(90 7.10742 3.55225)" fill="black"/>
+<rect x="4.44727" y="7.89233" width="1.68" height="7" transform="rotate(-180 4.44727 7.89233)" fill="black"/>
+</svg>
+
           </button>
 
           <!-- Title -->

@@ -1,10 +1,10 @@
 <template>
     <section id="editorials" class="bg-white flex flex-col justify-between h-[calc(100svh-7rem)] p-4  lg:p-7">
         <div class="  max-w-[90rem]">
-      <h1 class="lg:text-2xl text-mobile-2xl font-bold font-headline ">
+      <h2 class="lg:text-2xl text-mobile-2xl font-bold font-headline ">
         Stories
         <span class="text-[#96FF5E]"> curated by TACo</span>
-      </h1>
+      </h2>
     </div>
       <div v-if="posts" class="divide-y border-t border-b border-black  divide-black">
         <article v-for="post in posts" 

@@ -11,13 +11,13 @@
     ></div>
     <div class="hero-body absolute">
       <div class="lg:p-7 p-4 max-w-[90rem] justify-between h-[calc(100svh-0rem)] flex flex-col">
-        <h1 class="text-black lg:text-2xl text-mobile-2xl font-bold ">
+        <h2 class="text-black lg:text-2xl text-mobile-2xl font-bold ">
               End-to-End Encrypted. <br>End-to-End Decentralized. 
-            </h1>
-            <h2 class="subtitle font-medium text-mobile-xl lg:text-xl mt-7">
+            </h2>
+            <h3 class="subtitle font-medium text-mobile-xl lg:text-xl mt-7">
                   Empower users to share private data with legitimate recipients, and no-one else.<br>
                    From the very first ciphertext generated via the encrypt/decrypt API in January 2024.
-                </h2>
+                </h3>
       </div>
   </div>
   </section>

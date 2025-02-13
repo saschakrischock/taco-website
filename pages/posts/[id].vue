@@ -3,7 +3,7 @@
     <article v-if="post" class="prose lg:prose-xl mx-auto">
       <!-- Title and metadata header -->
       <div class="mb-8 mt-24 not-prose">
-        <h1 class="lg:text-2xl text-mobile-2xl font-bold mb-4">{{ post.title }}</h1>
+        <h2 class="lg:text-2xl text-mobile-2xl font-bold mb-4">{{ post.title }}</h2>
         <div class="flex items-center justify-between text-sm text-gray-500 font-mono">
           <div class="flex gap-2">
             <span v-for="tag in post.meta.tags" :key="tag" class="whitespace-nowrap">

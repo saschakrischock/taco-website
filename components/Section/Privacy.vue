@@ -30,18 +30,18 @@ const swiper = useSwiper(containerRef, {
   <section class="bg-black lg:flex-row lg:flex relative ">
     <div class="hero-body h-[calc(100svh)]  flex flex-col justify-between">
       <div class="lg:p-7 p-4 max-w-[90rem]">
-        <h1 class="text-white lg:text-2xl text-mobile-2xl font-headline font-bold font-['ABC Diatype Unlicensed Trial']">
+        <h2 class="text-white lg:text-2xl text-mobile-2xl font-headline font-bold font-['ABC Diatype Unlicensed Trial']">
           <span class="text-[#909090]">The privacy Layer</span><br>
           <span class="text-[#909090]">with </span>
           <span class="text-white">nothing to hide</span>
-        </h1>
+        </h2>
       </div>
       <div class="max-lg:flex max-lg:flex-col-reverse">
       <div class="flex flex-col gap-4 lg:px-7 px-4  pb-7">
       <div class="swiper-pagination font-mono "></div>
-      <div class="text-mobile-xl lg:text-xl  text-mobile-xl font-headline text-white max-w-[27rem]">
+      <h3 class="text-mobile-xl lg:text-xl  font-headline text-white max-w-[27rem]">
         Independent nodes are sampled from the Threshold Network to collectively generate a distributed public key.
-      </div>
+      </h3>
     </div>
 
 

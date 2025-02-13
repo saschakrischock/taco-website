@@ -3,15 +3,15 @@
   <section class="hero h-screen flex justify-between pb-4 lg:pb-7 flex-col bg-black is-primary is-fullheight">
     <div class="hero-body">
       <div class="lg:p-7 p-4 max-w-[90rem]">
-        <h1 class="text-white font-headline lg:text-2xl text-mobile-2xl font-bold font-['ABC Diatype Unlicensed Trial']">
+        <h2 class="text-white font-headline lg:text-2xl text-mobile-2xl font-bold font-['ABC Diatype Unlicensed Trial']">
           <span class="text-[#909090]">The</span>
           <span class="text-white"> zero compromiss </span>
           <span class="text-[#909090]">solution.</span>
-        </h1>
-        <h2 class="subtitle mt-6 font-headline text-black font-medium font-['ABC Diatype Medium Unlicensed Trial'] text-mobile-xl lg:text-xl">
+        </h2>
+        <h3 class="subtitle mt-6 font-headline text-black font-medium font-['ABC Diatype Medium Unlicensed Trial'] text-mobile-xl lg:text-xl">
           TACo is the only general-purpose access control plugin that works without trusting
           an intermediary so users aren't obliged to trust AWS your dev team or TACo.
-        </h2>
+        </h3>
       </div>
     </div>
 
@@ -52,13 +52,13 @@
             </div>
             <div class="flex items-center w-[60%] mobile-border justify-around  ">
               <span :class="[
-                'font-mono text-[15px] text-center w-1/2 min-w-[40px]',
+                'font-mono text-[15px] mono-text text-center w-1/2 min-w-[40px]',
                 feature.TACo === 'YES' ? 'text-[#96FF5E]' : 'text-gray-400'
               ]">
                 {{ feature.TACo }}
               </span>
               <span :class="[
-                'font-mono text-[15px]   text-center w-1/2 min-w-[40px]',
+                'font-mono text-[15px] mono-text   text-center w-1/2 min-w-[40px]',
                 feature[selectedCompetitor] === 'YES' ? 'text-[#96FF5E]' : 'text-gray-400'
               ]">
                 {{ feature[selectedCompetitor] }}
@@ -84,7 +84,7 @@
           <div v-for="(solution, index) in solutions" :key="solution" 
                class="border-t border-white  flex items-center justify-center pt-7 pb-2">
             <span :class="[
-              'font-mono text-[15px] text-center block',
+              'font-mono text-[15px] mono-text text-center block',
               index === 0 && feature[solution] === 'YES' ? 'text-[#96FF5E]' : 'text-gray-400'
             ]">
               {{ feature[solution] }}

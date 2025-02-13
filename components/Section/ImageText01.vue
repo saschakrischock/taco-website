@@ -13,12 +13,12 @@
       <div class="absolute h-72 bottom-0  w-full bg-gradient-to-t from-black to-transparent z-10"></div>
       <div class="hero-body absolute z-20">
         <div class="lg:p-7 p-4 max-w-[90rem]  h-[calc(100svh-1rem)]  lg:h-[calc(100svh-3rem)] font-headline  flex justify-between flex-col">
-            <h1 class="text-white   lg:text-2xl text-mobile-2xl font-bold font-headline ">
+            <h2 class="text-white   lg:text-2xl text-mobile-2xl font-bold font-headline ">
               End-to-end encryption<br> for (almost) everything.
-            </h1>
-            <h2 class="subtitle text-white max-w-[60rem] headline-font font-medium text-mobile-xl lg:text-mobile-xl lg:text-xl mt-7">
-              Imagine if Signal-like protections were embedded in every application. So healthcare providers, social platforms, connected vehicles and every other shadowy would-be data collector would see nothing but ciphertexts.
             </h2>
+            <h3 class="subtitle text-white max-w-[60rem] headline-font font-medium text-mobile-xl lg:text-mobile-xl lg:text-xl mt-7">
+              Imagine if Signal-like protections were embedded in every application. So healthcare providers, social platforms, connected vehicles and every other shadowy would-be data collector would see nothing but ciphertexts.
+            </h3>
         </div>
     </div>
     </section>

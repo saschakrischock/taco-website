@@ -18,7 +18,7 @@ export default defineNuxtPlugin((nuxtApp) => {
           rootMargin: '0px'
         })
 
-        document.querySelectorAll('h1').forEach(heading => {
+        document.querySelectorAll('h2').forEach(heading => {
           observer.observe(heading)
         })
       }
