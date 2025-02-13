@@ -5,7 +5,7 @@
     class="hero bg-white h-screen is-primary is-fullheight relative overflow-hidden"
   >
     <!-- First Lottie Animation with centered text -->
-    <div class="absolute pointer-events-none bg-white z-50 w-full h-full transition-opacity duration-1000" :style="{ opacity: firstLottieOpacity }">      <Blottie
+    <div class="absolute pointer-events-none bg-white z-[100] w-full h-full transition-opacity duration-1000" :style="{ opacity: firstLottieOpacity }">      <Blottie
         ref="firstLottieRef"
         class="absolute inset-0 w-[60rem] left-1/2 -translate-x-1/2 object-cover transition-opacity duration-300"
         :lottie="{
