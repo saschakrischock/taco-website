@@ -42,7 +42,7 @@ import { Blottie } from 'blottie'
     <div class="w-full bg-black flex flex-row justify-between px-6 max-lg:justify-center  py-4 relative">
 <div class=" max-lg:hidden  text-white t text-lg font-normal font-mono mono-text">©2025 | A Thesis Build – All Rights Reserved</div>
 
-<SvgLogoWhite class="lg:absolute lg:left-1/2 lg:-translate-x-1/2 w-24 lg:h-10"/>
+<SvgLogoWhite class="lg:absolute lg:top-[0.85rem] lg:left-1/2 lg:-translate-x-1/2 w-24 lg:h-8"/>
 
 <div class=" max-lg:hidden text-lg  justify-end items-center gap-8 inline-flex">
 <a href="#build" class="text-center text-white font-mono font-normal  mono-text">Build</a>
