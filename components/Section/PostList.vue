@@ -33,7 +33,7 @@
      
             
                 <time class="text-right max-lg:absolute max-lg:right-0  max-lg:bottom-2 max-lg:text-[#909090] font-mono font-lg">
-                  <div class="mono-text">{{ formatDate(post.meta.date) }}</div><br>
+                  <div class="mono-text">{{ formatDate(post.meta.date) }}</div>
                   <div class="max-lg:!hidden">{{ post.meta.time }}</div>
                 </time>
               </div>
