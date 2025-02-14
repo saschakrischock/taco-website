@@ -8,7 +8,6 @@ import Accordion01 from './components/Section/Accordion01.vue';
   <div>
     <NavHeader/>
 <NuxtPage/>
-<NavFixedFooter/>
 <SectionFooter/>
   </div>
 </template>

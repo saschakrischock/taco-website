@@ -1,5 +1,5 @@
 ---
-title: When you die, self custody becomesmeaningless
+title: When you die, self custody becomes meaningless
 description: Lorem Ipsum
 date: 2024-02-11
 time: 5:00PM

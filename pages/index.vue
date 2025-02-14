@@ -40,6 +40,7 @@ const handleComplete = () => {
     </div>-->
 
     <SectionHero/>
+    <NavFixedFooter/>
     <SectionImageText01/>
     <SectionAccordion01/>
     <SectionAccordion02/>

@@ -1,5 +1,5 @@
 ---
-title: Modern Urban Architecture third - A Visual Journey
+title: ‘Privacy-first’ apps owned by Big Tech are the most dangerous
 description: Exploring the stunning architectural marvels of contemporary cities
 date: 2024-02-12
 time: 6:30PM
