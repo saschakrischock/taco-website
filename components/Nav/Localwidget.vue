@@ -1,6 +1,6 @@
 <!-- WeatherLocation.vue -->
 <template>
-  <div class="w-96 max-lg:hidden text-center absolute left-1/2 -translate-x-1/2 text-black text-lg font-mono mono-text">
+  <div class="w-96 max-lg:hidden text-center absolute left-1/2 -translate-x-1/2 text-black text-lg font-mono ">
     {{ formattedOutput }}
   </div>
 </template>
