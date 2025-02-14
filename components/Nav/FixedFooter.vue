@@ -6,10 +6,10 @@
 <div class="text-[#909090] max-lg:hidden pr-12 absolute bg-[#F4F4F4] z-10 whitespace-nowrap text-lg font-normal mono-text" style="background: linear-gradient(to right, #F4F4F4 90%, transparent);">TACo is used (but NOT TRUSTED) by</div>
 <Vue3Marquee :clone="true">
  
-<div class="flex gap-4 overflow-hidden">
+<div class="flex items-center gap-4 mr-4 mt-[-0.2rem] overflow-hidden">
 <div class="  text-black text-[15px]  lg:text-lg font-normal  ">Waku</div>
 <div class="  text-black text-[15px]  lg:text-lg font-normal  ">OrbisDB</div>
-<div class="  text-black text-[15px]  whitespace-nowrap lg:ext-lg font-normal  ">Zuzalu City</div>
+<div class="  text-black text-[15px]  lg:ext-lg font-normal  ">Zuzalu City</div>
 <div class="  text-black text-[15px] lg:text-lg font-normal  ">ArDrive</div>
 <div class="  text-black text-[15px] lg:text-lg font-normal ">BqETH</div>
 <div class="  text-black text-[15px] lg:text-lg font-normal  ">Irys</div>

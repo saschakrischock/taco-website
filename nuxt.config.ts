@@ -10,4 +10,10 @@ export default defineNuxtConfig({
     'nuxt-swiper',
     'nuxt-marquee'
   ],
+  
+  nitro: {
+    prerender: {
+      routes: ['/'] // Add routes that need pre-rendering
+    }
+  }
 })
