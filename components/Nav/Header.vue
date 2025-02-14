@@ -52,8 +52,8 @@
             :key="item.href"
             :href="item.href"
             :class="[
-              'transition-colors bg-[#f4f4f4] p-8 rounded-[30px] duration-300 text-lg font-normal font-mono mono-text hover:text-[#96FF5E]',
-              isOverDarkSection ? 'text-white' : 'text-black'
+              'transition-colors text-black bg-[#f4f4f4] p-8 rounded-[30px] duration-300 text-lg font-normal font-mono mono-text hover:text-[#96FF5E]',
+            
             ]"
             @click="toggleMenu"
           >

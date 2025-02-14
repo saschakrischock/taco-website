@@ -1,6 +1,6 @@
 <!-- pages/index.vue -->
 <template>
-  <section class="hero h-screen flex justify-between pb-4 lg:pb-7 flex-col bg-black is-primary is-fullheight">
+  <section class="hero h-[100svh] flex justify-between pb-4 lg:pb-7 flex-col bg-black is-primary is-fullheight">
     <div class="hero-body">
       <div class="lg:p-7 p-4 max-w-[90rem]">
         <h2 class="text-white font-headline lg:text-2xl text-mobile-2xl font-bold font-['ABC Diatype Unlicensed Trial']">
@@ -36,8 +36,8 @@
                   {{ solution }}
                 </option>
               </select>
-              <div class="absolute right-2 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                <span class="text-white text-sm">▼</span>
+              <div class="absolute height-[1.7rem] right-2 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                <span class="text-white text-[0.6rem]">▼</span>
               </div>
             </div>
           </div>

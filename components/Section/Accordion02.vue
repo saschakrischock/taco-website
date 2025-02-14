@@ -1,15 +1,15 @@
 <template>
-  <section class="bg-white flex flex-col relative justify-between min-h-screen">
+  <section class="bg-white flex flex-col relative justify-between min-h-[100svh]">
     <div class="lg:p-7  p-4 max-w-[90rem]">
       <h2 class="lg:text-2xl text-mobile-2xl font-bold">
         <span class="text-[#96FF5E]">The Web needs TACo</span>
         <span class="text-black"> to escape</span>
         <br>
-        <span class="text-black">the clutches of Big Tech.</span>
+        <span class="text-black"> the clutches of Big Tech.</span>
       </h2>
     </div>
     <div class="lg:p-7 font-mono">
-      <div class="grid fade-element grid-cols-1 w-full lg:px-7 px-4  lg:absolute lg:bottom-7 lg:left-0 items-end md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
+      <div class="grid fade-element grid-cols-1 w-full lg:px-7 max-lg:pb-4 px-4  lg:absolute lg:bottom-7 lg:left-0 items-end md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
         <div v-for="(item, index) in items" 
              :key="index"
              ref="cardRefs"
@@ -54,7 +54,7 @@
 
           <!-- Description -->
           <div ref="descriptionRefs"
-               class="absolute  text-mono inset-x-0 bottom-0 px-2 pb-2 text-black text-sm transition-all duration-500"
+               class="absolute  text-mono inset-x-0 bottom-0 px-2 pb-4 text-black text-sm transition-all duration-500"
                :style="{
                  opacity: openItems[index] ? 1 : 0,
                  transform: openItems[index] ? 'translateY(0)' : 'translateY(100%)',

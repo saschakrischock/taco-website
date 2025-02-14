@@ -1,15 +1,15 @@
 <template>
-  <section class="bg-white relative flex flex-col justify-between min-h-screen">
+  <section class="bg-white relative flex flex-col justify-between min-h-[100svh]">
     <div class="lg:p-7  p-4 max-w-[90rem]">
       <h2 class="lg:text-2xl font-bold text-mobile-2xl font-headline ">
         Access
-        <span class="text-[#96FF5E]"> conditions</span>
+        <span class="text-[#96FF5E]"> conditions </span>
         <br>
         <span class="text-black">that fit your use case.</span>
       </h2>
     </div>
     <div class="lg:p-7 font-mono">
-      <div class="grid fade-element lg:absolute lg:bottom-7 lg:px-7 px-4  w-full lg:left-0 grid-cols-1 items-end md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
+      <div class="grid fade-element lg:absolute lg:bottom-7 max-lg:pb-4 lg:px-7 px-4  w-full lg:left-0 grid-cols-1 items-end md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
         <div v-for="(item, index) in items" 
              :key="index"
              ref="cardRefs"
@@ -72,7 +72,7 @@
 
           <!-- Description -->
           <div ref="descriptionRefs"
-               class="absolute text-mono inset-x-0 bottom-0 px-2 pb-2 text-black text-sm transition-all duration-500"
+               class="absolute text-mono inset-x-0 bottom-0 px-2 pb-4 text-black text-sm transition-all duration-500"
                :style="{
                  opacity: openItems[index] ? 1 : 0,
                  transform: openItems[index] ? 'translateY(0)' : 'translateY(100%)',

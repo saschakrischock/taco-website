@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-black flex relative flex-col justify-between min-h-screen">
+  <section class="bg-black flex relative flex-col justify-between min-h-[100svh]">
     <div class="lg:p-7  p-4 max-w-[90rem]">
       <h2 class="text-white font-headline font-bold lg:text-2xl text-mobile-2xl">
         <span>Web3 needs TACo</span><br>
@@ -52,7 +52,7 @@
 
           <!-- Description -->
           <div ref="descriptionRefs"
-               class="absolute  inset-x-0 bottom-0 px-2 pb-2 text-white text-sm transition-all duration-500"
+               class="absolute  inset-x-0 bottom-0 px-2 pb-4 text-white text-sm transition-all duration-500"
                :style="{
                  opacity: openItems[index] ? 1 : 0,
                  transform: openItems[index] ? 'translateY(0)' : 'translateY(100%)',

@@ -1,5 +1,5 @@
 <template>
-  <section ref="container" class="hero is-primary bg-white h-screen is-fullheight relative overflow-hidden">
+  <section ref="container" class="hero is-primary bg-white h-[100svh] is-fullheight relative overflow-hidden">
     <div 
       ref="parallaxBg"
       class="absolute inset-0 w-full h-[100%] -top-[0%] bg-center bg-cover bg-no-repeat"

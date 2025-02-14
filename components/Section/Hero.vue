@@ -2,16 +2,17 @@
   <section
     ref="sectionRef"
     id="build"
-    class="hero bg-white h-screen is-primary is-fullheight relative overflow-hidden"
+    class="hero bg-white h-[100svh] is-primary is-fullheight relative overflow-hidden"
   >
     <!-- First Lottie Animation with centered text -->
     <div 
-      :class="['fixed bg-white z-[100] w-full h-full transition-opacity duration-1000', { 'pointer-events-none': isFirstAnimationFadedOut }]" 
+      :class="['fixed bg-white z-[100]  w-full h-full transition-opacity duration-1000', { 'pointer-events-none': isFirstAnimationFadedOut }]" 
       :style="{ opacity: firstLottieOpacity }"
     >
+  
       <Blottie
         ref="firstLottieRef"
-        class="absolute inset-0 w-[60rem] left-1/2 -translate-x-1/2 object-cover transition-opacity duration-300"
+        class="absolute inset-0 w-[60rem] max-lg:scale-[0.7] left-1/2 -translate-x-1/2 object-cover transition-opacity duration-300"
         :lottie="{
           player: 'svg',
           loop: false,
@@ -23,7 +24,7 @@
         @complete="onFirstLottieComplete"
       />
       <!-- Centered TACo text -->
-      <div class="absolute inset-0 flex font-mono items-center justify-center">
+      <div class="absolute inset-0 flex max-lg:scale-[0.7] font-mono items-center justify-center">
         <h1 ref="tacoTextRef" class="text-black opacity-0 ml-[1.49rem] tracking-[1.45rem] text-[2rem] transition-all duration-300">
           TACo
         </h1>
