@@ -17,7 +17,11 @@
               End-to-end encryption<br> for (almost) everything.
             </h2>
             <h3 class="subtitle font-headline text-white max-w-[60rem]  font-medium text-mobile-xl lg:text-mobile-xl lg:text-xl mt-7">
-              Imagine if Signal-like protections were embedded in every application. So healthcare providers, social platforms, connected vehicles and every other shadowy would-be data collector would see nothing but ciphertexts.
+              Imagine if Signal-like protections were embedded in every application.<br>
+              So 
+              <span class="green-highlight">healthcare portals, social platforms, shared spreadsheets, booking<br>aggregators, connected vehicles, chatbot providers
+               – and every other digital</span>
+               <br>facility with a shadowy data harvestor – would see nothing but ciphertexts.
             </h3>
         </div>
     </div>

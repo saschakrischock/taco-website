@@ -70,6 +70,28 @@ h2, h3, .fade-element {
     opacity: 1 !important;
     transform: translateY(0) !important;
   }
+
+  .footer-blottie svg {
+    max-width: 1400px;
+    margin-bottom: -0.5rem;
+    height: auto !important;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .footer-blottie svg {
+      max-width: 100%;
+      scale: 1.75;
+      transform: translateY(-23%) !important;
+    }
+    
+  }
+
+  .green-highlight  {
+    transition: color 1s ease-in-out;
+  }
+  .green-highlight.active {
+    color: #96ff5e;
+  }
   
   .fade-out {
     opacity: 0 !important;

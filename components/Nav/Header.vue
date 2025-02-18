@@ -107,6 +107,7 @@ const isOverDarkSection = ref(false)
 const navItems = [
   { href: '#build', text: 'Build' },
   { href: '#editorials', text: 'Editorials' },
+  { href: 'https://github.com/your-repo', text: 'Repos' },
   { href: '#contact', text: 'Contact' }
 ]
 
