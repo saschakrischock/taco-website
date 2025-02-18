@@ -37,7 +37,8 @@
         </transition>
 
         <!-- Mobile navigation -->
-        <div class="flex lg:hidden gap-4">
+            <div class="flex flex-col justify-center items-center lg:hidden gap-3">
+        <div class="flex lg:hidden gap-x-3">
           <a href="#build" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Build</a>
           <a href="#editorials" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Editorials</a>
           <a href="repo" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Repos</a>
@@ -48,6 +49,7 @@
             Credits
         </button>
         </div>
+    </div>
 
         <!-- Mobile copyright -->
         <div class="flex lg:hidden font-mono flex-col gap-0 leading-[1.3]">
