@@ -179,7 +179,7 @@ const nft_high_quality_condition = new condition.predefined.erc721.ERC721Balance
   },
   {
     title: 'Secret recovery',
-    content: 'Communication with or between LLM models should be 100% private and censorship-resistant, not mined by intermediaries or blocked by a central authority. TACo can be harnessed for e2ee inference, acess-controlled agentic RAG, and distributed computation.',
+    content: 'Share your seed phrase or password  – to beneficiaries or your future self – without risking DOS by an intermediary.',
     icon: Lock,
     codeExample: `import { conditions } from '@nucypher/taco';
 const age_requirement_condition = new conditions.base.time.TimeCondition({
@@ -192,7 +192,7 @@ const age_requirement_condition = new conditions.base.time.TimeCondition({
   },
   {
     title: 'Inference protection',
-    content: 'TACo is the perfect complement to persistent storage and GraphQL/SQL databases – at long last enabling users to grant future access to uploaded data – without having to download & re-encrypt locally using a known consumer public key.',
+    content: 'Prevent third-parties from harvesting or blocking communication between end-users and generative models.',
     icon: Secure,
     codeExample: `import { conditions } from '@nucypher/taco';
 const beneficiary_condition = new conditions.base.contract.ContractCondition({
