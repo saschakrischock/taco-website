@@ -2,9 +2,8 @@
   <section class="bg-white flex flex-col relative justify-between min-h-[100svh]">
     <div class="lg:p-7  p-4 max-w-[90rem]">
       <h2 class="lg:text-2xl font-headline text-mobile-2xl font-bold">
-        <span class="text-[#96FF5E]">The Web needs TACo</span>
+        <span class="text-[#96FF5E]">The Web needs TACo</span><br>
         <span class="text-black"> to escape</span>
-        <br>
         <span class="text-black"> the clutches of Big Tech.</span>
       </h2>
     </div>
