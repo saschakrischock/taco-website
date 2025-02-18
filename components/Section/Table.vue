@@ -8,7 +8,7 @@
           <span class="text-white"> zero compromiss </span>
           <span class="text-[#909090]">solution.</span>
         </h2>
-        <h3 class="subtitle mt-6 font-headline text-black font-medium font-['ABC Diatype Medium Unlicensed Trial'] text-mobile-xl lg:text-xl">
+        <h3 class="subtitle mt-6 font-headline text-black font-medium  font-['ABC Diatype Medium Unlicensed Trial'] text-mobile-xl lg:text-xl">
           TACo is the only general-purpose access control plugin that works without trusting
           an intermediary so users aren't obliged to trust AWS your dev team or TACo.
         </h3>
@@ -20,17 +20,17 @@
       <div class="lg:hidden">
         <!-- Headers -->
         <div class="flex items-center justify-between mb-2">
-          <div class="text-white text-[15px] lg:text-[20px] font-medium font-['ABC Diatype Medium'] leading-[18px]">
+          <div class="text-white text-[15px] lg:text-[20px] font-medium  font-headline font-['ABC Diatype Medium'] leading-[18px]">
             Feature
           </div>
           <div class="flex items-center w-[60%] ">
-            <span class="text-white w-1/2 text-center text-15px lg:text-[20px] font-medium font-['ABC Diatype Medium'] leading-[18px]">
+            <span class="text-white w-1/2 text-center text-15px lg:text-[20px] font-medium font-headline font-['ABC Diatype Medium'] leading-[18px]">
               TACo
             </span>
             <div class="relative w-1/2 inline-block">
               <select 
                 v-model="selectedCompetitor"
-                class="appearance-none bg-[#333] w-full text-white px-3 py-1 rounded-full text-[15px] lg:text-[20px] font-medium font-['ABC Diatype Medium'] min-w-[100px]"
+                class="appearance-none bg-[#333] w-full text-white px-3 py-1 rounded-full text-[15px] lg:text-[20px] font-headline font-medium font-['ABC Diatype Medium'] min-w-[100px]"
               >
                 <option v-for="solution in solutions.slice(1)" :key="solution" :value="solution">
                   {{ solution }}
@@ -47,7 +47,7 @@
         <div class="lg:space-y-4">
           <div v-for="(feature, i) in features" :key="i" 
                class="flex  border-t border-white py-1">
-            <div class="text-white pr-1 h-[40px]  w-[40%] text-[15px] lg:text-[20px]  font-medium font-['ABC Diatype Medium'] leading-[20px]">
+            <div class="text-white pr-1 h-[40px]  w-[40%] text-[15px] lg:text-[20px] font-headline font-medium font-['ABC Diatype Medium'] leading-[20px]">
               {{ feature.name }} 
             </div>
             <div class="flex items-center w-[60%] mobile-border justify-around  ">
@@ -72,7 +72,7 @@
       <div class="hidden fade-element lg:grid grid-cols-6 gap-y-4 gap-x-4">
         <!-- Headers -->
         <div v-for="header in headers" :key="header" 
-             class="text-white top text-center header text-[20px] font-medium mb-0 font-['ABC Diatype Medium'] leading-[18px]">
+             class="text-white top text-center font-headline header text-[20px] font-medium mb-0 font-['ABC Diatype Medium'] leading-[18px]">
           {{ header }}
         </div>
 
