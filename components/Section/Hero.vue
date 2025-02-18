@@ -6,7 +6,7 @@
   >
     <!-- First Lottie Animation with centered text -->
     <div 
-      :class="['fixed bg-white z-[100]  w-full h-full transition-opacity duration-1000', { 'pointer-events-none': isFirstAnimationFadedOut }]" 
+      :class="['fixed bg-white z-[100]  w-full h-full transition-opacity duration-500', { 'pointer-events-none': isFirstAnimationFadedOut }]" 
       :style="{ opacity: firstLottieOpacity }"
     >
   
@@ -118,8 +118,13 @@ const handleScroll = () => {
   }
 }
 
+
+ 
+
+
 const onFirstLottieReady = (anim?: AnimationItem) => {
   if (anim) {
+    anim.setSpeed(3)
     anim.play()
     if (tacoTextRef.value) {
       stopMatrixEffect = startMatrixEffect(tacoTextRef.value, anim)
@@ -139,7 +144,7 @@ const onFirstLottieComplete = () => {
   // Set pointer-events-none after the fade-out animation completes
   setTimeout(() => {
     isFirstAnimationFadedOut.value = true
-  }, 1000) // Match the duration-1000 transition
+  }, 500) // Match the duration-1000 transition
   
   // Start second animation and fade in hero content after a short delay
   setTimeout(() => {
@@ -152,7 +157,7 @@ const onFirstLottieComplete = () => {
     setTimeout(() => {
       heroContentOpacity.value = 1
     }, 300)
-  }, 500)
+  }, 100)
 }
 
 const onSecondLottieReady = (anim?: AnimationItem) => {

@@ -19,7 +19,7 @@ export const useTacoMatrixSync = () => {
     // Fade in after a short delay
     setTimeout(() => {
       element.style.opacity = '1'
-    }, 200)
+    }, 100)
 
     const animate = (timestamp: number) => {
       if (!shouldContinue) return
@@ -29,11 +29,11 @@ export const useTacoMatrixSync = () => {
 
       // Custom easing curve for roulette-like deceleration
       // Start very fast, then dramatically slow down
-      const baseInterval = 30 // Even faster at start (30ms)
+      const baseInterval = 10 // Even faster at start (30ms)
       const maxInterval = 250 // Faster maximum slowdown
       
       // Custom curve that starts slow and accelerates the slowdown
-      const easeOutExpo = progress < 0.5 
+      const easeOutExpo = progress < 0.5
         ? Math.pow(progress * 2, 2) // Gentler curve in first half
         : 1 - Math.pow(2, -10 * (progress - 0.5)); // Sharper deceleration in second half
 
@@ -42,7 +42,7 @@ export const useTacoMatrixSync = () => {
       // Only update if enough time has passed
       if (timestamp - lastUpdate > updateInterval) {
         // If we're near the end (at 65%), show the final text
-        if (progress > 0.65) {
+        if (progress > 0.5) {
           element.textContent = originalText
           cancelAnimationFrame(animationFrame)
           return
