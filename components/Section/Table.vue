@@ -132,7 +132,7 @@ const featuresWithDescriptions = [
     name: 'Redundant & highly available',
     description: 'Distributed system architecture ensures continuous operation even during partial outages',
     TACo: 'YES',
-    LIT: 'X',
+    LIT: '',
     EVMContract: 'YES',
     PKI: 'X',
     CloudService: 'YES'
@@ -162,7 +162,7 @@ const featuresWithDescriptions = [
     LIT: 'X',
     EVMContract: 'YES',
     PKI: 'YES',
-    CloudService: 'X'
+    CloudService: ''
   },
   {
     name: 'Track record with infra',
