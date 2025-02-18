@@ -51,8 +51,7 @@
                  position: 'relative',
                  zIndex: 1
                }">
-            <pre class="bg-gray-50 p-4 pb-0 mt-2  rounded-xl font-mono text-sm whitespace-pre-wrap break-words">
-              <code :class="{ 'text-mono animate-type': openItems[index] }" v-html="highlightSyntax(item.codeExample)"></code>
+            <pre class="bg-gray-50 p-4 pb-0 mt-2  rounded-xl font-mono text-sm whitespace-pre-wrap break-words"><code :class="{ 'text-mono animate-type': openItems[index] }" v-html="highlightSyntax(item.codeExample)"></code>
             </pre>
            
           </div>
@@ -110,7 +109,6 @@ const codeBlockRefs = ref([])
 const highlightSyntax = (code) => {
   return code
     .replace(/(import|from|const|new)\b/g, '<span class="text-[#96FF5E]">$1</span>')
-    .replace(/(conditions|base|time|TimeCondition)/g, '<span class="text-gray-400">$1</span>')
     .replace(/('.*?')/g, '<span class="text-gray-400">$1</span>')
 }
 
@@ -170,34 +168,43 @@ const items = ref([
     content: 'Predicate decryption rights on ownership of a special-purpose NFTs. Works for digital media, event streams and beyond.',
     icon: Box,
     codeExample: `import { conditions } from '@nucypher/taco';
-const age_requirement_condition = new conditions.base. time.TimeCondition ({
-    chain: 1,
-    returnValueTest: {
-        comparator: '>=',
-        value: 1770508800,
-    },
+const nft_high_quality_condition = new condition.predefined.erc721.ERC721Balance({
+  chain: <span class="text-gray-400">1</span>,
+  contractAddress: '0x008646372cc42E1a627FCe94Aa7a7033e7CF075A',
+  returnValueTest: {
+    comparator: '>',
+    value: <span class="text-gray-400">1</span>,
+  },
 });`
   },
   {
     title: 'Secret recovery',
     content: 'Communication with or between LLM models should be 100% private and censorship-resistant, not mined by intermediaries or blocked by a central authority. TACo can be harnessed for e2ee inference, acess-controlled agentic RAG, and distributed computation.',
     icon: Lock,
-    codeExample: `import { Recovery } from '@nucypher/taco';
-const recovery = new Recovery({
-    threshold: 2,
-    shares: 3,
-    conditions: [timelock, multisig]
+    codeExample: `import { conditions } from '@nucypher/taco';
+const age_requirement_condition = new conditions.base.time.TimeCondition({
+    chain: <span class="text-gray-400">1</span>,
+    returnValueTest: {
+        comparator: '>=',
+        value: <span class="text-gray-400">1770508800</span>,
+    },
 });`
   },
   {
     title: 'Inference protection',
     content: 'TACo is the perfect complement to persistent storage and GraphQL/SQL databases – at long last enabling users to grant future access to uploaded data – without having to download & re-encrypt locally using a known consumer public key.',
     icon: Secure,
-    codeExample: `import { Delegation } from '@nucypher/taco';
-const delegation = new Delegation({
-    recipient: '0x...',
-    duration: 86400,
-    revocable: true
+    codeExample: `import { conditions } from '@nucypher/taco';
+const beneficiary_condition = new conditions.base.contract.ContractCondition({
+    contractAddress: '0x1e988ba4692e52Bc50b375bcC8585b95c48AaD77',
+    method: 'isAllowedModel',
+    functionAbi: isAllowedModelAbi,   <span class="text-gray-300">// custom function ABI</span>
+    parameters: [':userAddress'],
+    chain:  <span class="text-gray-400">1</span>,
+    returnValueTest: {
+      comparator: '==',
+      value: <span class="text-gray-400">true</span>,
+    },
 });`
   }
 ])
