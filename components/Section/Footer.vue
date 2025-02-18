@@ -40,7 +40,13 @@
         <div class="flex lg:hidden gap-4">
           <a href="#build" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Build</a>
           <a href="#editorials" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Editorials</a>
+          <a href="repo" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Repos</a>
+        </div>
+        <div class="flex lg:hidden gap-4">
           <a href="#contact" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Contact</a>
+        <button @click="toggleCredits" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">
+            Credits
+        </button>
         </div>
 
         <!-- Mobile copyright -->
