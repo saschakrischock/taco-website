@@ -1,6 +1,6 @@
 <!-- pages/index.vue -->
 <template>
-  <section class="hero min-h-[100svh] flex justify-between pb-4 lg:pb-7 flex-col bg-black is-primary is-fullheight">
+  <section class="hero bg-black min-h-[100svh] flex justify-between pb-4 lg:pb-7 flex-col  is-primary is-fullheight">
     <div class="hero-body">
       <div class="lg:p-7 p-4 max-w-[90rem]">
         <h2 class="text-white font-headline lg:text-2xl text-mobile-2xl font-bold font-['ABC Diatype Unlicensed Trial']">
@@ -8,22 +8,23 @@
           <span class="text-white"> zero compromiss </span>
           <span class="text-[#909090]">solution.</span>
         </h2>
-        <h3 class="subtitle mt-6 font-headline text-black font-medium  font-['ABC Diatype Medium Unlicensed Trial'] text-mobile-xl lg:text-xl">
-          TACo is the only general-purpose access control plugin that works without trusting
-          an intermediary so users aren't obliged to trust AWS your dev team or TACo.
-        </h3>
+        <transition name="fade-up">
+          <div v-if="isHovering" class="hidden lg:block text-white font-mono mt-4 mb-4 h-6">
+            {{ currentHoverText }}
+          </div>
+        </transition>
       </div>
     </div>
 
-    <div class="relative lg:px-7 px-4 bg-black">
+    <div class="relative lg:px-7 px-4 ">
       <!-- Mobile View -->
       <div class="lg:hidden">
         <!-- Headers -->
         <div class="flex items-center justify-between mb-2">
-          <div class="text-white text-[15px] lg:text-[20px] font-medium  font-headline font-['ABC Diatype Medium'] leading-[18px]">
+          <div class="text-white text-[15px] lg:text-[20px] font-medium font-headline font-['ABC Diatype Medium'] leading-[18px]">
             Feature
           </div>
-          <div class="flex items-center w-[60%] ">
+          <div class="flex items-center w-[60%]">
             <span class="text-white w-1/2 text-center text-15px lg:text-[20px] font-medium font-headline font-['ABC Diatype Medium'] leading-[18px]">
               TACo
             </span>
@@ -43,14 +44,14 @@
           </div>
         </div>
 
-        <!-- Content -->
+        <!-- Mobile Content -->
         <div class="lg:space-y-4">
-          <div v-for="(feature, i) in features" :key="i" 
-               class="flex  border-t border-white py-1">
-            <div class="text-white pr-1 h-[40px]  w-[40%] text-[15px] lg:text-[20px] font-headline font-medium font-['ABC Diatype Medium'] leading-[20px]">
+          <div v-for="(feature, i) in featuresWithDescriptions" :key="i" 
+               class="flex border-t border-white py-1">
+            <div class="text-white pr-1 h-[40px] w-[40%] text-[15px] lg:text-[20px] font-headline font-medium font-['ABC Diatype Medium'] leading-[20px]">
               {{ feature.name }} 
             </div>
-            <div class="flex items-center w-[60%] mobile-border justify-around  ">
+            <div class="flex items-center w-[60%] mobile-border justify-around">
               <span :class="[
                 'font-mono text-[15px] mono-text text-center w-1/2 min-w-[40px]',
                 feature.TACo === 'YES' ? 'text-[#96FF5E]' : 'text-gray-400'
@@ -58,7 +59,7 @@
                 {{ feature.TACo }}
               </span>
               <span :class="[
-                'font-mono text-[15px] mono-text   text-center w-1/2 min-w-[40px]',
+                'font-mono text-[15px] mono-text text-center w-1/2 min-w-[40px]',
                 feature[selectedCompetitor] === 'YES' ? 'text-[#96FF5E]' : 'text-gray-400'
               ]">
                 {{ feature[selectedCompetitor] }}
@@ -76,13 +77,17 @@
           {{ header }}
         </div>
 
-        <!-- Content -->
-        <template v-for="(feature, i) in features" :key="i">
-          <div class="text-white text-[20px] font-headline pr-2 font-medium font-['ABC Diatype Medium'] leading-[20px] pt-3 pb-2 border-t border-white">
+        <!-- Desktop Content -->
+        <template v-for="(feature, i) in featuresWithDescriptions" :key="i">
+          <div 
+            class="text-white hover:text-[#96FF5E] cursor-default text-[20px] font-headline pr-2 font-medium font-['ABC Diatype Medium'] leading-[20px] pt-3 pb-2 border-t border-white"
+            @mouseenter="() => { isHovering = true; currentHoverText = feature.description; }"
+            @mouseleave="() => { isHovering = false; currentHoverText = ''; }"
+          >
             {{ feature.name }}
           </div>
           <div v-for="(solution, index) in solutions" :key="solution" 
-               class="border-t border-white  flex items-center justify-center pt-7 pb-2">
+               class="border-t border-white flex items-center justify-center pt-7 pb-2">
             <span :class="[
               'font-mono text-[15px] mono-text text-center block',
               index === 0 && feature[solution] === 'YES' ? 'text-[#96FF5E]' : 'text-gray-400'
@@ -101,9 +106,13 @@ const selectedCompetitor = ref('LIT')
 const headers = ['Feature', 'TACo', 'LIT', 'EVM Contract', 'PKI', 'Cloud Service']
 const solutions = ['TACo', 'LIT', 'EVMContract', 'PKI', 'CloudService']
 
-const features = [
+const isHovering = ref(false)
+const currentHoverText = ref('')
+
+const featuresWithDescriptions = [
   {
     name: 'Scalable to millions of users',
+    description: 'Infrastructure designed to handle massive concurrent user loads while maintaining consistent performance',
     TACo: 'YES',
     LIT: 'YES',
     EVMContract: 'X',
@@ -112,6 +121,7 @@ const features = [
   },
   {
     name: 'Arbitrary Access Conditions',
+    description: 'Customize and implement any access control logic without limitations or predefined constraints',
     TACo: 'YES',
     LIT: 'YES',
     EVMContract: 'X',
@@ -120,6 +130,7 @@ const features = [
   },
   {
     name: 'Redundant & highly available',
+    description: 'Distributed system architecture ensures continuous operation even during partial outages',
     TACo: 'YES',
     LIT: 'X',
     EVMContract: 'YES',
@@ -128,6 +139,7 @@ const features = [
   },
   {
     name: 'Cryptoeconomically secure',
+    description: 'Security model backed by economic incentives and cryptographic guarantees',
     TACo: 'YES',
     LIT: 'X',
     EVMContract: 'YES',
@@ -136,6 +148,7 @@ const features = [
   },
   {
     name: 'Battle-tested network',
+    description: 'Production-proven infrastructure with extensive real-world deployment history',
     TACo: 'YES',
     LIT: 'X',
     EVMContract: 'YES',
@@ -144,6 +157,7 @@ const features = [
   },
   {
     name: 'Transparent trust model',
+    description: 'Fully auditable security assumptions with verifiable trust relationships',
     TACo: 'YES',
     LIT: 'X',
     EVMContract: 'YES',
@@ -152,6 +166,7 @@ const features = [
   },
   {
     name: 'Track record with infra',
+    description: 'Proven history of reliable infrastructure development and maintenance at scale',
     TACo: 'YES',
     LIT: 'X',
     EVMContract: 'YES',
@@ -160,6 +175,7 @@ const features = [
   },
   {
     name: 'Multi-chain',
+    description: 'Support for multiple blockchain networks with seamless cross-chain compatibility',
     TACo: '',
     LIT: 'YES',
     EVMContract: 'X',
@@ -204,8 +220,6 @@ const features = [
   margin-bottom: 0;
 }
 
-
-
 .header::before {
   content: '';
   display: block;
@@ -237,5 +251,25 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+</style>
+
+<style scoped>
+.fade-up-enter-active,
+.fade-up-leave-active {
+  transition: all 0.7s ease-out;
+  transform: translateY(0);
+}
+
+.fade-up-enter-from,
+.fade-up-leave-to {
+  opacity: 0;
+  transform: translateY(3px);
+}
+
+.fade-up-enter-to,
+.fade-up-leave-from {
+  opacity: 1;
+  transform: translateY(0);
 }
 </style>

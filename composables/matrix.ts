@@ -12,7 +12,7 @@ export const useMatrixText = () => {
 
   const animateElement = (element: HTMLElement) => {
     const originalText = element.getAttribute('data-original-text') || element.textContent || '';
-    const duration = 1000; // Fixed 2 second duration
+    const duration = 1000; // Fixed 1 second duration
     const frameInterval = 1000 / 24; // 24 fps
     const totalFrames = Math.floor(duration / frameInterval);
     let currentFrame = 0;
@@ -76,8 +76,23 @@ export const useMatrixText = () => {
       }
     };
 
-    currentFrame = 0;
     animate();
+  };
+
+  // New function to handle observing new elements
+  const observeNewElements = () => {
+    if (!observer) return;
+    
+    document.querySelectorAll('.mono-text').forEach(el => {
+      if (!el.hasAttribute('data-original-text')) {
+        el.setAttribute('data-original-text', el.textContent || '');
+      }
+      observer.observe(el);
+      // Optionally trigger animation immediately for newly observed elements
+      if (el instanceof HTMLElement) {
+        animateElement(el);
+      }
+    });
   };
 
   const cleanup = () => {
@@ -118,17 +133,14 @@ export const useMatrixText = () => {
       threshold: 0.5
     });
 
-    document.querySelectorAll('.mono-text').forEach(el => {
-      if (!el.hasAttribute('data-original-text')) {
-        el.setAttribute('data-original-text', el.textContent || '');
-      }
-      observer?.observe(el);
-    });
+    // Initial observation
+    observeNewElements();
   });
 
   onUnmounted(cleanup);
 
   return {
-    cleanup
+    cleanup,
+    observeNewElements
   };
 };

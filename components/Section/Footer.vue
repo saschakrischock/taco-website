@@ -28,11 +28,13 @@
 
       <!-- Credits section -->
       <div class="flex absolute w-full  bottom-4 max-lg:items-center max-lg:gap-4 max-lg:flex-col justify-end lg:justify-center items-end   h-[calc(100svh-7rem)] text-center text-black text-[15px] font-normal">
-        <div class="flex w-full flex-col gap-0 leading-[1.3]">
-          <span class="font-mono mono-text block">Design & AD: Aletheia, Leith Benkhedda</span>
-          <span class="font-mono mono-text block">Photography: Thadde Comar</span>
-          <span class="font-mono mono-text block">Web development: Sascha Krischock</span>
-        </div>
+        <transition @enter="observeNewElements" name="fade">
+          <div v-if="showCredits" class="flex w-full font-mono flex-col gap-0 leading-[1.3]">
+            <span class="font-mono mono-text block">Design & AD: Aletheia, Leith Benkhedda</span>
+            <span class="font-mono mono-text block">Photography: Thadde Comar</span>
+            <span class="font-mono mono-text block">Web development: Sascha Krischock</span>
+          </div>
+        </transition>
 
         <!-- Mobile navigation -->
         <div class="flex lg:hidden gap-4">
@@ -43,7 +45,7 @@
 
         <!-- Mobile copyright -->
         <div class="flex lg:hidden font-mono flex-col gap-0 leading-[1.3]">
-          ©2025 | A Thesis Build<br class="!block">
+          ©2025 |  NuCypher Build<br class="!block">
           All Rights Reserved
         </div>
       </div>
@@ -53,7 +55,7 @@
     <div class="w-full bg-black flex flex-row justify-between px-6 max-lg:justify-center py-4 relative">
       <!-- Desktop copyright -->
       <div class="max-lg:hidden text-white text-lg font-normal font-mono mono-text">
-        ©2025 | A Thesis Build – All Rights Reserved
+        ©2025 | NuCypher Build – All Rights Reserved
       </div>
 
       <!-- Logo -->
@@ -62,8 +64,12 @@
       <!-- Desktop navigation -->
       <div class="max-lg:hidden text-lg justify-end items-center gap-8 inline-flex">
         <a href="#build" class="text-center text-white font-mono font-normal mono-text">Build</a>
+        <a href="repo" class="text-center text-white font-mono font-normal mono-text">Repos</a>
         <a href="#editorials" class="text-center text-white font-mono font-normal mono-text">Editorials</a>
         <a href="#contact" class="text-center text-white font-mono font-normal mono-text">Contact</a>
+        <button @click="showCredits = !showCredits" class="text-center text-white font-mono font-normal mono-text">
+            Credits
+        </button>
       </div>
     </div>
   </div>
@@ -75,11 +81,23 @@ import { SvgLogoWhite } from '#components'
 import { Blottie, type BlottieExpose } from 'blottie'
 import type { AnimationItem } from 'lottie-web'
 
+
 // Refs
 const footerRef = ref<HTMLElement | null>(null)
 const footerLottieRef = ref<BlottieExpose>()
 const lottieOpacity = ref(0)
 const wasAboveViewport = ref(true)
+const showCredits = ref(false)
+
+const { observeNewElements } = useMatrixText();
+
+const toggleCredits = async () => {
+  showCredits.value = !showCredits.value;
+  if (showCredits.value) {
+    await nextTick();
+    observeNewElements();
+  }
+};
 
 // Visibility calculation
 const calculateVisibility = () => {
@@ -177,3 +195,21 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
 </script>
+
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-to,
+.fade-leave-from {
+  opacity: 1;
+}
+</style>

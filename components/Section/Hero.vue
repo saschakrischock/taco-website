@@ -62,8 +62,12 @@
             <span class="text-black"> is giving Bezos your house keys.</span></span>
         </h2>
         <h3 class="subtitle font-headline mt-6 text-black font-medium text-mobile-xl lg:text-xl">
-          TACo is the only general-purpose access control plugin that works without<br class="max-lg:hidden"> trusting
-          an intermediary so users aren't obliged to trust AWS your dev team or<br class="max-lg:hidden">TACo.
+          TACo is the only general-purpose access control plugin that works without<br class="max-lg:hidden">
+          
+          a central authority. So your users aren’t forced to trust:<br class="max-lg:block">
+          AWS KMS<br class="max-lg:block">
+          Your dev team<br class="max-lg:block">
+          Or TACo
         </h3>
       </div>
     </div>
