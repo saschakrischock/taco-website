@@ -17,6 +17,7 @@ import { Blottie } from 'blottie'
                     path: '/lottie/data_footer.json',
                 }"
             />
+            
 
 <div class="flex max-lg:items-center max-lg:gap-4 max-lg:flex-col justify-end lg:justify-center items-end lg:mb-6 mb-4 h-[calc(100svh-7rem)] text-center text-black text-[15px] font-normal  ">
     <div class="flex w-full flex-col gap-0 leading-[1.3]">
