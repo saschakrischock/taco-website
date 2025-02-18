@@ -48,7 +48,7 @@ const swiper = useSwiper(containerRef, {
 
   
     <ClientOnly>
-      <swiper-container ref="containerRef" :init="false" class=" lg:absolute lg:right-0 lg:bottom-0">
+      <swiper-container ref="containerRef" :init="false" class=" lg:max-w-[40vw] lg:absolute lg:right-0 lg:bottom-0">
         <swiper-slide v-for="(slide, index) in slides" :key="index" class="flex  items-center justify-center">
           <img :src="slide" :alt="`Diagram ${index + 1}`" class="max-w-full h-auto" />
         </swiper-slide>
@@ -75,6 +75,11 @@ swiper-container {
   margin-right: 2rem;
 }
 
+swiper-slide {
+    justify-content: flex-end !important;
+    align-items: flex-end !important ;
+}
+
 
 @media (max-width: 1024px) {
     swiper-container {
@@ -83,12 +88,14 @@ swiper-container {
         margin-left: 1rem !important;
         margin-bottom: 1rem !important;
     }
+
+    swiper-slide {
+    justify-content: center !important;
+    align-items: center !important ;
+}
 }
 
-swiper-slide {
-    justify-content: flex-end !important;
-    align-items: flex-end !important ;
-}
+
 
 :deep(.swiper-pagination-bullet) {
   width: 0;

@@ -2,7 +2,7 @@
   <section
     ref="sectionRef"
     id="build"
-    class="hero bg-white h-[100svh] is-primary is-fullheight relative overflow-hidden"
+    class="hero bg-white min-h-[100svh] is-primary is-fullheight relative overflow-hidden"
   >
     <!-- First Lottie Animation with centered text -->
     <div 
