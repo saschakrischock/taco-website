@@ -78,7 +78,7 @@
 
         <!-- Content -->
         <template v-for="(feature, i) in features" :key="i">
-          <div class="text-white text-[20px] pr-2 font-medium font-['ABC Diatype Medium'] leading-[20px] pt-3 pb-2 border-t border-white">
+          <div class="text-white text-[20px] font-headline pr-2 font-medium font-['ABC Diatype Medium'] leading-[20px] pt-3 pb-2 border-t border-white">
             {{ feature.name }}
           </div>
           <div v-for="(solution, index) in solutions" :key="solution" 

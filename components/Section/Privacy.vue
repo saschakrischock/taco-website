@@ -11,7 +11,10 @@ const slides = ref([
 
 const swiper = useSwiper(containerRef, {
   loop: true,
-  autoplay: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: true
+  },
   pagination: {
     el: '.swiper-pagination', // Changed from bulletElement to el
     clickable: true,
