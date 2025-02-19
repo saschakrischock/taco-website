@@ -10,6 +10,8 @@ export default defineNuxtConfig({
     'nuxt-swiper',
     'nuxt-marquee'
   ],
+  ssr: true,
+  // If you're using static hosting, add:
   
   nitro: {
     prerender: {
