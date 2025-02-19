@@ -104,25 +104,6 @@ Your content goes here...
 3. Make your changes
 4. Scroll down and click "Commit changes"
 
-## Tips for Good Posts
-
-1. **Images**
-   - Use clear, high-quality images
-   - Always add descriptive captions
-   - Keep image files under 5MB
-   - Banner images should be landscape orientation
-
-2. **Writing**
-   - Use short paragraphs
-   - Include descriptive image alt text
-   - Break up text with images
-   - Use headers to organize content
-
-3. **Metadata**
-   - Choose relevant tags
-   - Write clear descriptions
-   - Use accurate dates and times
-
 ## Example Post
 
 ```markdown
