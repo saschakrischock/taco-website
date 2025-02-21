@@ -145,10 +145,14 @@ const headers = [
 ]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const solutions = ['TACo', 'LIT', 'Smart Contract', 'PKI', 'Cloud KMS']
 =======
 const solutions = ['TACo', 'LIT', 'EVMContract', 'PKI', 'CloudService']
 >>>>>>> 78f9143 (changes)
+=======
+const solutions = ['TACo', 'LIT', 'Smart Contract', 'PKI', 'Cloud KMS']
+>>>>>>> deae52c (fix table)
 
 const isHovering = ref(false)
 const currentHoverText = ref('')
