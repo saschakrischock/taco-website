@@ -52,14 +52,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 2792660 (YOUR_COMMIT_MESSAGE)
 
+=======
+=======
+>>>>>>> b844fae (text)
 
         
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         
@@ -68,6 +73,11 @@
 >>>>>>> 2c89bc0 (YOUR_COMMIT_MESSAGE)
 =======
 >>>>>>> d088444 (Update website content and styling)
+=======
+
+
+>>>>>>> c6031de (text)
+>>>>>>> b844fae (text)
     </div>
   </section>
 </template>
