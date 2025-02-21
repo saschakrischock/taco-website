@@ -51,6 +51,7 @@
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 2792660 (YOUR_COMMIT_MESSAGE)
@@ -65,6 +66,8 @@
 >>>>>>> 54ade92 (changes)
 =======
 >>>>>>> 2c89bc0 (YOUR_COMMIT_MESSAGE)
+=======
+>>>>>>> d088444 (Update website content and styling)
     </div>
   </section>
 </template>
