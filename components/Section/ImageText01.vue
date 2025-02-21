@@ -50,7 +50,10 @@
             </h3>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2792660 (YOUR_COMMIT_MESSAGE)
 
         
 
