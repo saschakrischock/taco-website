@@ -116,7 +116,7 @@ const headers = [
   { title: 'Cloud KMS', description: 'Control data access via a cloud service like AWS Key Management Service or Google Cloud Key Management, which involves trusting either the developer, cloud provider, or both – via a master key-oriented architecture.' }
 ]
 
-const solutions = ['TACo', 'LIT', 'EVMContract', 'PKI', 'CloudService']
+const solutions = ['TACo', 'LIT', 'Smart Contract', 'PKI', 'Cloud KMS']
 
 const isHovering = ref(false)
 const currentHoverText = ref('')
