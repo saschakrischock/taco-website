@@ -71,10 +71,10 @@
 
       <!-- Desktop navigation -->
       <div class="max-lg:hidden text-lg justify-end items-center gap-8 inline-flex">
-        <a target="_blank" href="https://docs.taco.build/" class="text-center text-white font-mono font-normal mono-text">Build</a>
-        <a target="_blank" href="https://github.com/nucypher"  class="text-center text-white font-mono font-normal mono-text">Repos</a>
-       <!-- <a href="#editorials" class="text-center text-white font-mono font-normal mono-text">Editorials</a>-->
-        <a target="_blank" href="https://discord.gg/buildwithtaco"  class="text-center text-white font-mono font-normal mono-text">Contact</a>
+        <a href="#build" class="text-center text-white font-mono font-normal mono-text">Build</a>
+        <a href="repo" class="text-center text-white font-mono font-normal mono-text">Repos</a>
+        <a href="#editorials" class="text-center text-white font-mono font-normal mono-text">Editorials</a>
+        <a href="#contact" class="text-center text-white font-mono font-normal mono-text">Contact</a>
         <button @click="showCredits = !showCredits" class="text-center text-white font-mono font-normal mono-text">
             Credits
         </button>

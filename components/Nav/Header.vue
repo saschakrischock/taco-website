@@ -74,8 +74,10 @@
         { 'invert': isOverDarkSection }
       ]"/>
      <!-- <NavLocalwidget :class="[
+     <!-- <NavLocalwidget :class="[
         'transition-[filter] duration-300',
         { 'invert': isOverDarkSection }
+      ]"/>-->
       ]"/>-->
       <div class="h-[11px] max-lg:hidden justify-start items-center gap-8 inline-flex">
         <a target="_blank"
@@ -109,6 +111,10 @@ const navItems = [
  // { href: '#editorials', text: 'Editorials' },
   { href: 'https://github.com/nucypher', text: 'Repos' },
   { href: 'https://discord.gg/buildwithtaco', text: 'Contact' }
+  { href: '#build', text: 'Build' },
+ // { href: '#editorials', text: 'Editorials' },
+  { href: 'https://github.com/your-repo', text: 'Repos' },
+  { href: '#contact', text: 'Contact' }
 ]
 
 

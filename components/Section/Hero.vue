@@ -68,6 +68,10 @@
           <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isFirstGreen }]">  AWS KMS, </span>
           <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isSecondGreen }]">your dev<br> team, </span>
           <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isThirdGreen }]">or TACo</span>
+          a central authority. So your users aren't forced to trust: 
+          <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isFirstGreen }]"> AWS KMS, </span>
+          <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isSecondGreen }]">Your dev team </span>
+          <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isThirdGreen }]">or TACo</span>
         </h3>
       </div>
     </div>
@@ -90,6 +94,9 @@ const secondLottieRef = ref<BlottieExpose>()
 const firstLottieOpacity = ref(1)
 const secondLottieOpacity = ref(0)
 const heroContentOpacity = ref(0)
+const isFirstGreen = ref(false)
+const isSecondGreen = ref(false)
+const isThirdGreen = ref(false)
 const isFirstGreen = ref(false)
 const isSecondGreen = ref(false)
 const isThirdGreen = ref(false)
@@ -132,6 +139,9 @@ const handleScroll = () => {
       isFirstGreen.value = false
       isSecondGreen.value = false
       isThirdGreen.value = false
+      isFirstGreen.value = false
+      isSecondGreen.value = false
+      isThirdGreen.value = false
       // Reset animation to first frame when hidden
       if (secondLottieRef.value?.anim) {
         secondLottieRef.value.anim.goToAndStop(0, true)
@@ -165,8 +175,21 @@ const handleScroll = () => {
         }, 700)
       }, 700)
     }, 1700)
+
+    setTimeout(() => {
+      isFirstGreen.value = true
+      setTimeout(() => {
+        isSecondGreen.value = true
+        setTimeout(() => {
+          isThirdGreen.value = true
+        }, 700)
+      }, 700)
+    }, 1700)
     // Replay from start
     secondLottieRef.value.anim.goToAndPlay(0)
+    wasFullyHidden.value = false
+    // Just use startSecondAnimation - it has the sequence we want
+    startSecondAnimation()
     wasFullyHidden.value = false
     // Just use startSecondAnimation - it has the sequence we want
     startSecondAnimation()
@@ -215,6 +238,16 @@ const startSecondAnimation = () => {
         }, 700)
       }, 700)
     }, 1700)
+   
+    setTimeout(() => {
+      isFirstGreen.value = true
+      setTimeout(() => {
+        isSecondGreen.value = true
+        setTimeout(() => {
+          isThirdGreen.value = true
+        }, 700)
+      }, 700)
+    }, 1700)
     
     setTimeout(() => {
       heroContentOpacity.value = 1
@@ -227,6 +260,7 @@ const onSecondLottieReady = (anim?: AnimationItem) => {
 }
 
 const onSecondLottieComplete = () => {
+  // Nothing needed here
   // Nothing needed here
 }
 
