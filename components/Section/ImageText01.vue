@@ -20,7 +20,7 @@
               Imagine if Signal-like protections were embedded in every application.<br>
               So 
               <span class="green-highlight">healthcare portals, social platforms, shared spreadsheets, booking<br> aggregators, connected vehicles, chatbot providers
-               – and every other digital</span>
+               </span> – and every other digital
                <br> facility with a shadowy data harvestor – would see nothing but ciphertexts.
             </h3>
         </div>
