@@ -113,8 +113,8 @@ const navItems = [
   { href: 'https://discord.gg/buildwithtaco', text: 'Contact' }
   { href: '#build', text: 'Build' },
  // { href: '#editorials', text: 'Editorials' },
-  { href: 'https://github.com/your-repo', text: 'Repos' },
-  { href: '#contact', text: 'Contact' }
+  { href: 'https://github.com/nucypher', text: 'Repos' },
+  { href: 'https://discord.gg/buildwithtaco', text: 'Contact' }
 ]
 
 
