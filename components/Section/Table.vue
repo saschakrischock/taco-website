@@ -10,6 +10,7 @@
         </h2>
         <div class="max-lg:hidden relative" >
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div class="font-mono mt-4 opacity-0 pointer-events-none">{{ featuresWithDescriptions[7].description }}</div>
         <transition name="fade-up">
           <div v-if="isHovering" class="hidden absolute top-0 transition-all duration-300 lg:block text-white font-mono  ">
@@ -18,6 +19,11 @@
         <transition name="fade-up">
           <div v-if="isHovering" class="hidden absolute top-0 transition-all duration-300 lg:block text-white font-mono mt-4 ">
 >>>>>>> 78f9143 (changes)
+=======
+          <div class="font-mono mt-4 opacity-0 pointer-events-none">{{ featuresWithDescriptions[7].description }}</div>
+        <transition name="fade-up">
+          <div v-if="isHovering" class="hidden absolute top-0 transition-all duration-300 lg:block text-white font-mono  ">
+>>>>>>> 92e046e (changes)
             {{ currentHoverText }}
           </div>
         </transition>

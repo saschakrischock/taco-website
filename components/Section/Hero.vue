@@ -61,6 +61,7 @@
           with <span class="text-[#96FF5E]">secrets management<br class="max-lg:hidden">
             <span class="text-black"> is like giving Bezos your house keys.</span></span>
         </h2>
+<<<<<<< HEAD
         <h3 class="subtitle font-headline mt-6 text-black font-bold text-mobile-xl lg:text-xl">
           TACo is the only general-purpose access control plugin that works without <br class="max-lg:hidden">
           
@@ -72,6 +73,12 @@
 =======
 >>>>>>> 78f9143 (changes)
           a central authority. So your users aren't forced to trust: 
+=======
+        <h3 class="subtitle font-headline mt-6 text-black font-medium text-mobile-xl lg:text-xl">
+          TACo is the only general-purpose access control plugin that works without <br class="max-lg:hidden">
+          
+          trusting an intermediary. So users aren't obliged to trust:  
+>>>>>>> 92e046e (changes)
           <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isFirstGreen }]"> AWS KMS, </span>
           <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isSecondGreen }]">Your dev team </span>
           <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isThirdGreen }]">or TACo</span>
