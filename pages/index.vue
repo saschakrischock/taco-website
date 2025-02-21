@@ -48,7 +48,7 @@ const handleComplete = () => {
     <SectionImageText02/>
     <SectionAccordionCode/>
     <SectionTable/>
-    <SectionPostList/>
+   <!-- <SectionPostList/>-->
   </div>
 </template>
 
