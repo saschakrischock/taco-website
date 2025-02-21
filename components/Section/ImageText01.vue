@@ -59,9 +59,12 @@
         
 
 
+<<<<<<< HEAD
 =======
         
 >>>>>>> 54ade92 (changes)
+=======
+>>>>>>> 2c89bc0 (YOUR_COMMIT_MESSAGE)
     </div>
   </section>
 </template>
