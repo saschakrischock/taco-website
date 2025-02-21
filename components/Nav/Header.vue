@@ -74,11 +74,17 @@
         { 'invert': isOverDarkSection }
       ]"/>
      <!-- <NavLocalwidget :class="[
+<<<<<<< HEAD
      <!-- <NavLocalwidget :class="[
         'transition-[filter] duration-300',
         { 'invert': isOverDarkSection }
       ]"/>-->
       ]"/>-->
+=======
+        'transition-[filter] duration-300',
+        { 'invert': isOverDarkSection }
+      ]"/>-->
+>>>>>>> 78f9143 (changes)
       <div class="h-[11px] max-lg:hidden justify-start items-center gap-8 inline-flex">
         <a target="_blank"
           v-for="item in navItems" 
@@ -113,8 +119,13 @@ const navItems = [
   { href: 'https://discord.gg/buildwithtaco', text: 'Contact' }
   { href: '#build', text: 'Build' },
  // { href: '#editorials', text: 'Editorials' },
+<<<<<<< HEAD
   { href: 'https://github.com/nucypher', text: 'Repos' },
   { href: 'https://discord.gg/buildwithtaco', text: 'Contact' }
+=======
+  { href: 'https://github.com/your-repo', text: 'Repos' },
+  { href: '#contact', text: 'Contact' }
+>>>>>>> 78f9143 (changes)
 ]
 
 

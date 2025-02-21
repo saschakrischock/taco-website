@@ -39,9 +39,15 @@
         <!-- Mobile navigation -->
             <div class="flex flex-col justify-center items-center lg:hidden gap-3">
         <div class="flex lg:hidden gap-x-3">
+<<<<<<< HEAD
           <a target="_blank" href="https://docs.taco.build/" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Build</a>
          <!-- <a href="#editorials" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Editorials</a>-->
           <a  target="_blank" href="https://github.com/nucypher" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Repos</a>
+=======
+          <a href="#build" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Build</a>
+         <!-- <a href="#editorials" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Editorials</a>-->
+          <a href="repo" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Repos</a>
+>>>>>>> 78f9143 (changes)
         </div>
         <div class="flex lg:hidden gap-4">
           <a target="_blank" href="https://discord.gg/buildwithtaco" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Contact</a>
@@ -74,7 +80,7 @@
 <<<<<<< HEAD
         <a href="#build" class="text-center text-white font-mono font-normal mono-text">Build</a>
         <a href="repo" class="text-center text-white font-mono font-normal mono-text">Repos</a>
-        <a href="#editorials" class="text-center text-white font-mono font-normal mono-text">Editorials</a>
+       <!-- <a href="#editorials" class="text-center text-white font-mono font-normal mono-text">Editorials</a>-->
         <a href="#contact" class="text-center text-white font-mono font-normal mono-text">Contact</a>
 =======
         <a target="_blank" href="https://docs.taco.build/" class="text-center text-white font-mono font-normal mono-text">Build</a>

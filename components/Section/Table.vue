@@ -9,9 +9,15 @@
           <span class="text-[#909090]">solution.</span>
         </h2>
         <div class="max-lg:hidden relative" >
+<<<<<<< HEAD
           <div class="font-mono mt-4 opacity-0 pointer-events-none">{{ featuresWithDescriptions[7].description }}</div>
         <transition name="fade-up">
           <div v-if="isHovering" class="hidden absolute top-0 transition-all duration-300 lg:block text-white font-mono  ">
+=======
+          <div class="opacity-0 pointer-events-none">{{ featuresWithDescriptions[6].description }}</div>
+        <transition name="fade-up">
+          <div v-if="isHovering" class="hidden absolute top-0 transition-all duration-300 lg:block text-white font-mono mt-4 ">
+>>>>>>> 78f9143 (changes)
             {{ currentHoverText }}
           </div>
         </transition>
@@ -19,7 +25,11 @@
       </div>
     </div>
 
+<<<<<<< HEAD
     <div class="relative lg:px-7 px-4 max-lg:mb-[-0.6rem] mb-0 ">
+=======
+    <div class="relative lg:px-7 px-4 mb-0 ">
+>>>>>>> 78f9143 (changes)
       <!-- Mobile View -->
       <div class="lg:hidden">
         <!-- Headers -->
@@ -51,7 +61,11 @@
         <div class="lg:space-y-4">
           <div v-for="(feature, i) in featuresWithDescriptions" :key="i" 
                class="flex border-t border-white py-1">
+<<<<<<< HEAD
             <div class="text-white pr-1 h-[auto] w-[40%] text-[15px] lg:text-[20px] font-headline font-bold  leading-[20px]">
+=======
+            <div class="text-white pr-1 h-[auto] w-[40%] text-[15px] lg:text-[20px] font-headline font-medium font-['ABC Diatype Medium'] leading-[20px]">
+>>>>>>> 78f9143 (changes)
               {{ feature.name }} 
             </div>
             <div class="flex items-center w-[60%] mobile-border justify-around">
@@ -77,14 +91,22 @@
         <!-- Headers -->
         <div v-for="header in headers" :key="header"  @mouseenter="() => { isHovering = true; currentHoverText = header.description; }"
           @mouseleave="() => { isHovering = false; currentHoverText = ''; }" 
+<<<<<<< HEAD
              class="text-white first-of-type:pointer-events-none hover:text-[#96FF5E] transition-all duration-300 cursor-default top text-center font-headline header text-[20px] font-bold mb-0  leading-[18px]">
+=======
+             class="text-white first-of-type:pointer-events-none hover:text-[#96FF5E] transition-all duration-300 cursor-default top text-center font-headline header text-[20px] font-medium mb-0 font-['ABC Diatype Medium'] leading-[18px]">
+>>>>>>> 78f9143 (changes)
           {{ header.title }}
         </div>
 
         <!-- Desktop Content -->
         <template v-for="(feature, i) in featuresWithDescriptions" :key="i">
           <div 
+<<<<<<< HEAD
             class="text-white hover:text-[#96FF5E] transition-all duration-300 cursor-default text-[20px] font-headline pr-2 font-bold  leading-[20px] pt-3 pb-2 border-t border-white"
+=======
+            class="text-white hover:text-[#96FF5E] transition-all duration-300 cursor-default text-[20px] font-headline pr-2 font-medium font-['ABC Diatype Medium'] leading-[20px] pt-3 pb-2 border-t border-white"
+>>>>>>> 78f9143 (changes)
             @mouseenter="() => { isHovering = true; currentHoverText = feature.description; }"
             @mouseleave="() => { isHovering = false; currentHoverText = ''; }"
           >
@@ -116,7 +138,11 @@ const headers = [
   { title: 'Cloud KMS', description: 'Control data access via a cloud service like AWS Key Management Service or Google Cloud Key Management, which involves trusting either the developer, cloud provider, or both – via a master key-oriented architecture.' }
 ]
 
+<<<<<<< HEAD
 const solutions = ['TACo', 'LIT', 'Smart Contract', 'PKI', 'Cloud KMS']
+=======
+const solutions = ['TACo', 'LIT', 'EVMContract', 'PKI', 'CloudService']
+>>>>>>> 78f9143 (changes)
 
 const isHovering = ref(false)
 const currentHoverText = ref('')
@@ -128,9 +154,15 @@ const featuresWithDescriptions = [
     description: 'When private data is shared between devices, end-to-end encryption means the data cannot be decrypted in the middle. If there is a centralized authority managing access, whether this is a cloud provider, server manager or a permissioned group of service-providers, data can be viewed in plaintext form and the system cannot claim to be privacy-preserving. ',
     TACo: 'YES',
     LIT: 'YES',
+<<<<<<< HEAD
       'Smart Contract': 'X',
     PKI: 'YES',
     'Cloud KMS': 'X'
+=======
+    EVMContract: 'X',
+    PKI: 'YES',
+    CloudService: 'X'
+>>>>>>> 78f9143 (changes)
   },
   {
     name: 'Scalable to millions of users',
@@ -153,6 +185,18 @@ const featuresWithDescriptions = [
   {
     name: 'Redundant & fault-tolerant',
     description: 'To reach parity with established cloud providers, access control services must be redundant (i.e. have built-in back-ups across a diverse network of service-providers), fault-tolerant (i.e. do not require all service-providers to be perfectly configured) and highly available (service-providers must be heavily incentivized for uptime and reliability).',
+<<<<<<< HEAD
+=======
+    TACo: 'YES',
+    LIT: 'X',
+    EVMContract: 'YES',
+    PKI: 'X',
+    CloudService: 'YES'
+  },
+  {
+    name: 'Crypto\u00ADeconomically \u00ADsecure',
+    description: 'Cryptoeconomic security adds an extra layer of resilience and safety to an access control service – service-providers are required to deposit collateral, subsidized with a native token, and can be economically penalized for errant behavior. This adds powerful disincentives and logistical friction to any attempts to collude.',
+>>>>>>> 78f9143 (changes)
     TACo: 'YES',
     LIT: 'X',
       'Smart Contract': 'YES',
@@ -184,7 +228,11 @@ const featuresWithDescriptions = [
     LIT: 'X',
       'Smart Contract': 'YES',
     PKI: 'YES',
+<<<<<<< HEAD
     'Cloud KMS': 'X'
+=======
+    CloudService: 'X'
+>>>>>>> 78f9143 (changes)
   },
   {
     name: 'Off/multi-chain condition resolution',
@@ -193,7 +241,11 @@ const featuresWithDescriptions = [
     LIT: 'YES',
     'Smart Contract': 'X',
     PKI: 'X',
+<<<<<<< HEAD
     'Cloud KMS': 'YES'
+=======
+    CloudService: 'YES'
+>>>>>>> 78f9143 (changes)
   }
 ]
 </script>
