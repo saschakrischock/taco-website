@@ -114,6 +114,7 @@ const isOverDarkSection = ref(false)
 
 const navItems = [
   { href: 'https://docs.taco.build/', text: 'Build' },
+<<<<<<< HEAD
  // { href: '#editorials', text: 'Editorials' },
   { href: 'https://github.com/nucypher', text: 'Repos' },
   { href: 'https://discord.gg/buildwithtaco', text: 'Contact' }
@@ -126,6 +127,11 @@ const navItems = [
   { href: 'https://github.com/your-repo', text: 'Repos' },
   { href: '#contact', text: 'Contact' }
 >>>>>>> 78f9143 (changes)
+=======
+ // { href: '#editorials', text: 'Editorials' },
+  { href: 'https://github.com/nucypher', text: 'Repos' },
+  { href: 'https://discord.gg/buildwithtaco', text: 'Contact' }
+>>>>>>> c047740 (changes)
 ]
 
 
