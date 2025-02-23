@@ -57,7 +57,7 @@ const swiper = useSwiper(containerRef, {
 
 <template>
   <section class="bg-black lg:flex-row lg:flex relative">
-    <div class="hero-body min-h-[calc(100dvh)] flex flex-col justify-between">
+    <div class="hero-body min-h-[calc(100vh)] flex flex-col justify-between">
       <div class="lg:p-7 p-4 max-w-[90rem]">
         <h2 class="text-white lg:text-2xl text-mobile-2xl font-headline font-bold font-['ABC Diatype Unlicensed Trial']">
           <span class="text-[#909090]">The privacy Layer </span><br>
