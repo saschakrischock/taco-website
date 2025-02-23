@@ -68,11 +68,14 @@ const swiper = useSwiper(containerRef, {
       <div class="max-lg:flex max-lg:flex-col-reverse">
         <div class="flex flex-col gap-4 lg:px-7 px-4 pb-4 lg:pb-7">
           <div class="swiper-pagination font-mono"></div>
-          <div class="relative h-[7rem] lg:h-[7rem]"> <!-- Fixed height container -->
+          <div class="relative ">
+            
+            <div class="text-mobile-xl opacity-0 pointer-events-none lg:text-xl max-lg:bottom-0 font-headline text-white max-w-[32rem] ">            If a threshold of TACo nodes confirm that the conditions are fulfilled, decryption material is provisioned to the data consumer. The ciphertext is decrypted locally.<!-- Fixed height container -->
+            </div>
             <Transition name="slide-text-fade" mode="out-in">
               <div 
                 :key="currentSlide" 
-                class="text-mobile-xl lg:text-xl font-headline text-white max-w-[32rem] absolute"
+                class="text-mobile-xl lg:text-xl lg:top-0 max-lg:bottom-0 font-headline text-white max-w-[32rem] absolute"
               >
                 {{ slides[currentSlide].text }}
             </div>
@@ -159,6 +162,17 @@ swiper-slide {
     border-radius: 50%;
     opacity: 0.5;
   }
+
+
+  .slide-text-fade-enter-active,
+.slide-text-fade-leave-active {
+  transition: all 0.35s ease;
+  position: absolute;
+  width: 100%;
+  top: inherit !important;
+  bottom: 0 !important;
+  left: 0;
+}
 
   :deep(.swiper-pagination-bullet-active) {
     background: #96ff5e;

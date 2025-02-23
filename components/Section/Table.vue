@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <div class="relative lg:px-7 px-4 mb-0 ">
+    <div class="relative lg:px-7 px-4 max-lg:mb-[-0.6rem] mb-0 ">
       <!-- Mobile View -->
       <div class="lg:hidden">
         <!-- Headers -->
@@ -128,72 +128,72 @@ const featuresWithDescriptions = [
     description: 'When private data is shared between devices, end-to-end encryption means the data cannot be decrypted in the middle. If there is a centralized authority managing access, whether this is a cloud provider, server manager or a permissioned group of service-providers, data can be viewed in plaintext form and the system cannot claim to be privacy-preserving. ',
     TACo: 'YES',
     LIT: 'YES',
-    EVMContract: 'X',
+      'Smart Contract': 'X',
     PKI: 'YES',
-    CloudService: 'X'
+    'Cloud KMS': 'X'
   },
   {
     name: 'Scalable to millions of users',
     description: 'Scalable access control avoids the computational overhead of encrypting for each individual recipient locally on the data producer‘s device, and avoids the need to authenticate each recipient at the time of encryption – both of which place restriction on the size and complexity of intra-user data sharing. This is particularly restrictive in one-to-many and many-to-many systems, like social networks.',
     TACo: 'YES',
     LIT: 'YES',
-    EVMContract: 'X',
+      'Smart Contract': 'X',
     PKI: 'X',
-    CloudService: 'YES'
+    'Cloud KMS': 'YES'
   },
   {
     name: 'Arbitrary access logic',
     description: 'Arbitrary access logic refers to a highly expressive system for defining conditions that govern data access. It allows for the combination of multiple conditions into a structured set, enabling flexible and dynamic access policies. It‘s also possible to weave in IfThenElse logic, arbitrary calls to APIs, and composable authentication methods into the condition verification runtime.',
     TACo: 'YES',
     LIT: 'YES',
-    EVMContract: 'X',
+      'Smart Contract': 'X',
     PKI: 'X',
-    CloudService: 'YES'
+    'Cloud KMS': 'YES'
   },
   {
     name: 'Redundant & fault-tolerant',
     description: 'To reach parity with established cloud providers, access control services must be redundant (i.e. have built-in back-ups across a diverse network of service-providers), fault-tolerant (i.e. do not require all service-providers to be perfectly configured) and highly available (service-providers must be heavily incentivized for uptime and reliability).',
     TACo: 'YES',
     LIT: 'X',
-    EVMContract: 'YES',
+      'Smart Contract': 'YES',
     PKI: 'X',
-    CloudService: 'YES'
+    'Cloud KMS': 'YES'
   },
   {
     name: 'Crypto\u00ADeconomically \u00ADsecure',
     description: 'Cryptoeconomic security adds an extra layer of resilience and safety to an access control service – service-providers are required to deposit collateral, subsidized with a native token, and can be economically penalized for errant behavior. This adds powerful disincentives and logistical friction to any attempts to collude.',
     TACo: 'YES',
     LIT: 'X',
-    EVMContract: 'YES',
+      'Smart Contract': 'YES',
     PKI: 'X',
-    CloudService: 'X'
+    'Cloud KMS': 'X'
   },
   {
     name: 'Battle-tested network',
     description: 'Battle-tested networks have been live on mainnet for a significant period (>3 years), with protocols that execute sensitive cryptographic operations, and have not suffered any breaches/exploits since launching with real-world customers and real-world sensitive data. This goes beyond smart contract audits, rather is a substantive track record for operationalizing and decentralizing cryptographic primitives.',
     TACo: 'YES',
     LIT: 'X',
-    EVMContract: 'YES',
+      'Smart Contract': 'YES',
     PKI: 'X',
-    CloudService: 'X'
+    'Cloud KMS': 'X'
   },
   {
     name: 'Transparent trust model',
     description: 'No third-party integration imposes zero additional trust burden onto the app‘s end-users. Transparent trust models explain, with sufficient nuance, the trust assumptions associated with using a given technology – including how these assumptions evolve over time, and how they can be tuned by adopting developers.',
     TACo: 'YES',
     LIT: 'X',
-    EVMContract: 'YES',
+      'Smart Contract': 'YES',
     PKI: 'YES',
-    CloudService: 'X'
+    'Cloud KMS': 'X'
   },
   {
     name: 'Off/multi-chain condition resolution',
     description: 'In conditions-based decryption, access to private data depends on computational/system state  – e.g. has a given viewer paid for access to a given livestream. This state can exist on a base chain (e.g. Ethereum), an L2 (e.g. Polygon), another chain (e.g. Solana), or in Web 2.0 state (e.g. a weather API,  DNS records for email account ownership). Off-chain and multichain condition resolution means that the system is compatible with multiple sources of truth.',
     TACo: 'YES',
     LIT: 'YES',
-    EVMContract: 'X',
+    'Smart Contract': 'X',
     PKI: 'X',
-    CloudService: 'YES'
+    'Cloud KMS': 'YES'
   }
 ]
 </script>
