@@ -1,5 +1,6 @@
 <template>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <section ref="container" class="hero is-primary bg-black min-h-[100vh] is-fullheight relative overflow-hidden">
     <div 
       ref="parallaxBg"
@@ -29,6 +30,9 @@
 =======
     <section ref="container" class="hero is-primary bg-black min-h-[100dvh] is-fullheight relative overflow-hidden">
 >>>>>>> 69537b9 (changes)
+=======
+    <section ref="container" class="hero is-primary bg-black min-h-[100vh] is-fullheight relative overflow-hidden">
+>>>>>>> 8e05bf8 (changes)
       <div 
         ref="parallaxBg"
         class="absolute scale-fix inset-0 w-full h-[100%] top-[0%] bg-center bg-cover bg-no-repeat"
@@ -41,7 +45,7 @@
       <div class="absolute h-72 inset-0 w-full  bg-gradient-to-b from-black to-transparent z-10"></div>
       <div class="absolute h-72 bottom-0  w-full bg-gradient-to-t from-black to-transparent z-10"></div>
       <div class="hero-body absolute z-20">
-        <div class="lg:p-7 p-4 max-w-[90rem]  h-[calc(100dvh-1rem)]  lg:h-[calc(100dvh-3rem)] font-headline  flex justify-between flex-col">
+        <div class="lg:p-7 p-4 max-w-[90rem]  h-[calc(100vh-1rem)]  lg:h-[calc(100vh-3rem)] font-headline  flex justify-between flex-col">
             <h2 class="text-white   lg:text-2xl text-mobile-2xl font-bold font-headline">
               End-to-end encryption<br> for (almost) everything.
             </h2>
