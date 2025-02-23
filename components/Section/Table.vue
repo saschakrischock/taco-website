@@ -1,6 +1,6 @@
 <!-- pages/index.vue -->
 <template>
-  <section class="hero bg-black min-h-[100svh] flex justify-between pb-4 lg:pb-7 flex-col  is-primary is-fullheight">
+  <section class="hero bg-black min-h-[100dvh] flex justify-between pb-4 lg:pb-7 flex-col  is-primary is-fullheight">
     <div class="hero-body">
       <div class="lg:p-7 p-4 max-w-[90rem]">
         <h2 class="text-white font-headline lg:text-2xl text-mobile-2xl font-bold font-['ABC Diatype Unlicensed Trial']">
