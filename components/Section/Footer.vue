@@ -6,14 +6,14 @@
     class="w-full relative"
   >
     <!-- Main content section with full viewport height -->
-    <div class="relative min-h-[100dvh]">
+    <div class="relative min-h-[100vh]">
       <!-- Lottie animation -->
       <Blottie
         ref="footerLottieRef"
         :style="{ opacity: lottieOpacity }"
         class="w-[100vw] footer-blottie flex justify-center items-end absolute top-[7rem] left-0 origin-center 
                
-               pointer-events-none h-[calc(100dvh-7rem)] object-cover"
+               pointer-events-none h-[calc(100vh-7rem)] object-cover"
         :lottie="{
           player: 'svg',
           renderer: 'svg',
@@ -27,7 +27,7 @@
       />
 
       <!-- Credits section -->
-      <div class="flex absolute w-full  bottom-4 max-lg:items-center max-lg:gap-4 max-lg:flex-col justify-end lg:justify-center items-end   h-[calc(100dvh-7rem)] text-center text-black text-[15px] font-normal">
+      <div class="flex absolute w-full  bottom-4 max-lg:items-center max-lg:gap-4 max-lg:flex-col justify-end lg:justify-center items-end   h-[calc(100vh-7rem)] text-center text-black text-[15px] font-normal">
         <transition @enter="observeNewElements" name="fade">
           <div v-if="showCredits" class="flex w-full font-mono flex-col gap-0 leading-[1.3]">
             <span class="font-mono mono-text block">Design & AD: Aletheia, Leith Benkhedda</span>

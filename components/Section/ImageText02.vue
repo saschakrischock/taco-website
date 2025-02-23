@@ -1,5 +1,5 @@
 <template>
-  <section ref="container" class="hero is-primary bg-white min-h-[100dvh] is-fullheight relative overflow-hidden">
+  <section ref="container" class="hero is-primary bg-white min-h-[100vh] is-fullheight relative overflow-hidden">
     <div 
       ref="parallaxBg"
       class="absolute scale-fix inset-0 w-full h-[100%] -top-[0%] bg-center bg-cover bg-no-repeat"
@@ -12,7 +12,7 @@
     <div class="hero-body w-full absolute">
       <div class="absolute h-72 bottom-0   w-full bg-gradient-to-t from-white to-transparent z-10"></div>
 
-      <div class="lg:p-7 p-4 max-w-[90rem] justify-between h-[calc(100dvh-0rem)] flex flex-col">
+      <div class="lg:p-7 p-4 max-w-[90rem] justify-between h-[calc(100vh-0rem)] flex flex-col">
         <h2 class="text-black lg:text-2xl font-headline text-mobile-2xl font-bold ">
               End-to-End Encrypted. <br>End-to-End Decentralized. 
             </h2>
