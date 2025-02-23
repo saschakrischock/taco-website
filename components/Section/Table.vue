@@ -32,10 +32,14 @@
     </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div class="relative lg:px-7 px-4 max-lg:mb-[-0.6rem] mb-0 ">
 =======
     <div class="relative lg:px-7 px-4 mb-0 ">
 >>>>>>> 78f9143 (changes)
+=======
+    <div class="relative lg:px-7 px-4 max-lg:mb-[-0.6rem] mb-0 ">
+>>>>>>> 1057a87 (changes)
       <!-- Mobile View -->
       <div class="lg:hidden">
         <!-- Headers -->
@@ -165,6 +169,7 @@ const featuresWithDescriptions = [
     TACo: 'YES',
     LIT: 'YES',
 <<<<<<< HEAD
+<<<<<<< HEAD
       'Smart Contract': 'X',
     PKI: 'YES',
     'Cloud KMS': 'X'
@@ -173,6 +178,11 @@ const featuresWithDescriptions = [
     PKI: 'YES',
     CloudService: 'X'
 >>>>>>> 78f9143 (changes)
+=======
+      'Smart Contract': 'X',
+    PKI: 'YES',
+    'Cloud KMS': 'X'
+>>>>>>> 1057a87 (changes)
   },
   {
     name: 'Scalable to millions of users',
@@ -199,9 +209,9 @@ const featuresWithDescriptions = [
 =======
     TACo: 'YES',
     LIT: 'X',
-    EVMContract: 'YES',
+      'Smart Contract': 'YES',
     PKI: 'X',
-    CloudService: 'YES'
+    'Cloud KMS': 'YES'
   },
   {
     name: 'Crypto\u00ADeconomically \u00ADsecure',
@@ -211,6 +221,7 @@ const featuresWithDescriptions = [
     LIT: 'X',
       'Smart Contract': 'YES',
     PKI: 'X',
+<<<<<<< HEAD
     'Cloud KMS': 'YES'
   },
   {
@@ -220,6 +231,8 @@ const featuresWithDescriptions = [
     LIT: 'X',
       'Smart Contract': 'YES',
     PKI: 'X',
+=======
+>>>>>>> 1057a87 (changes)
     'Cloud KMS': 'X'
   },
   {
@@ -239,10 +252,14 @@ const featuresWithDescriptions = [
       'Smart Contract': 'YES',
     PKI: 'YES',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Cloud KMS': 'X'
 =======
     CloudService: 'X'
 >>>>>>> 78f9143 (changes)
+=======
+    'Cloud KMS': 'X'
+>>>>>>> 1057a87 (changes)
   },
   {
     name: 'Off/multi-chain condition resolution',
@@ -252,10 +269,14 @@ const featuresWithDescriptions = [
     'Smart Contract': 'X',
     PKI: 'X',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Cloud KMS': 'YES'
 =======
     CloudService: 'YES'
 >>>>>>> 78f9143 (changes)
+=======
+    'Cloud KMS': 'YES'
+>>>>>>> 1057a87 (changes)
   }
 ]
 </script>
