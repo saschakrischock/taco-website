@@ -2,7 +2,7 @@
   <section ref="container" class="hero is-primary bg-white min-h-[100svh] is-fullheight relative overflow-hidden">
     <div 
       ref="parallaxBg"
-      class="absolute inset-0 w-full h-[100%] -top-[0%] bg-center bg-cover bg-no-repeat"
+      class="absolute max-lg:scale-110 inset-0 w-full h-[100%] -top-[0%] bg-center bg-cover bg-no-repeat"
       :style="{
         backgroundImage: 'url(/images/2.jpg)',
         transform: `translate3d(0, ${parallaxOffset}px, 0)`,
