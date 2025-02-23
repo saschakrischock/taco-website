@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white relative flex flex-col justify-between min-h-[100vh]">
+  <section class="bg-white relative flex flex-col justify-between min-h-[100svh]">
     <div class="lg:p-7  p-4 max-w-[90rem]">
       <h2 class="lg:text-2xl font-bold text-mobile-2xl font-headline ">
         Access
