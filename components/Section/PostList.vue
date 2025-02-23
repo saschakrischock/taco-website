@@ -1,5 +1,9 @@
 <template>
+<<<<<<< HEAD
     <section id="editorials" class="bg-white flex flex-col justify-between h-[calc(100vh-7rem)] p-4  lg:p-7">
+=======
+    <section id="editorials" class="bg-white flex flex-col justify-between h-[calc(100dvh-7rem)] p-4  lg:p-7">
+>>>>>>> 69537b9 (changes)
         <div class="  max-w-[90rem]">
       <h2 class="lg:text-2xl text-mobile-2xl font-bold font-headline ">
         Stories
