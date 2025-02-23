@@ -3,7 +3,7 @@
   <section
     ref="sectionRef"
     id="build"
-    class="hero bg-white min-h-[100vh] is-primary is-fullheight relative overflow-hidden"
+    class="hero bg-white min-h-[100svh] is-primary is-fullheight relative overflow-hidden"
   >
     <!-- First Lottie Animation with centered text -->
     <div 
@@ -53,7 +53,7 @@
     <div class="hero-body relative z-10">
       <div
         :style="{ opacity: heroContentOpacity }"
-        class="lg:p-7 p-4 pt-16 lg:pt-24 max-w-[90rem] flex flex-col justify-between h-[calc(100vh-7rem)] lg:h-[calc(100svh-5rem)] transition-opacity duration-700"
+        class="lg:p-7 p-4 pt-16 lg:pt-24 max-w-[90rem] flex flex-col justify-between h-[calc(100svh-7rem)] lg:h-[calc(100svh-5rem)] transition-opacity duration-700"
       >
         <h2 class="text-black font-headline text-mobile-2xl lg:text-2xl text-mobile-2xl font-bold">
           <span>Trusting </span>

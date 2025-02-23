@@ -6,14 +6,14 @@
     class="w-full relative"
   >
     <!-- Main content section with full viewport height -->
-    <div class="relative min-h-[100vh]">
+    <div class="relative min-h-[100svh]">
       <!-- Lottie animation -->
       <Blottie
         ref="footerLottieRef"
         :style="{ opacity: lottieOpacity }"
         class="w-[100vw] footer-blottie flex justify-center items-end absolute top-[7rem] left-0 origin-center 
                
-               pointer-events-none h-[calc(100vh-7rem)] object-cover"
+               pointer-events-none h-[calc(100svh-7rem)] object-cover"
         :lottie="{
           player: 'svg',
           renderer: 'svg',
