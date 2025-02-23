@@ -46,6 +46,13 @@ body, html {
     display: none;
 }
 @media (max-width: 1024px) {
+
+
+  .scale-fix {
+    scale: 1.1;
+  }
+
+
     br {
         display: none;
     }
