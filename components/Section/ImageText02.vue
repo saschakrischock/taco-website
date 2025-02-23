@@ -3,10 +3,14 @@
     <div 
       ref="parallaxBg"
 <<<<<<< HEAD
+<<<<<<< HEAD
       class="absolute scale-fix inset-0 w-full h-[100%] -top-[0%] bg-center bg-cover bg-no-repeat will-change-transform"
 =======
       class="absolute max-lg:scale-110 inset-0 w-full h-[100%] -top-[0%] bg-center bg-cover bg-no-repeat"
 >>>>>>> 19b76fe (changes)
+=======
+      class="absolute scale-fix inset-0 w-full h-[100%] -top-[0%] bg-center bg-cover bg-no-repeat"
+>>>>>>> 6b58832 (changes)
       :style="{
         backgroundImage: 'url(/images/2.jpg)',
         transform: `translate3d(0, ${parallaxOffset}px, 0)`,
