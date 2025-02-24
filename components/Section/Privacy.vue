@@ -5,15 +5,7 @@ const currentSlide = ref(0)
 const slides = ref([
   {
     image: '/privacy/diagram-01.svg',
-<<<<<<< HEAD
-<<<<<<< HEAD
     text: '<span class="highlight">Independent nodes</span> are randomly sampled from the TACo network to create an access control cohort.'
-=======
-    text: 'Independent nodes are randomly sampled from the <span class="highlight">TACo network</span> to create an access control cohort.'
->>>>>>> 5db1ca3 (changes)
-=======
-    text: '<span class="highlight">Independent nodes</span> are randomly sampled from the TACo network to create an access control cohort.'
->>>>>>> 3e402a2 (Update components/Section/Privacy.vue)
   },
   {
     image: '/privacy/diagram-02.svg',
@@ -78,8 +70,6 @@ const swiper = useSwiper(containerRef, {
           <div class="swiper-pagination font-mono"></div>
           <div class="relative ">
             
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div class="text-mobile-xl opacity-0 pointer-events-none lg:text-xl max-lg:bottom-0 font-headline text-white max-w-[32rem] "> 
               If a threshold of TACo nodes confirm that the conditions are fulfilled, <span class="highlight">decryption material</span> is provisioned to the data consumer. The ciphertext is decrypted locally
             </div>
@@ -90,29 +80,6 @@ const swiper = useSwiper(containerRef, {
   v-html="slides[currentSlide].text"
 >
 </div>
-=======
-            <div class="text-mobile-xl opacity-0 pointer-events-none lg:text-xl max-lg:bottom-0 font-headline text-white max-w-[32rem] ">            If a threshold of TACo nodes confirm that the conditions are fulfilled, decryption material is provisioned to the data consumer. The ciphertext is decrypted locally.<!-- Fixed height container -->
-            </div>
-            <Transition name="slide-text-fade" mode="out-in">
-              <div 
-                :key="currentSlide" 
-                class="text-mobile-xl lg:text-xl lg:top-0 max-lg:bottom-0 font-headline text-white max-w-[32rem] absolute"
-              >
-                {{ slides[currentSlide].text }}
-            </div>
->>>>>>> 1057a87 (changes)
-=======
-            <div class="text-mobile-xl opacity-0 pointer-events-none lg:text-xl max-lg:bottom-0 font-headline text-white max-w-[32rem] "> 
-              If a threshold of TACo nodes confirm that the conditions are fulfilled, <span class="highlight">decryption material</span> is provisioned to the data consumer. The ciphertext is decrypted locally
-            </div>
-            <Transition name="slide-text-fade" mode="out-in">
-              <div 
-  :key="currentSlide" 
-  class="text-mobile-xl lg:text-xl lg:top-0 max-lg:bottom-0 font-headline text-white max-w-[32rem] absolute"
-  v-html="slides[currentSlide].text"
->
-</div>
->>>>>>> 5db1ca3 (changes)
             </Transition>
           </div>
         </div>
