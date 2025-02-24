@@ -78,16 +78,26 @@ h2, h3, .fade-element {
     transform: translateY(0) !important;
   }
 
-  .footer-blottie svg {
-    max-width: 1400px;
-    margin-bottom: -0.5rem;
-    height: auto !important;
+  .footer-blottie svg { 
+height: auto !important;
+margin-bottom: -0.5rem;
   }
+
+  @media screen and (min-width: 1700px) {
+  .footer-blottie svg {
+    margin-bottom: -0.5rem;
+    height: 100% !important;
+    max-height: calc(100svh - 7rem);
+  }
+}
 
   @media screen and (max-width: 1024px) {
     .footer-blottie svg {
       max-width: 100%;
       scale: 1.75;
+      margin-bottom: -1rem;
+
+      height: auto !important;
       transform: translateY(-23%) !important;
     }
     
