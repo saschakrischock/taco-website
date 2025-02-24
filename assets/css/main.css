@@ -39,8 +39,38 @@ html {
 
 body, html {
     width: 100vw;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
+
+.highlight {
+  color: #fff; /* Start with normal text color */
+  font-weight: bold;
+  animation: highlightFadeIn 0.8s ease-in-out forwards;
+  animation-delay: 0.4s; /* Delay the highlight effect */
+  display: inline-block; /* Ensures the animation applies properly */
+}
+
+/* Animation for the highlight effect */
+@keyframes highlightFadeIn {
+  0% {
+    color: #fff;
+  }
+  100% {
+    color: #96ff5e;
+  }
+}
+
+/* Make sure each new slide resets the animation */
+.slide-text-fade-enter-active .highlight {
+  animation: highlightFadeIn 0.8s ease-in-out forwards;
+  animation-delay: 0.4s;
+}
+
+.font-headline {
+  font-weight: 700 !important;
+}
+  
+
 
 ::-webkit-scrollbar {
     display: none;
