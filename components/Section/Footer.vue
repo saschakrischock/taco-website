@@ -27,15 +27,7 @@
       />
 
       <!-- Credits section -->
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div class="flex absolute w-full  bottom-4 max-lg:items-center max-lg:gap-4 max-lg:flex-col justify-end lg:justify-center items-end   h-[calc(100vh-7rem)] text-center text-black text-[15px] font-normal">
-=======
-      <div class="flex absolute w-full  bottom-4 max-lg:items-center max-lg:gap-4 max-lg:flex-col justify-end lg:justify-center items-end   h-[calc(100dvh-7rem)] text-center text-black text-[15px] font-normal">
->>>>>>> 69537b9 (changes)
-=======
-      <div class="flex absolute w-full  bottom-4 max-lg:items-center max-lg:gap-4 max-lg:flex-col justify-end lg:justify-center items-end   h-[calc(100vh-7rem)] text-center text-black text-[15px] font-normal">
->>>>>>> 8e05bf8 (changes)
         <transition @enter="observeNewElements" name="fade">
           <div v-if="showCredits" class="flex w-full font-mono flex-col gap-0 leading-[1.3]">
             <span class="font-mono mono-text block">Design & AD: Aletheia, Leith Benkhedda</span>
@@ -47,21 +39,9 @@
         <!-- Mobile navigation -->
             <div class="flex flex-col justify-center items-center lg:hidden gap-3">
         <div class="flex lg:hidden gap-x-3">
-<<<<<<< HEAD
-<<<<<<< HEAD
           <a target="_blank" href="https://docs.taco.build/" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Build</a>
          <!-- <a href="#editorials" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Editorials</a>-->
           <a  target="_blank" href="https://github.com/nucypher" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Repos</a>
-=======
-          <a href="#build" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Build</a>
-         <!-- <a href="#editorials" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Editorials</a>-->
-          <a href="repo" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Repos</a>
->>>>>>> 78f9143 (changes)
-=======
-          <a target="_blank" href="https://docs.taco.build/" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Build</a>
-         <!-- <a href="#editorials" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Editorials</a>-->
-          <a  target="_blank" href="https://github.com/nucypher" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Repos</a>
->>>>>>> c047740 (changes)
         </div>
         <div class="flex lg:hidden gap-4">
           <a target="_blank" href="https://discord.gg/buildwithtaco" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Contact</a>
@@ -91,24 +71,10 @@
 
       <!-- Desktop navigation -->
       <div class="max-lg:hidden text-lg justify-end items-center gap-8 inline-flex">
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <a href="#build" class="text-center text-white font-mono font-normal mono-text">Build</a>
-        <a href="repo" class="text-center text-white font-mono font-normal mono-text">Repos</a>
-       <!-- <a href="#editorials" class="text-center text-white font-mono font-normal mono-text">Editorials</a>-->
-        <a href="#contact" class="text-center text-white font-mono font-normal mono-text">Contact</a>
-=======
         <a target="_blank" href="https://docs.taco.build/" class="text-center text-white font-mono font-normal mono-text">Build</a>
         <a target="_blank" href="https://github.com/nucypher"  class="text-center text-white font-mono font-normal mono-text">Repos</a>
        <!-- <a href="#editorials" class="text-center text-white font-mono font-normal mono-text">Editorials</a>-->
         <a target="_blank" href="https://discord.gg/buildwithtaco"  class="text-center text-white font-mono font-normal mono-text">Contact</a>
->>>>>>> 14b471d (changes)
-=======
-        <a target="_blank" href="https://docs.taco.build/" class="text-center text-white font-mono font-normal mono-text">Build</a>
-        <a target="_blank" href="https://github.com/nucypher"  class="text-center text-white font-mono font-normal mono-text">Repos</a>
-       <!-- <a href="#editorials" class="text-center text-white font-mono font-normal mono-text">Editorials</a>-->
-        <a target="_blank" href="https://discord.gg/buildwithtaco"  class="text-center text-white font-mono font-normal mono-text">Contact</a>
->>>>>>> c047740 (changes)
         <button @click="showCredits = !showCredits" class="text-center text-white font-mono font-normal mono-text">
             Credits
         </button>
