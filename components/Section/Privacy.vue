@@ -5,7 +5,7 @@ const currentSlide = ref(0)
 const slides = ref([
   {
     image: '/privacy/diagram-01.svg',
-    text: 'Independent nodes are randomly sampled from the <span class="highlight">TACo network</span> to create an access control cohort.'
+    text: '<span class="highlight">Independent nodes</span> are randomly sampled from the TACo network to create an access control cohort.'
   },
   {
     image: '/privacy/diagram-02.svg',

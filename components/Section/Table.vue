@@ -5,7 +5,7 @@
       <div class="lg:p-7 p-4 max-w-[90rem]">
         <h2 class="text-white font-headline lg:text-2xl text-mobile-2xl font-bold ">
           <span class="text-[#909090]">The</span>
-          <span class="text-white"> zero compromiss </span>
+          <span class="text-white"> zero compromise </span>
           <span class="text-[#909090]">solution.</span>
         </h2>
         <div class="max-lg:hidden relative" >

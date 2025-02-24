@@ -17,7 +17,7 @@
           End-to-End Encrypted. <br>End-to-End Decentralized. 
         </h2>
         <h3 class="subtitle z-10 lg:max-w-[50rem] font-bold font-headline text-mobile-xl lg:text-xl mt-7">
-          TACo is day one decentralized. That means the very first ciphertext generated via the taco-web API – in January 2024 – was encrypted under a decentralized cryptosystem, with a group of 30 nodes indepenently managing access to the data.
+          TACo is day one decentralized. That means the very first ciphertext generated via the <a href ="https://github.com/nucypher/taco-web">taco-web API</a> – in January 2024 – was encrypted under a decentralized cryptosystem, with a group of 30 nodes independently managing access to the data.
         </h3>
       </div>
     </div>
