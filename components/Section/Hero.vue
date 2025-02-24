@@ -66,7 +66,7 @@
           
           trusting an intermediary. So users aren't obliged to trust 
           <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isFirstGreen }]">  AWS KMS, </span>
-          <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isSecondGreen }]">Your dev<br> team </span>
+          <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isSecondGreen }]">your dev<br> team, </span>
           <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isThirdGreen }]">or TACo</span>
         </h3>
       </div>
