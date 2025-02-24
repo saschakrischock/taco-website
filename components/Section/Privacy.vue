@@ -5,7 +5,11 @@ const currentSlide = ref(0)
 const slides = ref([
   {
     image: '/privacy/diagram-01.svg',
+<<<<<<< HEAD
     text: '<span class="highlight">Independent nodes</span> are randomly sampled from the TACo network to create an access control cohort.'
+=======
+    text: 'Independent nodes are randomly sampled from the <span class="highlight">TACo network</span> to create an access control cohort.'
+>>>>>>> 5db1ca3 (changes)
   },
   {
     image: '/privacy/diagram-02.svg',
@@ -71,6 +75,7 @@ const swiper = useSwiper(containerRef, {
           <div class="relative ">
             
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div class="text-mobile-xl opacity-0 pointer-events-none lg:text-xl max-lg:bottom-0 font-headline text-white max-w-[32rem] "> 
               If a threshold of TACo nodes confirm that the conditions are fulfilled, <span class="highlight">decryption material</span> is provisioned to the data consumer. The ciphertext is decrypted locally
             </div>
@@ -92,6 +97,18 @@ const swiper = useSwiper(containerRef, {
                 {{ slides[currentSlide].text }}
             </div>
 >>>>>>> 1057a87 (changes)
+=======
+            <div class="text-mobile-xl opacity-0 pointer-events-none lg:text-xl max-lg:bottom-0 font-headline text-white max-w-[32rem] "> 
+              The encrypted payload (ciphertext + conditions) is uploaded to a storage layer or transmitted via a transport layer, so it can be retrieved by a data consumer.
+            </div>
+            <Transition name="slide-text-fade" mode="out-in">
+              <div 
+  :key="currentSlide" 
+  class="text-mobile-xl lg:text-xl lg:top-0 max-lg:bottom-0 font-headline text-white max-w-[32rem] absolute"
+  v-html="slides[currentSlide].text"
+>
+</div>
+>>>>>>> 5db1ca3 (changes)
             </Transition>
           </div>
         </div>
