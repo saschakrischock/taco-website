@@ -6,10 +6,14 @@ const slides = ref([
   {
     image: '/privacy/diagram-01.svg',
 <<<<<<< HEAD
+<<<<<<< HEAD
     text: '<span class="highlight">Independent nodes</span> are randomly sampled from the TACo network to create an access control cohort.'
 =======
     text: 'Independent nodes are randomly sampled from the <span class="highlight">TACo network</span> to create an access control cohort.'
 >>>>>>> 5db1ca3 (changes)
+=======
+    text: '<span class="highlight">Independent nodes</span> are randomly sampled from the TACo network to create an access control cohort.'
+>>>>>>> 3e402a2 (Update components/Section/Privacy.vue)
   },
   {
     image: '/privacy/diagram-02.svg',
