@@ -5,27 +5,27 @@ const currentSlide = ref(0)
 const slides = ref([
   {
     image: '/privacy/diagram-01.svg',
-    text: 'Independent nodes are randomly sampled from the TACo network to create an access control cohort.'
+    text: 'Independent nodes are randomly sampled from the <span class="highlight">TACo network</span> to create an access control cohort.'
   },
   {
     image: '/privacy/diagram-02.svg',
-    text: 'The cohort of TACo nodes initializes a Distributed Key Generation ritual, which generates a persistent public key.'
+    text: 'The cohort of TACo nodes initializes a Distributed Key Generation ritual, which generates a <span class="highlight">persistent public key</span>.'
   },
   {
     image: '/privacy/diagram-03.svg',
-    text: 'The data producer encrypts the private data using the persistent public key, and specifies conditions for access – these are embedded alongside the ciphertext.'
+    text: 'The data producer encrypts the private data using the persistent public key, and specifies <span class="highlight">conditions for access</span> – these are embedded alongside the ciphertext.'
   },
   {
     image: '/privacy/diagram-04.svg',
-    text: 'The encrypted payload (ciphertext + conditions) is uploaded to a storage layer or transmitted via a transport layer, so it can be retrieved by a data consumer.'
+    text: 'The <span class="highlight">encrypted payload</span> (ciphertext + conditions) is uploaded to a storage layer or transmitted via a transport layer, so it can be retrieved by a data consumer.'
   },
   {
     image: '/privacy/diagram-05.svg',
-    text: 'The data consumer requests access to the data. TACo nodes individually authenticate them, then validate that each access condition is fulfilled.'
+    text: 'The data consumer requests access to the data. TACo nodes individually authenticate them, then validate that each <span class="highlight">access condition</span> is fulfilled.'
   },
   {
     image: '/privacy/diagram-06.svg',
-    text: 'If a threshold of TACo nodes confirm that the conditions are fulfilled, decryption material is provisioned to the data consumer. The ciphertext is decrypted locally.'
+    text: 'If a threshold of TACo nodes confirm that the conditions are fulfilled, <span class="highlight">decryption material</span> is provisioned to the data consumer. The ciphertext is decrypted locally.'
   }
 ])
 
@@ -70,15 +70,16 @@ const swiper = useSwiper(containerRef, {
           <div class="swiper-pagination font-mono"></div>
           <div class="relative ">
             
-            <div class="text-mobile-xl opacity-0 pointer-events-none lg:text-xl max-lg:bottom-0 font-headline text-white max-w-[32rem] ">            If a threshold of TACo nodes confirm that the conditions are fulfilled, decryption material is provisioned to the data consumer. The ciphertext is decrypted locally.<!-- Fixed height container -->
+            <div class="text-mobile-xl opacity-0 pointer-events-none lg:text-xl max-lg:bottom-0 font-headline text-white max-w-[32rem] "> 
+              The encrypted payload (ciphertext + conditions) is uploaded to a storage layer or transmitted via a transport layer, so it can be retrieved by a data consumer.
             </div>
             <Transition name="slide-text-fade" mode="out-in">
               <div 
-                :key="currentSlide" 
-                class="text-mobile-xl lg:text-xl lg:top-0 max-lg:bottom-0 font-headline text-white max-w-[32rem] absolute"
-              >
-                {{ slides[currentSlide].text }}
-            </div>
+  :key="currentSlide" 
+  class="text-mobile-xl lg:text-xl lg:top-0 max-lg:bottom-0 font-headline text-white max-w-[32rem] absolute"
+  v-html="slides[currentSlide].text"
+>
+</div>
             </Transition>
           </div>
         </div>
@@ -114,6 +115,8 @@ swiper-slide {
   justify-content: flex-end !important;
   align-items: flex-end !important;
 }
+
+
 
 @media (max-width: 1024px) {
   swiper-container {
