@@ -59,15 +59,15 @@
           <span>Trusting </span>
           <span class="text-black">centralized platforms </span><br class="max-lg:hidden">
           with <span class="text-[#96FF5E]">secrets management<br class="max-lg:hidden">
-            <span class="text-black"> is giving Bezos your house keys.</span></span>
+            <span class="text-black"> is like giving Bezos your house keys.</span></span>
         </h2>
-        <h3 class="subtitle font-headline mt-6 text-black font-medium text-mobile-xl lg:text-xl">
-          TACo is the only general-purpose access control plugin that works without<br class="max-lg:hidden">
+        <h3 class="subtitle font-headline mt-6 text-black font-bold text-mobile-xl lg:text-xl">
+          TACo is the only general-purpose access control plugin that works without <br class="max-lg:hidden">
           
-          a central authority. So your users aren’t forced to trust:<br class="max-lg:block">
-          AWS KMS<br class="max-lg:block">
-          Your dev team<br class="max-lg:block">
-          Or TACo
+          trusting an intermediary. So users aren't obliged to trust 
+          <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isFirstGreen }]">  AWS KMS, </span>
+          <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isSecondGreen }]">your dev<br> team, </span>
+          <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isThirdGreen }]">or TACo</span>
         </h3>
       </div>
     </div>
@@ -90,6 +90,9 @@ const secondLottieRef = ref<BlottieExpose>()
 const firstLottieOpacity = ref(1)
 const secondLottieOpacity = ref(0)
 const heroContentOpacity = ref(0)
+const isFirstGreen = ref(false)
+const isSecondGreen = ref(false)
+const isThirdGreen = ref(false)
 const isFirstAnimationFadedOut = ref(false)
 
 // State management
@@ -126,6 +129,9 @@ const handleScroll = () => {
     if (scrollProgress >= 1) {
       secondLottieOpacity.value = 0
       wasFullyHidden.value = true
+      isFirstGreen.value = false
+      isSecondGreen.value = false
+      isThirdGreen.value = false
       // Reset animation to first frame when hidden
       if (secondLottieRef.value?.anim) {
         secondLottieRef.value.anim.goToAndStop(0, true)
@@ -149,9 +155,21 @@ const handleScroll = () => {
   ) {
     // Show the animation
     secondLottieOpacity.value = 1
+
+    setTimeout(() => {
+      isFirstGreen.value = true
+      setTimeout(() => {
+        isSecondGreen.value = true
+        setTimeout(() => {
+          isThirdGreen.value = true
+        }, 700)
+      }, 700)
+    }, 1700)
     // Replay from start
     secondLottieRef.value.anim.goToAndPlay(0)
-    wasFullyHidden.value = false // Reset the flag
+    wasFullyHidden.value = false
+    // Just use startSecondAnimation - it has the sequence we want
+    startSecondAnimation()
   }
 }
 
@@ -187,6 +205,16 @@ const startSecondAnimation = () => {
     secondLottieOpacity.value = 1
     hasSecondAnimationStarted.value = true
     secondLottieRef.value.anim.play()
+   
+    setTimeout(() => {
+      isFirstGreen.value = true
+      setTimeout(() => {
+        isSecondGreen.value = true
+        setTimeout(() => {
+          isThirdGreen.value = true
+        }, 700)
+      }, 700)
+    }, 1700)
     
     setTimeout(() => {
       heroContentOpacity.value = 1
@@ -199,7 +227,7 @@ const onSecondLottieReady = (anim?: AnimationItem) => {
 }
 
 const onSecondLottieComplete = () => {
-  // No specific action needed on completion
+  // Nothing needed here
 }
 
 // Lifecycle hooks

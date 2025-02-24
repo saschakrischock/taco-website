@@ -47,7 +47,7 @@
           </button>
           
           <!-- Navigation Items -->
-          <a 
+          <a target="_blank"
             v-for="item in navItems" 
             :key="item.href"
             :href="item.href"
@@ -73,12 +73,12 @@
         'w-12 h-[1.7rem] transition-[filter] duration-300',
         { 'invert': isOverDarkSection }
       ]"/>
-      <NavLocalwidget :class="[
+     <!-- <NavLocalwidget :class="[
         'transition-[filter] duration-300',
         { 'invert': isOverDarkSection }
-      ]"/>
+      ]"/>-->
       <div class="h-[11px] max-lg:hidden justify-start items-center gap-8 inline-flex">
-        <a 
+        <a target="_blank"
           v-for="item in navItems" 
           :key="item.href"
           :href="item.href"
@@ -105,10 +105,10 @@ const scrollThreshold = 50
 const isOverDarkSection = ref(false)
 
 const navItems = [
-  { href: '#build', text: 'Build' },
-  { href: '#editorials', text: 'Editorials' },
-  { href: 'https://github.com/your-repo', text: 'Repos' },
-  { href: '#contact', text: 'Contact' }
+  { href: 'https://docs.taco.build/', text: 'Build' },
+ // { href: '#editorials', text: 'Editorials' },
+  { href: 'https://github.com/nucypher', text: 'Repos' },
+  { href: 'https://discord.gg/buildwithtaco', text: 'Contact' }
 ]
 
 

@@ -8,7 +8,7 @@
       </h2>
     </div>
     <div class="lg:p-7 font-mono">
-      <div class="grid fade-element grid-cols-1 w-full lg:px-7 max-lg:pb-4 px-4  lg:absolute lg:bottom-7 lg:left-0 items-end md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
+      <div class="grid fade-element grid-cols-1 w-full lg:px-7 max-lg:pb-4 px-4  lg:absolute lg:bottom-7 lg:left-0 items-end  lg:grid-cols-3 lg:gap-7">
         <div v-for="(item, index) in items" 
              :key="index"
              ref="cardRefs"
@@ -144,7 +144,7 @@ const items = ref([
   },
   {
     title: 'Internet of Things',
-    content: 'Communication with or between LLM models should be 100% private and censorship-resistant, not mined by intermediaries or blocked by a central authority. TACo can be harnessed for e2ee inference, acess-controlled agentic RAG, and distributed computation.',
+    content: 'Communication with or between LLM models should be 100% private and censorship-resistant, not mined by intermediaries or blocked by a central authority. TACo can be harnessed for e2ee inference, access-controlled agentic RAG, and distributed computation.',
     icon: Eye
   },
   {
