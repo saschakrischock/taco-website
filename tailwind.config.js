@@ -2,8 +2,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        mono: ['OCR-X Trial'],
-        headline: ['ABC Diatype Unlicensed Trial'],
+        mono: ['OCR-X'],
+        headline: ['ABC Diatype'],
       },
       fontSize: {
         lg: ['0.938rem', {
