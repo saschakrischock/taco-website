@@ -71,7 +71,7 @@ const swiper = useSwiper(containerRef, {
           <div class="relative ">
             
             <div class="text-mobile-xl opacity-0 pointer-events-none lg:text-xl max-lg:bottom-0 font-headline text-white max-w-[32rem] "> 
-              The encrypted payload (ciphertext + conditions) is uploaded to a storage layer or transmitted via a transport layer, so it can be retrieved by a data consumer.
+              If a threshold of TACo nodes confirm that the conditions are fulfilled, <span class="highlight">decryption material</span> is provisioned to the data consumer. The ciphertext is decrypted locally
             </div>
             <Transition name="slide-text-fade" mode="out-in">
               <div 
