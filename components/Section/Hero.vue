@@ -70,6 +70,7 @@
           trusting an intermediary. So users aren't obliged to trust 
           <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isFirstGreen }]">  AWS KMS, </span>
           <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isSecondGreen }]">your dev<br> team, </span>
+<<<<<<< HEAD
           <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isThirdGreen }]">or TACo</span>
 =======
 >>>>>>> 78f9143 (changes)
@@ -94,6 +95,8 @@
           <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isFirstGreen }]">  AWS KMS, </span>
 >>>>>>> 6808545 (changes)
           <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isSecondGreen }]">Your dev<br> team </span>
+=======
+>>>>>>> c95c8c1 (Update components/Section/Hero.vue)
           <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isThirdGreen }]">or TACo</span>
         </h3>
       </div>
