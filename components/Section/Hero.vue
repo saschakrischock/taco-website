@@ -62,6 +62,7 @@
             <span class="text-black"> is like giving Bezos your house keys.</span></span>
         </h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <h3 class="subtitle font-headline mt-6 text-black font-bold text-mobile-xl lg:text-xl">
           TACo is the only general-purpose access control plugin that works without <br class="max-lg:hidden">
           
@@ -75,6 +76,9 @@
           a central authority. So your users aren't forced to trust: 
 =======
         <h3 class="subtitle font-headline mt-6 text-black font-medium text-mobile-xl lg:text-xl">
+=======
+        <h3 class="subtitle font-headline mt-6 text-black font-bold text-mobile-xl lg:text-xl">
+>>>>>>> 344f71b (changes)
           TACo is the only general-purpose access control plugin that works without <br class="max-lg:hidden">
           
 <<<<<<< HEAD

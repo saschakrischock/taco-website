@@ -22,10 +22,14 @@
           End-to-end encryption<br> for (almost) everything.
         </h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <h3 class="subtitle font-headline text-white max-w-[60rem] font-bold text-mobile-xl lg:text-mobile-xl lg:text-xl mt-7">
 =======
         <h3 class="subtitle font-headline text-white max-w-[60rem] font-medium text-mobile-xl lg:text-mobile-xl lg:text-xl mt-7">
 >>>>>>> 6d1e519 (changes)
+=======
+        <h3 class="subtitle font-headline text-white max-w-[60rem] font-bold text-mobile-xl lg:text-mobile-xl lg:text-xl mt-7">
+>>>>>>> 344f71b (changes)
           Imagine if Signal-like protections were embedded in every application.<br>
           So 
           <span class="green-highlight">healthcare portals, social platforms, shared spreadsheets, booking<br> aggregators, connected vehicles, chatbot providers
