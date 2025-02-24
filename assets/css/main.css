@@ -1,141 +1,133 @@
 
 @font-face {
-    font-family: 'ABC Diatype';
-    src: url('/assets/fonts/ABCDiatype-Bold.woff2') format('woff2'),
-        url('/assets/fonts/ABCDiatype-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'ABC Diatype';
+  src: url('/assets/fonts/ABCDiatype-Bold.woff2') format('woff2'),
+      url('/assets/fonts/ABCDiatype-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 
 
 .blog p {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .font-mono {
-    font-feature-settings: "ss02" 1, "onum" 1;
+  font-feature-settings: "ss02" 1, "onum" 1;
 }
 
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
 
 body, html {
-    width: 100vw;
-    overflow-x: hidden !important;
+  width: 100vw;
+  overflow-x: hidden !important;
 }
 
 .highlight {
-  color: #fff; /* Start with normal text color */
-  font-weight: bold;
-  animation: highlightFadeIn 0.8s ease-in-out forwards;
-  animation-delay: 0.4s; /* Delay the highlight effect */
-  display: inline-block; /* Ensures the animation applies properly */
+color: #fff; /* Start with normal text color */
+font-weight: bold;
+animation: highlightFadeIn 0.8s ease-in-out forwards;
+animation-delay: 0.4s; /* Delay the highlight effect */
+display: inline-block; /* Ensures the animation applies properly */
 }
 
 /* Animation for the highlight effect */
 @keyframes highlightFadeIn {
-  0% {
-    color: #fff;
-  }
-  100% {
-    color: #96ff5e;
-  }
+0% {
+  color: #fff;
+}
+100% {
+  color: #96ff5e;
+}
 }
 
 /* Make sure each new slide resets the animation */
 .slide-text-fade-enter-active .highlight {
-  animation: highlightFadeIn 0.8s ease-in-out forwards;
-  animation-delay: 0.4s;
+animation: highlightFadeIn 0.8s ease-in-out forwards;
+animation-delay: 0.4s;
 }
 
 .font-headline {
-  font-weight: 700 !important;
+font-weight: 700 !important;
 }
-  
+
 
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 @media (max-width: 1024px) {
 
 
-  .scale-fix {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    scale: 1.05;
-=======
-    scale: 1.1;
->>>>>>> 6b58832 (changes)
-=======
-    scale: 1.05;
->>>>>>> 6d1e519 (changes)
+.scale-fix {
+  scale: 1.05;
+}
+
+
+  br {
+      display: none;
   }
 
+  .text-lg {
+      font-size: 15px;
+  }
 
-    br {
-        display: none;
-    }
-
-    .text-lg {
-        font-size: 15px;
-    }
-
-    .scale-up {
-        scale: 2;
-    }
+  .scale-up {
+      scale: 2;
+  }
 }
 
 h2, h3, .fade-element {
-    opacity: 0 ;
-    transform: translateY(50px);
-    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1),
-                transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .fade-in {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-  }
-
-  .footer-blottie svg { 
-height: auto !important;
-margin-bottom: -0.5rem;
-  }
-
-  @media screen and (min-width: 1700px) {
-  .footer-blottie svg {
-    margin-bottom: -0.5rem;
-    height: 100% !important;
-    max-height: calc(100svh - 7rem);
-  }
+  opacity: 0 ;
+  transform: translateY(50px);
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-  @media screen and (max-width: 1024px) {
-    .footer-blottie svg {
-      max-width: 100%;
-      scale: 1.75;
-      margin-bottom: -1rem;
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
 
-      height: auto !important;
-      transform: translateY(-23%) !important;
-    }
-    
-  }
+.footer-blottie svg { 
+height: auto !important;
+margin-bottom: -0.5rem;
+}
 
-  .green-highlight  {
-    transition: color 1s ease-in-out;
-  }
-  .green-highlight.active {
-    color: #96ff5e;
+@media screen and (min-width: 1700px) {
+.footer-blottie svg {
+  margin-bottom: -0.5rem;
+  height: 100% !important;
+  max-height: calc(100svh - 7rem);
+}
+}
+
+@media screen and (max-width: 1024px) {
+  .footer-blottie svg {
+    max-width: 100%;
+    scale: 1.75;
+    margin-bottom: -1rem;
+
+    height: auto !important;
+    transform: translateY(-23%) !important;
   }
   
-  .fade-out {
-    opacity: 0 !important;
-    transform: translateY(10px) !important;
-    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1),
-                transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-  }
+}
+
+.green-highlight  {
+  transition: color 1s ease-in-out;
+}
+.green-highlight.active {
+  color: #96ff5e;
+}
+
+.fade-out {
+  opacity: 0 !important;
+  transform: translateY(10px) !important;
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
