@@ -61,42 +61,12 @@
           with <span class="text-[#96FF5E]">secrets management<br class="max-lg:hidden">
             <span class="text-black"> is like giving Bezos your house keys.</span></span>
         </h2>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <h3 class="subtitle font-headline mt-6 text-black font-bold text-mobile-xl lg:text-xl">
           TACo is the only general-purpose access control plugin that works without <br class="max-lg:hidden">
           
-<<<<<<< HEAD
           trusting an intermediary. So users aren't obliged to trust 
           <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isFirstGreen }]">  AWS KMS, </span>
           <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isSecondGreen }]">your dev<br> team, </span>
-<<<<<<< HEAD
-          <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isThirdGreen }]">or TACo</span>
-=======
->>>>>>> 78f9143 (changes)
-          a central authority. So your users aren't forced to trust: 
-=======
-        <h3 class="subtitle font-headline mt-6 text-black font-medium text-mobile-xl lg:text-xl">
-=======
-        <h3 class="subtitle font-headline mt-6 text-black font-bold text-mobile-xl lg:text-xl">
->>>>>>> 344f71b (changes)
-          TACo is the only general-purpose access control plugin that works without <br class="max-lg:hidden">
-          
-<<<<<<< HEAD
-<<<<<<< HEAD
-          trusting an intermediary. So users aren't obliged to trust:  
->>>>>>> 92e046e (changes)
-=======
-          trusting an intermediary. So users aren't obliged to trust
->>>>>>> 99f8c8c (changes)
-          <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isFirstGreen }]"> AWS KMS, </span>
-=======
-          trusting an intermediary. So users aren't obliged to trust 
-          <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isFirstGreen }]">  AWS KMS, </span>
->>>>>>> 6808545 (changes)
-          <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isSecondGreen }]">Your dev<br> team </span>
-=======
->>>>>>> c95c8c1 (Update components/Section/Hero.vue)
           <span :class="['transition-colors duration-300', { 'text-[#96FF5E]': isThirdGreen }]">or TACo</span>
         </h3>
       </div>
@@ -123,12 +93,6 @@ const heroContentOpacity = ref(0)
 const isFirstGreen = ref(false)
 const isSecondGreen = ref(false)
 const isThirdGreen = ref(false)
-<<<<<<< HEAD
-const isFirstGreen = ref(false)
-const isSecondGreen = ref(false)
-const isThirdGreen = ref(false)
-=======
->>>>>>> 78f9143 (changes)
 const isFirstAnimationFadedOut = ref(false)
 
 // State management
@@ -168,12 +132,6 @@ const handleScroll = () => {
       isFirstGreen.value = false
       isSecondGreen.value = false
       isThirdGreen.value = false
-<<<<<<< HEAD
-      isFirstGreen.value = false
-      isSecondGreen.value = false
-      isThirdGreen.value = false
-=======
->>>>>>> 78f9143 (changes)
       // Reset animation to first frame when hidden
       if (secondLottieRef.value?.anim) {
         secondLottieRef.value.anim.goToAndStop(0, true)
@@ -207,30 +165,11 @@ const handleScroll = () => {
         }, 700)
       }, 700)
     }, 1700)
-<<<<<<< HEAD
-
-    setTimeout(() => {
-      isFirstGreen.value = true
-      setTimeout(() => {
-        isSecondGreen.value = true
-        setTimeout(() => {
-          isThirdGreen.value = true
-        }, 700)
-      }, 700)
-    }, 1700)
-=======
->>>>>>> 78f9143 (changes)
     // Replay from start
     secondLottieRef.value.anim.goToAndPlay(0)
     wasFullyHidden.value = false
     // Just use startSecondAnimation - it has the sequence we want
     startSecondAnimation()
-<<<<<<< HEAD
-    wasFullyHidden.value = false
-    // Just use startSecondAnimation - it has the sequence we want
-    startSecondAnimation()
-=======
->>>>>>> 78f9143 (changes)
   }
 }
 
@@ -276,19 +215,6 @@ const startSecondAnimation = () => {
         }, 700)
       }, 700)
     }, 1700)
-<<<<<<< HEAD
-   
-    setTimeout(() => {
-      isFirstGreen.value = true
-      setTimeout(() => {
-        isSecondGreen.value = true
-        setTimeout(() => {
-          isThirdGreen.value = true
-        }, 700)
-      }, 700)
-    }, 1700)
-=======
->>>>>>> 78f9143 (changes)
     
     setTimeout(() => {
       heroContentOpacity.value = 1
@@ -302,10 +228,6 @@ const onSecondLottieReady = (anim?: AnimationItem) => {
 
 const onSecondLottieComplete = () => {
   // Nothing needed here
-<<<<<<< HEAD
-  // Nothing needed here
-=======
->>>>>>> 78f9143 (changes)
 }
 
 // Lifecycle hooks
