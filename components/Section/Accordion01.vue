@@ -146,7 +146,7 @@ const items = ref([
   },
   {
     title: 'Decentralized GenAI',
-    content: 'Communication with or between LLM models should be 100% private and censorship-resistant, not mined by intermediaries or blocked by a central authority. TACo can be harnessed for e2ee inference, acess-controlled agentic RAG, and distributed computation.',
+    content: 'Communication with or between LLM models should be 100% private and censorship-resistant, not mined by intermediaries or blocked by a central authority. TACo can be harnessed for e2ee inference, access-controlled agentic RAG, and distributed computation.',
     icon: Ai
   },
   {
