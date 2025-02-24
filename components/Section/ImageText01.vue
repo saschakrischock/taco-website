@@ -16,7 +16,7 @@
         <h2 class="text-white lg:text-2xl text-mobile-2xl font-bold font-headline">
           End-to-end encryption<br> for (almost) everything.
         </h2>
-        <h3 class="subtitle font-headline text-white max-w-[60rem] font-medium text-mobile-xl lg:text-mobile-xl lg:text-xl mt-7">
+        <h3 class="subtitle font-headline text-white max-w-[60rem] font-bold text-mobile-xl lg:text-mobile-xl lg:text-xl mt-7">
           Imagine if Signal-like protections were embedded in every application.<br>
           So 
           <span class="green-highlight">healthcare portals, social platforms, shared spreadsheets, booking<br> aggregators, connected vehicles, chatbot providers

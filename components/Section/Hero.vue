@@ -61,7 +61,7 @@
           with <span class="text-[#96FF5E]">secrets management<br class="max-lg:hidden">
             <span class="text-black"> is giving Bezos your house keys.</span></span>
         </h2>
-        <h3 class="subtitle font-headline mt-6 text-black font-medium text-mobile-xl lg:text-xl">
+        <h3 class="subtitle font-headline mt-6 text-black font-bold text-mobile-xl lg:text-xl">
           TACo is the only general-purpose access control plugin that works without <br class="max-lg:hidden">
           
           trusting an intermediary. So users aren't obliged to trust 

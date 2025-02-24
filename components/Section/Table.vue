@@ -24,17 +24,17 @@
       <div class="lg:hidden">
         <!-- Headers -->
         <div class="flex items-center justify-between mb-2">
-          <div class="text-white text-[15px] lg:text-[20px] font-medium font-headline font-['ABC Diatype Medium'] leading-[18px]">
+          <div class="text-white text-[15px] lg:text-[20px] font-bold font-headline font-['ABC Diatype Medium'] leading-[18px]">
             Feature
           </div>
           <div class="flex items-center w-[60%]">
-            <span class="text-white w-1/2 text-center text-15px lg:text-[20px] font-medium font-headline font-['ABC Diatype Medium'] leading-[18px]">
+            <span class="text-white w-1/2 text-center text-15px lg:text-[20px] font-bold font-headline font-['ABC Diatype Medium'] leading-[18px]">
               TACo
             </span>
             <div class="relative w-1/2 inline-block">
               <select 
                 v-model="selectedCompetitor"
-                class="appearance-none bg-[#333] w-full text-white px-3 py-1 rounded-full text-[15px] lg:text-[20px] font-headline font-medium font-['ABC Diatype Medium'] min-w-[100px]"
+                class="appearance-none bg-[#333] w-full text-white px-3 py-1 rounded-full text-[15px] lg:text-[20px] font-headline font-bold font-['ABC Diatype Medium'] min-w-[100px]"
               >
                 <option v-for="solution in solutions.slice(1)" :key="solution" :value="solution">
                   {{ solution }}
@@ -51,7 +51,7 @@
         <div class="lg:space-y-4">
           <div v-for="(feature, i) in featuresWithDescriptions" :key="i" 
                class="flex border-t border-white py-1">
-            <div class="text-white pr-1 h-[auto] w-[40%] text-[15px] lg:text-[20px] font-headline font-medium font-['ABC Diatype Medium'] leading-[20px]">
+            <div class="text-white pr-1 h-[auto] w-[40%] text-[15px] lg:text-[20px] font-headline font-bold font-['ABC Diatype Medium'] leading-[20px]">
               {{ feature.name }} 
             </div>
             <div class="flex items-center w-[60%] mobile-border justify-around">
@@ -77,14 +77,14 @@
         <!-- Headers -->
         <div v-for="header in headers" :key="header"  @mouseenter="() => { isHovering = true; currentHoverText = header.description; }"
           @mouseleave="() => { isHovering = false; currentHoverText = ''; }" 
-             class="text-white first-of-type:pointer-events-none hover:text-[#96FF5E] transition-all duration-300 cursor-default top text-center font-headline header text-[20px] font-medium mb-0 font-['ABC Diatype Medium'] leading-[18px]">
+             class="text-white first-of-type:pointer-events-none hover:text-[#96FF5E] transition-all duration-300 cursor-default top text-center font-headline header text-[20px] font-bold mb-0 font-['ABC Diatype Medium'] leading-[18px]">
           {{ header.title }}
         </div>
 
         <!-- Desktop Content -->
         <template v-for="(feature, i) in featuresWithDescriptions" :key="i">
           <div 
-            class="text-white hover:text-[#96FF5E] transition-all duration-300 cursor-default text-[20px] font-headline pr-2 font-medium font-['ABC Diatype Medium'] leading-[20px] pt-3 pb-2 border-t border-white"
+            class="text-white hover:text-[#96FF5E] transition-all duration-300 cursor-default text-[20px] font-headline pr-2 font-bold font-['ABC Diatype Medium'] leading-[20px] pt-3 pb-2 border-t border-white"
             @mouseenter="() => { isHovering = true; currentHoverText = feature.description; }"
             @mouseleave="() => { isHovering = false; currentHoverText = ''; }"
           >
