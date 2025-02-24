@@ -59,7 +59,7 @@
           <span>Trusting </span>
           <span class="text-black">centralized platforms </span><br class="max-lg:hidden">
           with <span class="text-[#96FF5E]">secrets management<br class="max-lg:hidden">
-            <span class="text-black"> is giving Bezos your house keys.</span></span>
+            <span class="text-black"> is like giving Bezos your house keys.</span></span>
         </h2>
         <h3 class="subtitle font-headline mt-6 text-black font-bold text-mobile-xl lg:text-xl">
           TACo is the only general-purpose access control plugin that works without <br class="max-lg:hidden">
