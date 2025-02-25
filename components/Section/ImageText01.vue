@@ -14,14 +14,14 @@
     <div class="hero-body absolute z-20">
       <div class="lg:p-7 p-4 max-w-[90rem] h-[calc(100vh-1rem)] lg:h-[calc(100vh-3rem)] font-headline flex justify-between flex-col">
         <h2 class="text-white lg:text-2xl text-mobile-2xl font-bold font-headline">
-          End-to-end encryption<br> for (almost) everything.
+          End-to-end encryption<br> for almost everything.
         </h2>
         <h3 class="subtitle font-headline text-white max-w-[60rem] font-bold text-mobile-xl lg:text-mobile-xl lg:text-xl mt-7">
           Imagine if Signal-like protections were embedded in every application.<br>
-          So 
-          <span class="green-highlight">healthcare portals, social platforms, shared spreadsheets, booking<br> aggregators, connected vehicles, chatbot providers
+
+          <span class="green-highlight">Healthcare portals, social platforms, shared spreadsheets, booking<br> aggregators, connected vehicles, chatbot providers
           </span> – and every other digital
-          <br> facility with a shadowy data harvestor – would see nothing but ciphertexts.
+          <br> facility with a shadowy data harvester – would see nothing but ciphertexts.
         </h3>
       </div>
     </div>

@@ -139,17 +139,17 @@ onMounted(() => {
 const items = ref([
   {
     title: 'Hyper-sensitive, high stakes data',
-    content: 'Sufficiently decentralized is a cop-out. TACo can handle many-to-many data sharing at scale, regardless of the size of file or frequency of access request. And without a centralized authority that may harvest, exploit, monetize, or censor interpersonal communication.',
+    content: 'From password recovery to reproductive healthcare to validating legal evidence, TACo is an essential component in high-stakes sharing flows – so the end-user isn’t forced to trust the app developers or a cloud provider with their critical data.',
     icon: Secure
   },
   {
     title: 'Internet of Things',
-    content: 'Communication with or between LLM models should be 100% private and censorship-resistant, not mined by intermediaries or blocked by a central authority. TACo can be harnessed for e2ee inference, access-controlled agentic RAG, and distributed computation.',
+    content: 'TACo is an antidote to the burgeoning interconnected hardware panopticon, in which every waking (and sleeping) moment of life is surveilled, harvested, cross-referenced, and exploited by equipment manufacturers (and their customers).',
     icon: Eye
   },
   {
     title: 'Activism, journalism and human rights',
-    content: 'TACo is the perfect complement to persistent storage and GraphQL/SQL databases – at long last enabling users to grant future access to uploaded data – without having to download & re-encrypt locally using a known data consumer‘s public key.',
+    content: 'TACo seeks to protect the most vulnerable in society – those who may face censorship, intimidation, retribution and violence as a consequence of their private data being leaked, subpoenaed, or stolen by powerful interests.',
     icon: Fist
   }
 ])

@@ -41,7 +41,7 @@
         <div class="flex lg:hidden gap-x-3">
           <a target="_blank" href="https://docs.taco.build/" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Build</a>
          <!-- <a href="#editorials" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Editorials</a>-->
-          <a  target="_blank" href="https://github.com/nucypher" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Repos</a>
+          <a  target="_blank" href="https://github.com/nucypher/taco-web" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Repos</a>
         </div>
         <div class="flex lg:hidden gap-4">
           <a target="_blank" href="https://discord.gg/buildwithtaco" class="text-center bg-[#F4F4F4] py-1 px-3 rounded-xl font-mono font-normal mono-text">Contact</a>
@@ -72,8 +72,10 @@
       <!-- Desktop navigation -->
       <div class="max-lg:hidden text-lg justify-end items-center gap-8 inline-flex">
         <a target="_blank" href="https://docs.taco.build/" class="text-center text-white font-mono font-normal mono-text">Build</a>
-        <a target="_blank" href="https://github.com/nucypher"  class="text-center text-white font-mono font-normal mono-text">Repos</a>
+        <a target="_blank" href="https://github.com/nucypher/taco-web"  class="text-center text-white font-mono font-normal mono-text">
+          Repos</a>
        <!-- <a href="#editorials" class="text-center text-white font-mono font-normal mono-text">Editorials</a>-->
+        <a target="_blank" href="https://playground.nucypher.io/"  class="text-center text-white font-mono font-normal mono-text">Playground</a>
         <a target="_blank" href="https://discord.gg/buildwithtaco"  class="text-center text-white font-mono font-normal mono-text">Contact</a>
         <button @click="showCredits = !showCredits" class="text-center text-white font-mono font-normal mono-text">
             Credits
