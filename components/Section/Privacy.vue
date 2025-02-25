@@ -62,7 +62,7 @@ const swiper = useSwiper(containerRef, {
         <h2 class="text-white lg:text-2xl text-mobile-2xl font-headline font-bold ">
           <span class="text-[#909090]">The privacy Layer </span><br>
           <span class="text-[#909090]">with </span>
-          <span class="text-white">nothing to hide</span>
+          <span class="text-white">nothing to hide.</span>
         </h2>
       </div>
       <div class="max-lg:flex max-lg:flex-col-reverse">
