@@ -1,6 +1,6 @@
 <template>
   <section ref="container" class="hero is-primary bg-black min-h-[100vh] is-fullheight relative overflow-hidden">
-    <div 
+    <div
       ref="parallaxBg"
       class="absolute scale-fix inset-0 w-full h-[100%] top-[0%] bg-center max-lg:bg-right bg-cover bg-no-repeat will-change-transform"
       :style="{
@@ -18,7 +18,6 @@
         </h2>
         <h3 class="subtitle font-headline text-white max-w-[60rem] font-bold text-mobile-xl lg:text-mobile-xl lg:text-xl mt-7">
           Imagine if Signal-like protections were embedded in every application.<br>
-
           <span class="green-highlight">Healthcare portals, social platforms, shared spreadsheets, booking<br> aggregators, connected vehicles, chatbot providers
           </span> – and every other digital
           <br> facility with a shadowy data harvester – would see nothing but ciphertexts.
@@ -35,36 +34,45 @@ const container = ref(null)
 const parallaxBg = ref(null)
 const parallaxOffset = ref(0)
 let rafId = null
-let lastKnownScrollPosition = 0
-let ticking = false
+let previousScrollY = 0
+let targetOffset = 0
+const lerpFactor = 0.5 // lerp
+
+// Smoothly interpolate between current and target position
+const lerp = (start, end, factor) => {
+  return start + (end - start) * factor
+}
+
+const updateParallax = () => {
+  if (!container.value) return
+  
+  const rect = container.value.getBoundingClientRect()
+  const containerHeight = rect.height
+  const viewportMiddle = window.innerHeight / 2
+  const elementMiddle = rect.top + containerHeight / 2
+  
+  // Reduce movement on mobile for smoother effect
+  const isMobile = window.innerWidth < 768
+  const parallaxStrength = isMobile ? 0.2 : 0.4 // Reduced strength for smoother effect
+  
+  // Calculate the target offset
+  targetOffset = -((elementMiddle - viewportMiddle) * parallaxStrength)
+  
+  //  lerp
+  parallaxOffset.value = lerp(parallaxOffset.value, targetOffset, lerpFactor)
+  
+  rafId = requestAnimationFrame(updateParallax)
+}
 
 const handleScroll = () => {
-  lastKnownScrollPosition = window.scrollY
-
-  if (!ticking) {
-    rafId = requestAnimationFrame(() => {
-      if (!container.value) return
-      const rect = container.value.getBoundingClientRect()
-      const containerHeight = rect.height
-      const viewportMiddle = window.innerHeight / 2
-      const elementMiddle = rect.top + containerHeight / 2
-      
-      // Reduce movement on mobile for smoother effect
-      const isMobile = window.innerWidth < 768
-      const parallaxStrength = isMobile ? 0.4 : 0.8
-      
-      const distanceFromCenter = (elementMiddle - viewportMiddle) * parallaxStrength
-      parallaxOffset.value = -distanceFromCenter
-      
-      ticking = false
-    })
+  if (!rafId) {
+    rafId = requestAnimationFrame(updateParallax)
   }
-  ticking = true
 }
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll, { passive: true })
-  handleScroll()
+  rafId = requestAnimationFrame(updateParallax)
 })
 
 onUnmounted(() => {
@@ -80,5 +88,6 @@ onUnmounted(() => {
   will-change: transform;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  transform: translateZ(0);
 }
 </style>

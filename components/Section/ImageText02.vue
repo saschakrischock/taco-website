@@ -31,36 +31,42 @@ const container = ref(null)
 const parallaxBg = ref(null)
 const parallaxOffset = ref(0)
 let rafId = null
-let lastKnownScrollPosition = 0
-let ticking = false
+let targetOffset = 0
+const lerpFactor = 0.5 // lerp
+
+const lerp = (start, end, factor) => {
+  return start + (end - start) * factor
+}
+
+const updateParallax = () => {
+  if (!container.value) return
+  
+  const rect = container.value.getBoundingClientRect()
+  const containerHeight = rect.height
+  const viewportMiddle = window.innerHeight / 2
+  const elementMiddle = rect.top + containerHeight / 2
+  
+  // Reduce movement on mobile for smoother effect
+  const isMobile = window.innerWidth < 768
+  const parallaxStrength = isMobile ? 0.2 : 0.4 // Reduced strength for smoother effect
+  
+  // Calculate the target offset
+  targetOffset = -((elementMiddle - viewportMiddle) * parallaxStrength)
+  
+  parallaxOffset.value = lerp(parallaxOffset.value, targetOffset, lerpFactor)
+  
+  rafId = requestAnimationFrame(updateParallax)
+}
 
 const handleScroll = () => {
-  lastKnownScrollPosition = window.scrollY
-
-  if (!ticking) {
-    rafId = requestAnimationFrame(() => {
-      if (!container.value) return
-      const rect = container.value.getBoundingClientRect()
-      const containerHeight = rect.height
-      const viewportMiddle = window.innerHeight / 2
-      const elementMiddle = rect.top + containerHeight / 2
-      
-      // Reduce movement on mobile for smoother effect
-      const isMobile = window.innerWidth < 768
-      const parallaxStrength = isMobile ? 0.4 : 0.8
-      
-      const distanceFromCenter = (elementMiddle - viewportMiddle) * parallaxStrength
-      parallaxOffset.value = -distanceFromCenter
-      
-      ticking = false
-    })
+  if (!rafId) {
+    rafId = requestAnimationFrame(updateParallax)
   }
-  ticking = true
 }
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll, { passive: true })
-  handleScroll()
+  rafId = requestAnimationFrame(updateParallax)
 })
 
 onUnmounted(() => {
@@ -76,5 +82,6 @@ onUnmounted(() => {
   will-change: transform;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  transform: translateZ(0);
 }
 </style>
