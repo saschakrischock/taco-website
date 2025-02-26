@@ -26,7 +26,7 @@
       <!-- Centered TACo text -->
       <div class="absolute inset-0 flex max-lg:scale-[0.7] font-mono items-center justify-center">
         <h1 ref="tacoTextRef" class="text-black opacity-0 ml-[1.49rem] tracking-[1.45rem] text-[2rem] transition-all duration-300">
-          TACo
+          
         </h1>
       </div>
     </div>
