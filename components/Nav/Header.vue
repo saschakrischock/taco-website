@@ -69,10 +69,16 @@
         { 'translate-y-0': isVisible, '-translate-y-full': !isVisible },
       ]"
     >
-      <SvgLogo :class="[
-        'w-12 h-[1.7rem] transition-[filter] duration-300',
-        { 'invert': isOverDarkSection }
-      ]"/>
+    
+      <button 
+        @click="scrolltoTop"
+        :class="[
+          'w-12 h-[1.7rem] transition-[filter] duration-300',
+          { 'invert': isOverDarkSection }
+        ]"
+      >
+        <NavLogo />
+      </button>
      <!-- <NavLocalwidget :class="[
         'transition-[filter] duration-300',
         { 'invert': isOverDarkSection }
@@ -112,6 +118,10 @@ const navItems = [
   { href: 'https://discord.gg/buildwithtaco', text: 'Contact' }
 ]
 
+
+const scrolltoTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
 
 // Toggle menu function
 const toggleMenu = () => {

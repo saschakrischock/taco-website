@@ -102,8 +102,13 @@ margin-bottom: -0.5rem;
 .footer-blottie svg {
   margin-bottom: -0.5rem;
   height: 100% !important;
+  max-width: 90vw !important;
   max-height: calc(100svh - 7rem);
 }
+}
+
+.footer-blottie svg {
+  max-width: 90vw;
 }
 
 @media screen and (max-width: 1024px) {

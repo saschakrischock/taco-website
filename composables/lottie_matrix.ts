@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 
 export const useTacoMatrixSync = () => {
-  const matrixChars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz#&*<>|=+-'
+  const matrixChars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz#&*'
   let animationFrame: number | null = null
   
   const getRandomChar = () => {
