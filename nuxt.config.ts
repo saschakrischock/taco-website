@@ -4,10 +4,10 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      title: 'TACo - Truly Decentralized End-to-End Encryption',
+      title: 'TACo - Actually Decentralized End-to-End Encryption',
       meta: [
         // Essential meta tags
-        { name: 'description', content: 'TACo offers decentralized access control with uncensorable end-to-end encryption. Integrate secure E2EE into your applications via our simple encrypt/decrypt API.' },
+        { name: 'description', content: 'TACo is a access control plugin that has been decentralized from day one. Integrate trust-minimized end-to-end encryption into your application via the taco-web encrypt/decrypt API.' },
         { name: 'keywords', content: 'encryption, e2ee, end-to-end encryption, decentralized, access control, web3, privacy, security, taco-web, api' },
         
         // Open Graph tags for social media sharing
