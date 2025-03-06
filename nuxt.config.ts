@@ -45,14 +45,11 @@ export default defineNuxtConfig({
   },
   compatibilityDate: '2024-11-01',
   devtools: { enabled: false },
+  image: {
+    provider: 'netlify'
+  },
   css: ['~/assets/css/main.css'],
-  modules: [
-    '@nuxtjs/tailwindcss',
-    '@nuxt/fonts',
-    '@nuxt/content',
-    'nuxt-swiper',
-    'nuxt-marquee'
-  ],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/fonts', '@nuxt/content', 'nuxt-swiper', 'nuxt-marquee', '@nuxt/image'],
   ssr: true,
   // If you're using static hosting, add:
   

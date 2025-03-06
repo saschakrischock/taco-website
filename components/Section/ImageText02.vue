@@ -4,7 +4,7 @@
       ref="parallaxBg"
       class="absolute scale-fix inset-0 w-full h-[100%] -top-[0%] bg-center bg-cover bg-no-repeat will-change-transform"
       :style="{
-        backgroundImage: 'url(/images/2.jpg)',
+        backgroundImage: `url('${bgImageUrl}')`,
         transform: `translate3d(0, ${parallaxOffset}px, 0)`,
         zIndex: 0
       }"
@@ -25,7 +25,24 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
+
+// Add the useImage composable for Nuxt Image
+const nuxtImg = useImage()
+
+// Create a responsive background image URL with Netlify provider
+const bgImageUrl = computed(() => {
+  // Determine appropriate size based on viewport
+  const width = window.innerWidth
+  const imageWidth = width < 768 ? 1024 : width < 1280 ? 1920 : 2560
+  
+  return nuxtImg('/images/2_big.jpg', {
+    width: imageWidth,
+    quality: 80,
+    format: 'webp',
+    placehoder: 100
+  })
+})
 
 const container = ref(null)
 const parallaxBg = ref(null)
@@ -64,13 +81,20 @@ const handleScroll = () => {
   }
 }
 
+// Add resize handler for responsive image updates
+const handleResize = () => {
+  // The computed bgImageUrl will automatically update when window size changes
+}
+
 onMounted(() => {
   window.addEventListener('scroll', handleScroll, { passive: true })
+  window.addEventListener('resize', handleResize, { passive: true })
   rafId = requestAnimationFrame(updateParallax)
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
+  window.removeEventListener('resize', handleResize)
   if (rafId) {
     cancelAnimationFrame(rafId)
   }

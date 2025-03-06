@@ -4,7 +4,7 @@
       ref="parallaxBg"
       class="absolute scale-fix inset-0 w-full h-[100%] top-[0%] bg-center max-lg:bg-right bg-cover bg-no-repeat will-change-transform"
       :style="{
-        backgroundImage: 'url(/images/1.jpg)',
+        backgroundImage: `url('${bgImageUrl}')`,
         transform: `translate3d(0, ${parallaxOffset}px, 0)`,
         zIndex: 0
       }"
@@ -28,7 +28,24 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
+
+// Add the useImage composable
+const img = useImage()
+
+// Create a responsive background image URL
+const bgImageUrl = computed(() => {
+  // Determine appropriate size based on viewport
+  const width = window.innerWidth
+  const imageWidth = width < 768 ? 1024 : width < 1280 ? 1920 : 2560
+  
+  return img('/images/1_big.jpg', {
+    width: imageWidth,
+    quality: 90,
+    format: 'webp',
+    placeholder: 100
+  })
+})
 
 const container = ref(null)
 const parallaxBg = ref(null)
@@ -58,7 +75,7 @@ const updateParallax = () => {
   // Calculate the target offset
   targetOffset = -((elementMiddle - viewportMiddle) * parallaxStrength)
   
-  //  lerp
+  // lerp
   parallaxOffset.value = lerp(parallaxOffset.value, targetOffset, lerpFactor)
   
   rafId = requestAnimationFrame(updateParallax)
@@ -70,13 +87,20 @@ const handleScroll = () => {
   }
 }
 
+// Add resize handler for responsive image updates
+const handleResize = () => {
+  // The computed bgImageUrl will automatically update
+}
+
 onMounted(() => {
   window.addEventListener('scroll', handleScroll, { passive: true })
+  window.addEventListener('resize', handleResize, { passive: true })
   rafId = requestAnimationFrame(updateParallax)
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
+  window.removeEventListener('resize', handleResize)
   if (rafId) {
     cancelAnimationFrame(rafId)
   }
