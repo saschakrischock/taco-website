@@ -6,7 +6,7 @@
     class="w-full relative"
   >
     <!-- Main content section with full viewport height -->
-    <div class="relative min-h-[100svh]">
+    <div class="relative overflow-hidden min-h-[100svh]">
       <!-- Lottie animation -->
       <Blottie
         ref="footerLottieRef"
